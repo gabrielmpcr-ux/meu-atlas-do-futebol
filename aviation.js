@@ -42,7 +42,7 @@ function initializeAviation(){
  try{const stored=localStorage.getItem(AVIATION_KEY);if(stored)aviation=aviationValidate(JSON.parse(stored))}catch{aviationMessage('Não foi possível ler o histórico de voos salvo. Exporte seu backup antes de importar outro arquivo.',true)}
  document.getElementById('importFlightsButton').onclick=()=>document.getElementById('aviationImport').click();document.getElementById('aviationImport').addEventListener('change',importAtlasBackup);
  const controls={aviationSearch:'q',aviationYear:'year',aviationCarrier:'carrier',aviationCountry:'country',aviationOrigin:'origin',aviationDestination:'destination',aviationTrip:'trip',aviationSort:'sort'};
- for(const[id,key]of Object.entries(controls))document.getElementById(id).addEventListener(key==='q'?'input':'change',event=>{aviationState[key]=event.target.value;aviationState.limit=20;aviationState.airport='';renderAviation();if(key==='trip'){const trip=aviation.trips.find(t=>t.id===aviationState.trip);aviationRouteIds=trip?.flightIds||[];renderAviationMap(true)}});
+ for(const[id,key]of Object.entries(controls))document.getElementById(id).addEventListener(key==='q'?'input':'change',event=>{aviationState[key]=event.target.value;aviationState.limit=20;aviationState.airport='';renderAviation();if(key==='trip'){const trip=aviation.trips.find(t=>t.id===aviationState.trip);aviationRouteIds=trip?.flightIds||[];if(trip)aviationMapMode='all';renderAviationMap(true)}});
  document.getElementById('aviationClear').onclick=clearAviationFilters;
  document.getElementById('aviationMore').onclick=()=>{aviationState.limit+=20;renderAviation()};
  document.getElementById('aviationChips').onclick=event=>{const button=event.target.closest('[data-flight-quick]');if(!button)return;aviationState.quick=button.dataset.flightQuick;aviationState.limit=20;renderAviation();document.querySelector(`[data-flight-quick="${aviationState.quick}"]`)?.focus({preventScroll:true})};
@@ -99,7 +99,7 @@ function aviationHandleAction(event){
  const b=event.target.closest('[data-avi-action]');if(!b)return;const id=b.dataset.id,action=b.dataset.aviAction;
  if(action==='details')openAviationDetails(id);
  else if(action==='map')aviationShowOnMap([id]);
- else if(action==='trip'||action==='trip-map'){document.getElementById('stadiumDetails').close();document.getElementById('aviationDetailDialog').close();Object.assign(aviationState,{trip:id,q:'',year:'',carrier:'',country:'',origin:'',destination:'',airport:'',quick:'all',limit:20});renderAviation();if(action==='trip-map')aviationShowOnMap(aviation.trips.find(t=>t.id===id)?.flightIds||[]);else showFlights()}
+ else if(action==='trip'||action==='trip-map'){document.getElementById('stadiumDetails').close();document.getElementById('aviationDetailDialog').close();Object.assign(aviationState,{trip:id,q:'',year:'',carrier:'',country:'',origin:'',destination:'',airport:'',quick:'all',limit:20});renderAviation();if(action==='trip-map')aviationShowOnMap(aviation.trips.find(t=>t.id===id)?.flightIds||[]);else{aviationRouteIds=aviation.trips.find(t=>t.id===id)?.flightIds||[];aviationMapMode='all';renderAviationMap(true);showFlights()}}
  else if(action==='trip-edit')openAviationTrip(id);
  else if(action==='edit')openAviationEdit(id);
  else if(action==='delete')deleteAviationFlight(id);
