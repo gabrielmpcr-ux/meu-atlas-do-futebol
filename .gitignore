@@ -1,0 +1,9 @@
+# Personal exports and boarding pass media must never be deployed.
+my-football-atlas-backup*.json
+Importar_voos_no_Atlas.json
+*.private.json
+Wallet_*.json
+Wallet_*.csv
+Wallet_*.xlsx
+*.mp4
+.DS_Store
