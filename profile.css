@@ -1,0 +1,9 @@
+/* Original personal photograph, framed with CSS rather than regenerated. */
+.shell{grid-template-columns:280px minmax(0,1fr)}
+.profile-brand{display:flex;flex-direction:column;align-items:stretch;gap:17px;width:100%;min-width:0}
+.profile-photo{display:block;box-sizing:border-box;width:100%;height:auto;aspect-ratio:2/3;object-fit:cover;object-position:56% 50%;border-radius:16px;border:1px solid #e6e9ee;background:#f2f4f7}
+.profile-caption{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:0 2px 16px;border-bottom:1px solid #e1e6ec}
+.profile-caption .brand-text{font:800 27px/1.07 Outfit,sans-serif;letter-spacing:-.8px;color:#152231}
+.profile-symbol{flex:0 0 78px;width:78px;height:43px;color:#e6ad15}
+@media(max-width:1100px){.shell{grid-template-columns:75px minmax(0,1fr)}.profile-brand{gap:0}.profile-photo{width:49px;height:65px;aspect-ratio:auto;border-radius:10px;object-position:55% 43%}.profile-caption{display:none}}
+@media(max-width:700px){.shell{display:block}}
