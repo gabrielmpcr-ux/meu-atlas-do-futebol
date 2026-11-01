@@ -7,3 +7,16 @@ test('merge is idempotent and matches confirmed identity without guessing from e
 test('filters combine, preserve IDs and distinguish departures from arrivals',()=>{const a=validate({flights:[raw,{...raw,id:'return',origin:'SDU',destination:'GRU'},{id:'foreign',origin:'ASU',destination:'GRU',carrier:'Outra',year:2023,dayMonth:'02/03',yearStatus:'estimated'}],trips:[{id:'t',name:'Rio',flightIds:['one','return']}]});assert.equal(entries(a,{origin:'GRU'}).length,1);assert.equal(entries(a,{destination:'GRU'}).length,2);assert.equal(entries(a,{q:'sao paulo',quick:'international',year:'2023'})[0].id,'foreign');assert.equal(entries(a,{trip:'t',origin:'GRU'})[0].id,'one');assert.equal(entries(a,{quick:'bridge'}).length,2)});
 test('route-inconsistent cards count once and never add distance or airports',()=>{const f=flight({...raw,origin:'GRU',destination:'GRU',minutes:''}),p=flight({id:'p',kind:'presumed',origin:'COR',destinationCity:'São Paulo'}),m=metrics([f,p]);assert.equal(m.count,2);assert.equal(m.km,0);assert.equal(m.kmCount,0);assert.equal(m.durationCount,0);assert.equal(m.presumed,1);assert.equal(entries({flights:[f,p],trips:[]},{origin:'GRU'}).length,0)});
 test('great-circle paths end at the actual airports',()=>{const a=airport('GRU'),b=airport('LHR'),path=arc(a,b);assert.equal(path.length,33);assert(Math.abs(path[0][0]-a.lat)<1e-8);assert(Math.abs(path.at(-1)[1]-b.lng)<1e-8);assert(path.every(p=>p.every(Number.isFinite)))});
+
+test('fills duration gaps from known airports without mutating recorded flight data',()=>{
+ const recorded=flight({...raw,minutes:67}),missing=flight({...raw,id:'missing',minutes:null}),before=JSON.stringify(missing);
+ assert.equal(c.aviationDuration(recorded),67);
+ assert.equal(c.aviationDuration(missing),55);
+ assert.equal(JSON.stringify(missing),before);
+ const long=flight({...raw,id:'long',destination:'LHR',minutes:null});
+ assert(c.aviationDuration(long)>600&&c.aviationDuration(long)<850);
+ const total=metrics([recorded,missing,long]);
+ assert.equal(total.durationCount,3);assert.equal(total.minutes,122+c.aviationDuration(long));
+ assert.equal(c.aviationDuration(flight({...raw,origin:'GRU',destination:'GRU',minutes:null})),null);
+ assert.equal(c.aviationDuration(flight({id:'p',kind:'presumed',origin:'ASU',destinationCity:'São Paulo'})),null);
+});

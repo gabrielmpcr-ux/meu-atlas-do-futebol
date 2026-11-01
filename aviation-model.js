@@ -53,7 +53,14 @@ function aviationEntries(data,state){
   const text=aviationNormalize([f.code,f.carrier,f.origin,f.destination,f.originCity,f.destinationCity,f.originCountry,f.destinationCountry].join(' '));return terms.every(t=>text.includes(t));
  }).sort((a,b)=>{const x=aviationDateKey(a),y=aviationDateKey(b);if(!x||!y)return Number(!x)-Number(!y)||a.id.localeCompare(b.id);return (state.sort==='oldest'?x.localeCompare(y):y.localeCompare(x))||a.id.localeCompare(b.id)});
 }
-function aviationMetrics(flights){const routes=flights.filter(f=>aviationHasRoute(f)),durations=flights.filter(f=>f.minutes!==null);return{count:flights.length,cards:flights.filter(f=>f.kind==='card').length,presumed:flights.filter(f=>f.kind==='presumed').length,km:routes.reduce((s,f)=>s+f.km,0),kmCount:routes.length,minutes:durations.reduce((s,f)=>s+f.minutes,0),durationCount:durations.length,estimated:flights.filter(f=>f.yearStatus==='estimated').length}}
+// Preserve recorded durations; fill gaps at display time without rewriting personal data.
+function aviationDuration(f){
+ if(Number.isFinite(f.minutes)&&f.minutes>0)return f.minutes;
+ if(!aviationHasRoute(f))return null;
+ const km=aviationDistance(aviationAirport(f.origin),aviationAirport(f.destination));
+ return Math.max(5,Math.round((km/800*60+30)/5)*5);
+}
+function aviationMetrics(flights){const routes=flights.filter(f=>aviationHasRoute(f)),durations=flights.map(aviationDuration).filter(n=>n!==null);return{count:flights.length,cards:flights.filter(f=>f.kind==='card').length,presumed:flights.filter(f=>f.kind==='presumed').length,km:routes.reduce((s,f)=>s+f.km,0),kmCount:routes.length,minutes:durations.reduce((s,n)=>s+n,0),durationCount:durations.length,estimated:flights.filter(f=>f.yearStatus==='estimated').length}}
 function aviationRanking(flights,key){const counts=new Map();for(const f of flights){const name=key(f);if(name)counts.set(name,(counts.get(name)||0)+1)}return[...counts].sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0],'pt'))}
 function aviationArc(a,b){
  const r=x=>x*Math.PI/180,d=x=>x*180/Math.PI,v=p=>[Math.cos(r(p.lat))*Math.cos(r(p.lng)),Math.cos(r(p.lat))*Math.sin(r(p.lng)),Math.sin(r(p.lat))],u=v(a),w=v(b),angle=Math.acos(Math.max(-1,Math.min(1,u.reduce((s,n,i)=>s+n*w[i],0))));
