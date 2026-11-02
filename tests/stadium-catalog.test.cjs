@@ -49,3 +49,12 @@ test('every reference stadium has sourced coordinates and commonly prefixed name
  for(const v of catalog){assert(Number.isFinite(v.lat)&&Number.isFinite(v.lng),v.name);assert.match(v.coordinateSource,/^https:\/\//)}
  for(const [name,iso] of [['Estadio Santiago Bernabeu','ESP'],['Estádio Vail Chaves','BRA'],['Estádio Municipal Cícero de Souza Marques','BRA'],['Rochdalão','BRA']])assert(findStadiumDetails({stadium:name,iso}),name);
 });
+
+test('Vigo additions preserve the collection, add two sourced stadiums and are idempotent across aliases',()=>{
+ vm.runInContext(fs.readFileSync('stadium-additions.js','utf8'),context);
+ const existing={iso:'ESP',city:'Madrid',stadium:'Santiago Bernabéu',notes:'Memória pessoal',photoUrl:'personal'};
+ const first=context.addVigoStadiums([existing]);assert.equal(first.added,2);assert.equal(first.records.length,3);assert.equal(first.records[0],existing);assert.equal(first.records[1].lat,42.1961);assert.equal(first.records[2].lng,-8.75571);assert.equal(first.records[1].date,'');
+ assert.equal(context.addVigoStadiums(first.records).added,0);
+ assert.equal(context.addVigoStadiums([{iso:'ESP',city:'Vigo',stadium:'Campo do Vao'}]).added,1);
+ assert.throws(()=>context.addVigoStadiums(null));
+});

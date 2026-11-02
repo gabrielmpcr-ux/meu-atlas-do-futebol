@@ -1,6 +1,38 @@
 // Public stadium reference data. Sources and image licenses are recorded per entry.
 const stadiumCatalog = [
 {
+  "name": "Estádio O Vao",
+  "aliases": [
+    "Campo do Vao",
+    "O Vao",
+    "Estadio O Vao",
+    "Campo de O Vao"
+  ],
+  "iso": "ESP",
+  "city": "Vigo",
+  "lat": 42.1961,
+  "lng": -8.79194,
+  "club": "Coruxo Fútbol Club",
+  "coordinateSource": "https://es.wikipedia.org/wiki/Campo_do_Vao"
+},
+{
+  "name": "Campo Municipal de Bouzas–Baltasar Pujales",
+  "aliases": [
+    "Campo Municipal de Bouzas-Baltasar Pujales",
+    "Baltasar Pujales",
+    "Campo Baltasar Pujales",
+    "Estádio Baltasar Pujales",
+    "Campo de Bouzas"
+  ],
+  "iso": "ESP",
+  "city": "Vigo",
+  "lat": 42.22679,
+  "lng": -8.75571,
+  "club": "Club Rápido de Bouzas",
+  "address": "Calle Eduardo Cabello, 55, 36208 Vigo, Pontevedra, Espanha",
+  "coordinateSource": "https://es.wikipedia.org/wiki/Campo_municipal_de_Bouzas-Baltasar_Pujales"
+},
+{
   "name": "Estádio Azteca",
   "aliases": [
     "Estadio Azteca",
