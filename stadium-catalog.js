@@ -1,5 +1,27 @@
 // Public stadium reference data. Sources and image licenses are recorded per entry.
 const stadiumCatalog = [
+{
+  "name": "Estádio Azteca",
+  "aliases": [
+    "Estadio Azteca",
+    "Azteca",
+    "Estadio Banorte"
+  ],
+  "iso": "MEX",
+  "city": "Cidade do México",
+  "lat": 19.303,
+  "lng": -99.1505,
+  "coordinateSource": "https://en.wikipedia.org/wiki/Estadio_Azteca",
+  "photo": {
+    "file": "Vista aérea nocturna del Estadio Azteca.jpg",
+    "url": "https://gabrielmpcr-ux.github.io/meu-atlas-do-futebol/assets/editorial/azteca.webp",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/Vista_a%C3%A9rea_nocturna_del_Estadio_Azteca.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Vista_a%C3%A9rea_nocturna_del_Estadio_Azteca.jpg",
+    "author": "ProtoplasmaKid",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+  }
+},
   {
     "name": "Vila Belmiro",
     "iso": "BRA",

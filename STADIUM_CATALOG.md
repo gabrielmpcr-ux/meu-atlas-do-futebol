@@ -8,8 +8,10 @@ As fotos são consultadas no catálogo durante a renderização, com miniaturas 
 
 Cada coordenada e fotografia possui sua fonte no próprio registro. As localizações vêm das categorias geográficas do Wikimedia Commons; Anacleto Campanella usa a localização documentada de uma fotografia do estádio, com precisão aproximada dentro do complexo.
 
-Cobertura atualmente conferida: 48 coordenadas e 50 fotografias em 52 entradas. Pendentes de verificação complementar: coordenadas de Estádio Espanha, Romildo Vitor Gomes Ferreira, José Liberatti e Cícero de Souza Marques; fotos de Estádio Espanha e Romildo Vitor Gomes Ferreira. Não preencher essas lacunas com estimativas não identificadas.
+Cobertura atualmente conferida: 49 coordenadas e 51 fotografias em 53 entradas. Pendentes de verificação complementar: coordenadas de Estádio Espanha, Romildo Vitor Gomes Ferreira, José Liberatti e Cícero de Souza Marques; fotos de Estádio Espanha e Romildo Vitor Gomes Ferreira. Não preencher essas lacunas com estimativas não identificadas.
 
 Validação local: `node --test tests/stadium-catalog.test.cjs`.
 
 Para executar o site: `python3 -m http.server 8001 --bind 127.0.0.1` na raiz do checkout. Nenhuma dependência de build é necessária.
+
+O Estádio Azteca inclui coordenadas verificadas na Wikipedia e fotografia de ProtoplasmaKid sob CC BY 4.0. Registros existentes com coordenadas vazias passam a exibir o marcador sem reimportação; coordenadas e fotos pessoais existentes são preservadas.

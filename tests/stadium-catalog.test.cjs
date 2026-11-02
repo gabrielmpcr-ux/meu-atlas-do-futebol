@@ -38,3 +38,9 @@ test('preserves user coordinates, zero values, partial pairs and unknown stadium
  }
  const unknown={stadium:'Outro estádio',iso:'BRA',lat:'',lng:''};assert.equal(enrichStadium(unknown),unknown);
 });
+
+test('Azteca restores the Mexico City marker without changing personal fields',()=>{
+ const raw={country:'México',iso:'MEX',city:'Cidade do México',stadium:'Estádio Azteca',lat:'',lng:'',notes:'Minha memória',photoUrl:'data:image/jpeg;base64,personal'};
+ const enriched=enrichStadium(raw);assert.equal(enriched.lat,19.303);assert.equal(enriched.lng,-99.1505);assert.equal(raw.lat,'');assert.equal(enriched.notes,raw.notes);assert.equal(enriched.photoUrl,raw.photoUrl);
+ assert.equal(enrichStadium(enriched),enriched);assert.equal(findStadiumDetails({iso:'MEX',stadium:'Estadio Azteca'}).name,'Estádio Azteca');
+});

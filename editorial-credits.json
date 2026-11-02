@@ -1,0 +1,54 @@
+[
+  {
+    "id": "mexico",
+    "src": "assets/editorial/mexico.webp",
+    "title": "Mexico City Skyline (5604867225).jpg",
+    "author": "Francisco Anzola",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mexico_City_Skyline_(5604867225).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Mexico_City_Skyline_%285604867225%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 1920,
+    "height": 1440,
+    "adaptation": "Conversão para WebP; enquadramento na interface por CSS."
+  },
+  {
+    "id": "istanbul",
+    "src": "assets/editorial/istanbul.webp",
+    "title": "Istanbul skyline 01.jpg",
+    "author": "SegLig",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Istanbul_skyline_01.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Istanbul_skyline_01.jpg",
+    "width": 1920,
+    "height": 1080,
+    "adaptation": "Conversão para WebP; enquadramento na interface por CSS."
+  },
+  {
+    "id": "tokyo",
+    "src": "assets/editorial/tokyo.webp",
+    "title": "Minato City, Tokyo, Japan.jpg",
+    "author": "David Kernan",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Minato_City,_Tokyo,_Japan.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/35/Minato_City%2C_Tokyo%2C_Japan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 1920,
+    "height": 1080,
+    "adaptation": "Conversão para WebP; enquadramento na interface por CSS."
+  },
+  {
+    "id": "azteca",
+    "src": "assets/editorial/azteca.webp",
+    "title": "Vista aérea nocturna del Estadio Azteca.jpg",
+    "author": "ProtoplasmaKid",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Vista_a%C3%A9rea_nocturna_del_Estadio_Azteca.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/Vista_a%C3%A9rea_nocturna_del_Estadio_Azteca.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 1920,
+    "height": 1080,
+    "adaptation": "Conversão para WebP; enquadramento na interface por CSS."
+  }
+]
