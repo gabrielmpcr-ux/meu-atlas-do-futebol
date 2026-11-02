@@ -26,3 +26,12 @@ Leaflet: BSD-2-Clause, licença em `vendor/leaflet-LICENSE.txt`. Globe.gl, fonte
 ## Verificação
 
 Testes em Chromium para computador e celular: ambos os mapas, trocas repetidas, carregamento lento, indicadores e consultas, filtros e detalhes dos estádios, rolagem e arraste, preservação dos dados e ausência de rolagem horizontal. Preferência por movimento reduzido verificada. Suíte existente do projeto aprovada.
+
+
+## Coleção de voos e navegação fixa
+
+Os indicadores leem os registros locais: LATAM (inclui nome TAM), GOL, CGH/GRU ↔ SDU/GIG nos dois sentidos e soma de minutos registrados ou estimativa do modelo. A cobertura da duração aparece no indicador; as estimativas são identificadas. Sem inventar dias para registros com apenas ano. A coleção tem busca, companhia, ano, ponte aérea, paginação de 20 e cinco colunas em desktop, três em tablet e duas em celular. Detalhes e rota permanecem na página. O menu usa altura medida para compensar âncoras e marca a seção atual. Nenhuma escrita em localStorage.
+
+Validação: Playwright com dados sintéticos verifica contagens, dois sentidos, filtros, paginação, detalhes, mapa, 5/2 colunas, menu fixo, deslocamento da âncora, largura mobile e preservação do armazenamento.
+
+A fonte ativa é `atlas-01-v2.js`. O gerador histórico em `/workspace/work/v2/build.py` pertence à versão anterior e não deve ser executado sobre esta revisão.
