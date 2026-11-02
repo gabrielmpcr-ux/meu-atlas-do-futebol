@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; connect-src 'self'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'"><title>Baixar backup do Atlas</title><style>body{margin:0;background:#f4f6f4;color:#19352b;font:16px system-ui;display:grid;min-height:100vh;place-items:center}main{max-width:520px;padding:32px;margin:20px;background:white;border:1px solid #d9e3dd;border-radius:16px}h1{font-size:28px;margin-top:0}p{line-height:1.6}a[download]{display:inline-block;background:#254d3a;color:white;padding:15px 22px;border-radius:8px;text-decoration:none;font-weight:700}a[hidden]{display:none}small{display:block;margin-top:20px;color:#59685f;line-height:1.5}.error{color:#9d2525}</style></head><body><main><h1>Backup do Atlas</h1><p id="status" role="status">Preparando o arquivo no seu navegador…</p><p id="summary"></p><a id="download" hidden>Baixar backup atualizado</a><p id="next" hidden>Depois, abra seu Atlas, guarde uma cópia com <b>Exportar dados</b> e importe o arquivo baixado para substituir o histórico.</p><small>A abertura do arquivo ocorre neste navegador. O conteúdo fica criptografado no servidor. Quem possuir o link completo pode abrir o backup; guarde o link junto dos seus documentos pessoais.</small></main><script>
+(async()=>{
+ const params=new URLSearchParams(location.hash.slice(1));
+ const filename=params.get('f'),keyText=params.get('k');
+ history.replaceState(null,'',location.pathname);
+ const status=document.getElementById('status');
+ try{
+  if(!filename||!/^atlas-[a-f0-9]{24}\.json$/.test(filename)||!keyText||!/^[-_A-Za-z0-9]{43}$/.test(keyText))throw Error('Abra o link completo enviado na conversa para acessar seu backup.');
+  if(!crypto.subtle||!globalThis.DecompressionStream)throw Error('Abra este link em uma versão atual do Chrome, Edge, Firefox ou Safari.');
+  const decode=s=>Uint8Array.from(atob(s.replace(/-/g,'+').replace(/_/g,'/').padEnd(Math.ceil(s.length/4)*4,'=')),c=>c.charCodeAt(0));
+  const response=await fetch('./backups/'+filename,{credentials:'omit',cache:'no-store',referrerPolicy:'no-referrer'});
+  if(!response.ok)throw Error('O arquivo ainda não está disponível. Aguarde um minuto e abra novamente o link completo da conversa.');
+  const payload=await response.json();
+  if(payload.version!==1||payload.cipher!=='AES-256-GCM'||payload.compression!=='gzip')throw Error('Formato de arquivo não reconhecido.');
+  const key=await crypto.subtle.importKey('raw',decode(keyText),{name:'AES-GCM'},false,['decrypt']);
+  const zipped=await crypto.subtle.decrypt({name:'AES-GCM',iv:decode(payload.iv)},key,decode(payload.data));
+  const stream=new Blob([zipped]).stream().pipeThrough(new DecompressionStream('gzip'));
+  const bytes=await new Response(stream).arrayBuffer();
+  if(bytes.byteLength>32*1024*1024)throw Error('O arquivo ultrapassa o limite de importação do Atlas.');
+  const backup=JSON.parse(new TextDecoder().decode(bytes));
+  if(backup.version!==2||!Array.isArray(backup.visits)||!Array.isArray(backup.aviation?.flights)||!Array.isArray(backup.aviation?.trips))throw Error('O conteúdo não é um backup completo do Atlas.');
+  const visits=backup.visits,flights=backup.aviation.flights;
+  if(new Set(flights.map(f=>f.id)).size!==flights.length)throw Error('O backup contém identificadores de voo repetidos.');
+  const countries=new Set(visits.map(v=>v.iso.toUpperCase())).size,cities=new Set(visits.map(v=>v.iso.toUpperCase()+'|'+v.city.toLowerCase())).size,stadiums=new Set(visits.filter(v=>v.stadium).map(v=>v.iso+'|'+v.stadium.toLowerCase())).size;
+  status.textContent='Seu arquivo está pronto para baixar.';
+  document.getElementById('summary').textContent=flights.length+' registros de voos · '+stadiums+' estádios · '+cities+' cidades · '+countries+' países';
+  const link=document.getElementById('download');link.href=URL.createObjectURL(new Blob([bytes],{type:'application/json'}));link.download='atlas-backup-atualizado-'+flights.length+'-registros.json';link.hidden=false;
+  document.getElementById('next').hidden=false;
+ }catch(error){status.className='error';status.textContent=error.name==='OperationError'?'Não foi possível abrir o backup. Confira se usou o link completo enviado na conversa.':error.message;}
+})();
+</script></body></html>
