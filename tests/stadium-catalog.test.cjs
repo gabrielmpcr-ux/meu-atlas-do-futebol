@@ -44,3 +44,8 @@ test('Azteca restores the Mexico City marker without changing personal fields',(
  const enriched=enrichStadium(raw);assert.equal(enriched.lat,19.303);assert.equal(enriched.lng,-99.1505);assert.equal(raw.lat,'');assert.equal(enriched.notes,raw.notes);assert.equal(enriched.photoUrl,raw.photoUrl);
  assert.equal(enrichStadium(enriched),enriched);assert.equal(findStadiumDetails({iso:'MEX',stadium:'Estadio Azteca'}).name,'Estádio Azteca');
 });
+
+test('every reference stadium has sourced coordinates and commonly prefixed names resolve',()=>{
+ for(const v of catalog){assert(Number.isFinite(v.lat)&&Number.isFinite(v.lng),v.name);assert.match(v.coordinateSource,/^https:\/\//)}
+ for(const [name,iso] of [['Estadio Santiago Bernabeu','ESP'],['Estádio Vail Chaves','BRA'],['Estádio Municipal Cícero de Souza Marques','BRA'],['Rochdalão','BRA']])assert(findStadiumDetails({stadium:name,iso}),name);
+});

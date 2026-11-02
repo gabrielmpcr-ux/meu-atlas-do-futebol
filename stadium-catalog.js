@@ -58,6 +58,10 @@ const stadiumCatalog = [
   },
   {
     "name": "Estádio Espanha",
+    "lat": -23.94575,
+    "lng": -46.36406,
+    "coordinateSource": "https://mapcarta.com/W108138615",
+    "aliases": ["Estadio Espanha", "Estádio da Caneleira"],
     "iso": "BRA",
     "city": "Santos"
   },
@@ -234,11 +238,19 @@ const stadiumCatalog = [
   },
   {
     "name": "Romildo Vitor Gomes Ferreira",
+    "lat": -22.43948,
+    "lng": -46.96204,
+    "coordinateSource": "https://mapcarta.com/pt/W154337589",
+    "aliases": ["Estádio Romildo Vitor Gomes Ferreira", "Estádio Vail Chaves", "Vail Chaves", "Romildão"],
     "iso": "BRA",
     "city": "Mogi Mirim"
   },
   {
     "name": "Estádio José Liberatti",
+    "lat": -23.51111111,
+    "lng": -46.77611111,
+    "coordinateSource": "https://pt.wikipedia.org/wiki/Estádio_Municipal_Prefeito_José_Liberatti",
+    "aliases": ["Estádio Municipal Prefeito José Liberatti", "Estádio Municipal José Liberatti", "Rochdalão"],
     "iso": "BRA",
     "city": "Osasco",
     "photo": {
@@ -406,6 +418,10 @@ const stadiumCatalog = [
   },
   {
     "name": "Municipal Cícero de Souza Marques",
+    "lat": -22.9509,
+    "lng": -46.5302,
+    "coordinateSource": "https://en.wikipedia.org/wiki/Estádio_Cícero_de_Souza_Marques",
+    "aliases": ["Estádio Municipal Cícero de Souza Marques", "Estádio Cícero de Souza Marques"],
     "iso": "BRA",
     "city": "Bragança Paulista",
     "photo": {
@@ -726,6 +742,7 @@ const stadiumCatalog = [
   },
   {
     "name": "Santiago Bernabéu",
+    "aliases": ["Estadio Santiago Bernabéu", "Estádio Santiago Bernabéu", "Bernabéu", "Santiago Bernabeu Stadium"],
     "iso": "ESP",
     "city": "Madrid",
     "lat": 40.45306,
