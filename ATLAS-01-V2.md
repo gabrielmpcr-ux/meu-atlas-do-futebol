@@ -35,3 +35,10 @@ Os indicadores leem os registros locais: LATAM (inclui nome TAM), GOL, CGH/GRU �
 Validação: Playwright com dados sintéticos verifica contagens, dois sentidos, filtros, paginação, detalhes, mapa, 5/2 colunas, menu fixo, deslocamento da âncora, largura mobile e preservação do armazenamento.
 
 A fonte ativa é `atlas-01-v2.js`. O gerador histórico em `/workspace/work/v2/build.py` pertence à versão anterior e não deve ser executado sobre esta revisão.
+
+
+## Panorama e filtros avançados de voos
+
+Nacionais são trechos com ambos os aeroportos no Brasil. Internacionais cruzam países e abrem por padrão em saídas do Brasil; seletor permite retornos, trechos entre outros países e todos. Trechos domésticos em países estrangeiros e registros sem país conhecido permanecem em Todos, evitando classificações falsas. País/aeroporto vêm do catálogo com fallback nos campos do registro. Busca, companhia, ano, ponte aérea, país de destino, origem e chegada são cumulativos. Ordenação por ano e dia/mês disponíveis, sem atribuir datas completas a registros parciais; anos ausentes ficam ao final.
+
+O panorama agrega todos os resultados antes da paginação, com percursos direcionais, países/cidades de destino e cobertura de duração. Os registros individuais ficam fechados até pedido explícito ou clique em um percurso. Mudança de filtro retorna ao consolidado. A grade mantém paginação de 20. Teste Playwright cobre classificação, escopos internacionais, consolidação anterior à lista, combinação de filtros, ordenação, rota agrupada, mobile e armazenamento intacto.
