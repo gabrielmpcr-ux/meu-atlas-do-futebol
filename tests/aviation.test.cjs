@@ -20,3 +20,13 @@ test('fills duration gaps from known airports without mutating recorded flight d
  assert.equal(c.aviationDuration(flight({...raw,origin:'GRU',destination:'GRU',minutes:null})),null);
  assert.equal(c.aviationDuration(flight({id:'p',kind:'presumed',origin:'ASU',destinationCity:'São Paulo'})),null);
 });
+
+test('recognizes added destinations and separates the two Istanbul airport locations',()=>{
+ for(const code of ['UIO','OPO','MEX','NRT','BSB','IST','ISL']){
+  const a=airport(code);assert(a,code);assert(Number.isFinite(a.lat)&&Math.abs(a.lat)<=90);assert(Number.isFinite(a.lng)&&Math.abs(a.lng)<=180);
+  assert.doesNotThrow(()=>new Intl.DateTimeFormat('en',{timeZone:a.timezone}).format(0));
+  const f=flight({...raw,id:code,destination:code});assert(f.km>0);assert(f.destinationCity);assert(f.destinationCountry);
+ }
+ const domestic=flight({...raw,origin:'UIO',destination:'GYE'});assert.equal(domestic.originCountry,domestic.destinationCountry);assert(domestic.km>200&&domestic.km<350);
+ const old=airport('ISL'),current=airport('IST');assert(old.lat<41&&current.lat>41);assert.notEqual(old.lng,current.lng);
+});
