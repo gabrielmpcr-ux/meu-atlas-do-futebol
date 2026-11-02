@@ -1,5 +1,13 @@
 // Generic public airport reference. Contains no personal flight history.
 const aviationAirports={
+ "IST": {"city": "Istambul", "country": "Turquia", "lat": 41.275278, "lng": 28.751944, "timezone": "Europe/Istanbul", "name": "Istanbul Airport", "source": "https://raw.githubusercontent.com/jpatokal/openflights/master/data/airports.dat"},
+ "ISL": {"city": "Istambul", "country": "Turquia", "lat": 40.976898, "lng": 28.8146, "timezone": "Europe/Istanbul", "name": "Atatürk International Airport", "source": "https://raw.githubusercontent.com/jpatokal/openflights/master/data/airports.dat", "note": "Atatürk usava o código IST antes da transferência de operações comerciais em 2019. Use esta localização para referências históricas ao antigo aeroporto."},
+ "NRT": {"city": "Tóquio", "country": "Japão", "lat": 35.7647018433, "lng": 140.386001587, "timezone": "Asia/Tokyo", "name": "Narita International Airport", "source": "https://raw.githubusercontent.com/jpatokal/openflights/master/data/airports.dat"},
+ "OPO": {"city": "Porto", "country": "Portugal", "lat": 41.2481002808, "lng": -8.68138980865, "timezone": "Europe/Lisbon", "name": "Francisco de Sá Carneiro Airport", "source": "https://raw.githubusercontent.com/jpatokal/openflights/master/data/airports.dat"},
+ "MEX": {"city": "Cidade do México", "country": "México", "lat": 19.4363, "lng": -99.072098, "timezone": "America/Mexico_City", "name": "Licenciado Benito Juarez International Airport", "source": "https://raw.githubusercontent.com/jpatokal/openflights/master/data/airports.dat"},
+ "BSB": {"city": "Brasília", "country": "Brasil", "lat": -15.86916732788086, "lng": -47.920833587646484, "timezone": "America/Sao_Paulo", "name": "Presidente Juscelino Kubistschek International Airport", "source": "https://raw.githubusercontent.com/jpatokal/openflights/master/data/airports.dat"},
+ "UIO": {"city": "Quito", "country": "Equador", "lat": -0.129166666667, "lng": -78.3575, "timezone": "America/Guayaquil", "name": "Mariscal Sucre International Airport", "source": "https://raw.githubusercontent.com/jpatokal/openflights/master/data/airports.dat"},
+
  "CGH": {
   "city": "São Paulo",
   "country": "Brasil",
