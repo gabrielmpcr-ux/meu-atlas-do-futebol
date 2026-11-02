@@ -42,3 +42,10 @@ A fonte ativa é `atlas-01-v2.js`. O gerador histórico em `/workspace/work/v2/b
 Nacionais são trechos com ambos os aeroportos no Brasil. Internacionais cruzam países e abrem por padrão em saídas do Brasil; seletor permite retornos, trechos entre outros países e todos. Trechos domésticos em países estrangeiros e registros sem país conhecido permanecem em Todos, evitando classificações falsas. País/aeroporto vêm do catálogo com fallback nos campos do registro. Busca, companhia, ano, ponte aérea, país de destino, origem e chegada são cumulativos. Ordenação por ano e dia/mês disponíveis, sem atribuir datas completas a registros parciais; anos ausentes ficam ao final.
 
 O panorama agrega todos os resultados antes da paginação, com percursos direcionais, países/cidades de destino e cobertura de duração. Os registros individuais ficam fechados até pedido explícito ou clique em um percurso. Mudança de filtro retorna ao consolidado. A grade mantém paginação de 20. Teste Playwright cobre classificação, escopos internacionais, consolidação anterior à lista, combinação de filtros, ordenação, rota agrupada, mobile e armazenamento intacto.
+
+
+## Menu do panorama
+
+Os cinco totais são botões com estado expandido. Inicialmente nenhuma visualização é aberta. Voos, percursos direcionais, países de destino, cidades de destino e tempo por companhia compartilham o mesmo painel; alternar visualizações preserva os filtros. Alterar filtros atualiza o painel ativo. Horas indicam cobertura e estimativas. Países/cidades exibem contagem de chegadas por trecho, não alegam visitas fora do aeroporto. Percursos e destinos permitem aprofundar nos voos. Recolher fecha o painel. Cards de cidade têm controle para remover o recorte de cidade; limpar filtros restaura o panorama inicial.
+
+Verificação Playwright: cinco painéis, recolhimento inicial, manutenção de filtros/painel, classificação nacional/internacional, escopos, filtros de aeroporto/país, ordenação, rota, largura mobile e armazenamento intacto.
