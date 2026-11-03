@@ -1,0 +1,18 @@
+# Logotipos das competições
+
+Identificação das competições informadas pelo responsável pelo Atlas. As marcas pertencem aos seus respectivos titulares; não indicam patrocínio ou parceria. As licenças das fotografias editoriais não se estendem automaticamente a estas marcas.
+
+- **Campeonato Paulista**: [referência](https://commons.wikimedia.org/wiki/File:LOGO_PAULISTÃO_2024.svg); [arquivo consultado](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/LOGO_PAULIST%C3%83O_2024.svg/250px-LOGO_PAULIST%C3%83O_2024.svg.png).
+- **Copa do Brasil**: [referência](https://en.wikipedia.org/wiki/Copa_do_Brasil); [arquivo consultado](https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Copa_do_Brasil_logo_%282018%29.svg/250px-Copa_do_Brasil_logo_%282018%29.svg.png).
+- **Brasileirão**: [referência](https://en.wikipedia.org/wiki/Campeonato_Brasileiro_S%C3%A9rie_A); [arquivo consultado](https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Campeonato_Brasileiro_S%C3%A9rie_A_logo_%282026%29.svg/250px-Campeonato_Brasileiro_S%C3%A9rie_A_logo_%282026%29.svg.png).
+- **Taça São Paulo**: [referência](https://commons.wikimedia.org/wiki/File:Copa_São_Paulo_de_Futebol_Júnior_(Copinha)_logo.png); [arquivo consultado](https://upload.wikimedia.org/wikipedia/commons/0/03/Copa_S%C3%A3o_Paulo_de_Futebol_J%C3%BAnior_%28Copinha%29_logo.png).
+- **CONMEBOL Libertadores**: [referência](https://en.wikipedia.org/wiki/Copa_Libertadores); [arquivo consultado](https://thumb.wikimedia.org/wikipedia/en/thumb/a/a1/Copa_Libertadores_logo.svg/250px-Copa_Libertadores_logo.svg.png).
+- **CONMEBOL Sudamericana**: [referência](https://en.wikipedia.org/wiki/Copa_Sudamericana); [arquivo consultado](https://thumb.wikimedia.org/wikipedia/en/thumb/c/c2/CONMEBOL_Sudamericana_logo_%282017%29.svg/250px-CONMEBOL_Sudamericana_logo_%282017%29.svg.png).
+- **CONMEBOL Recopa**: [referência](https://en.wikipedia.org/wiki/Recopa_Sudamericana); [arquivo consultado](https://thumb.wikimedia.org/wikipedia/en/thumb/4/48/Recopa_sudamericana_logo.png/250px-Recopa_sudamericana_logo.png).
+- **CONMEBOL Libertadores Feminina**: [referência](https://en.wikipedia.org/wiki/Copa_Libertadores_Femenina); [arquivo consultado](https://thumb.wikimedia.org/wikipedia/en/thumb/6/69/Conmebol_libertadores_femenina_logo.png/250px-Conmebol_libertadores_femenina_logo.png).
+- **Olimpíadas**: [referência](https://en.wikipedia.org/wiki/Olympic_Games); [arquivo consultado](https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Olympic_rings_without_rims.svg/250px-Olympic_rings_without_rims.svg.png).
+- **UEFA Champions League**: [referência](https://en.wikipedia.org/wiki/UEFA_Champions_League); [arquivo consultado](https://thumb.wikimedia.org/wikipedia/en/thumb/f/f5/UEFA_Champions_League.svg/250px-UEFA_Champions_League.svg.png).
+- **La Liga**: [referência](https://en.wikipedia.org/wiki/La_Liga); [arquivo consultado](https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/LaLiga_EA_Sports_2023_Vertical_Logo.svg/250px-LaLiga_EA_Sports_2023_Vertical_Logo.svg.png).
+- **Copa do Mundo FIFA**: [referência](https://en.wikipedia.org/wiki/FIFA_World_Cup); [arquivo consultado](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/FIFA_World_Cup_wordmark_%282023%29.svg/250px-FIFA_World_Cup_wordmark_%282023%29.svg.png).
+- **Copa do Nordeste**: [referência](https://en.wikipedia.org/wiki/Copa_do_Nordeste); [arquivo consultado](https://thumb.wikimedia.org/wikipedia/en/thumb/0/05/Copa_do_Nordeste.png/250px-Copa_do_Nordeste.png).
+- **Liga Mexicana**: [referência](https://en.wikipedia.org/wiki/Liga_MX); [arquivo consultado](https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Liga_MX_logo.svg/250px-Liga_MX_logo.svg.png).

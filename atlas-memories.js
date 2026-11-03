@@ -6,7 +6,7 @@ if(!section||section.dataset.mosaicReady)return;
 section.dataset.mosaicReady='true';
 section.classList.add('personal-memories');
 section.setAttribute('aria-labelledby','memoriesTitle');
-section.innerHTML='<div class="section-title memories-title"><div><span class="eyebrow">MEMÓRIAS</span><h2 id="memoriesTitle">As viagens passam.<br><em>As memórias ficam.</em></h2></div><p>Um mosaico de momentos. Todas as fotos, juntas.</p></div><div class="memories-mosaic" role="group" aria-label="Mosaico de fotos pessoais"></div>';
+section.innerHTML='<div class="section-title memories-title"><div><span class="eyebrow">MEMÓRIAS</span><h2 id="memoriesTitle">As viagens passam. As memórias ficam.</h2><p>Um mosaico de momentos. Todas as fotos, juntas.</p></div></div><div class="memories-mosaic" role="group" aria-label="Mosaico de fotos pessoais"></div>';
 const grid=section.querySelector('.memories-mosaic');
 for(const [i,p] of photos.entries()){
  const button=document.createElement('button');button.type='button';button.className='memories-tile';
