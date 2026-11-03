@@ -68,6 +68,15 @@ Referências públicas acrescentadas: Estádio O Vao/Coruxo (42.1961, -8.79194) 
 
 Salvamento lê a base bruta e altera somente o registro pretendido, preservando campos desconhecidos, fotografias, jogos e vínculos. Não persiste dados demonstrativos. Detecta alterações em outra aba antes da gravação. Código de aeroporto novo exige cidade/país; sem referência de coordenadas, o voo fica na coleção e não desenha rota fictícia. Datas parciais continuam parciais. Exclusão exige confirmação e atualiza as referências dos voos nos grupos. Backup completo JSON pode ser baixado na central de gerenciamento. Operações somente locais, sem envio de fotos ou dados ao servidor. Recarregamento após salvar atualiza mapa, galeria e indicadores.
 
-A promoção do layout a `index.html` continua separada desta entrega. As páginas anteriores permanecem disponíveis; os caminhos de edição e inclusão no novo layout não dependem delas. Importação/restauração de backup e criação/edição de grupos de viagem ainda pertencem ao gerenciamento anterior e não foram substituídas nesta entrega.
+A integração de gerenciamento foi entregue antes da promoção descrita na seção seguinte. As páginas anteriores permanecem disponíveis; os caminhos de edição e inclusão no novo layout não dependem delas. Importação/restauração de backup e criação/edição de grupos de viagem ainda pertencem ao gerenciamento anterior e não foram substituídas nesta entrega.
 
 Verificação de navegador com registros sintéticos: inclusão/edição de cada tipo; validação de datas; preservação de fotos, jogos, grupos e campos extras; upload e compressão de foto; registro de jogo; exclusão de voo e limpeza de referência; backup baixado e conferido; conflito entre abas; formulário mobile sem transbordamento. Não são usadas capturas ou dados pessoais na publicação.
+
+
+## Página principal
+
+`index.html` agora serve o novo Atlas. A barra de comparação, nomes de prévia e links para propostas foram retirados da experiência ativa. `atlas-01-v2.html` e `conceito-1.html` continuam compatíveis com os links anteriores. A página de entrada principal tem título e descrição próprios e não carrega o marcador noindex das propostas. Uma sessão sem coleção continua claramente identificada como demonstrativa; exemplos não são gravados na coleção pessoal.
+
+`atlas-classico.html` preserva o HTML da página principal anterior, obtido do commit remoto vigente antes da troca, com apenas um aviso e link de retorno. Mantém importação/restauração e grupos de viagem. Link disponível no rodapé e em Gerenciar meu Atlas. Recursos relativos continuam na mesma pasta. O novo ambiente e o anterior leem as mesmas chaves e a mesma origem de armazenamento. Não há migração, limpeza ou substituição automática dos dados. Âncoras históricas de voos, destinos, mapa e jogos são direcionadas às novas seções.
+
+Testes: página raiz em desktop/mobile, dados demonstrativos identificados, ausência de comparador, preservação byte a byte do localStorage ao navegar, globo 3D e mapa 2D, galeria/detalhes, gerenciamento, links de retorno e âncoras antigas. Teste completo de inclusão/edição, fotos, jogos, backup e exclusão executado também pela página raiz.
