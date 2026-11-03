@@ -1,0 +1,29 @@
+/* Full-width personal memories, independent of travel and stadium data. */
+.atlas-v2 .personal-memories{margin-bottom:0}
+.atlas-v2 .memories-title{align-items:flex-end;margin-bottom:34px}
+.atlas-v2 .memories-title h2{font-size:clamp(34px,4.2vw,60px);line-height:1.12;letter-spacing:-1.5px}
+.atlas-v2 .memories-title h2 em{font-family:Georgia,serif;font-style:italic;font-weight:400;color:var(--gold-dark)}
+.atlas-v2 .memories-title p{max-width:310px;font-size:13px;color:var(--muted);line-height:1.7}
+.memories-mosaic{position:relative;left:50%;transform:translateX(-50%);width:var(--memory-viewport,100%);display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-auto-rows:clamp(125px,12.5vw,190px);gap:2px;background:var(--night,#15222a)}
+.memories-tile{position:relative;grid-column:span var(--memory-span,3);height:100%;width:100%;min-width:0;display:block;overflow:hidden;border:0;border-radius:0;margin:0;padding:0;background:#263640;cursor:pointer}
+.memories-tile img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 43%;transition:transform .45s}
+.memories-expand{position:absolute;right:12px;bottom:12px;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#14232ac9;color:white;font-size:22px;opacity:0;transition:opacity .2s}
+.memories-tile:hover img{transform:scale(1.035)}
+.memories-tile:hover .memories-expand,.memories-tile:focus-visible .memories-expand{opacity:1}
+.memories-tile:focus-visible{outline:3px solid var(--gold,#f2bd30);outline-offset:-3px}
+.memories-tile.memory-waiting{opacity:0;transition:opacity .65s}
+.memories-tile.memory-revealed{opacity:1}
+.memories-lightbox{position:fixed;inset:0;width:min(1100px,94vw);max-width:94vw;max-height:94dvh;margin:auto;padding:0;border:0;border-radius:6px;background:#132330;color:#fff;overflow:auto}
+.memories-lightbox::backdrop{background:#08141de8}
+.memories-full-photo{display:block;width:100%;height:75dvh;object-fit:contain}
+.memories-lightbox button{display:grid;place-items:center;min-width:44px;min-height:44px;border:1px solid #ffffff40;border-radius:50%;padding:5px;background:#1b2b39;color:#fff;font-size:22px;cursor:pointer}
+.memories-lightbox .memories-close{position:absolute;right:12px;top:12px;z-index:1}
+.memories-controls{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 18px}
+.memories-position{font-size:12px;font-variant-numeric:tabular-nums;color:#d8e1e7}
+@media(max-width:850px){.memories-mosaic{grid-auto-rows:140px}.memories-tile{grid-column:span 4}.atlas-v2 .memories-title{display:block}.atlas-v2 .memories-title p{margin-top:20px;max-width:none}}
+@media(max-width:600px){.memories-mosaic{grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-rows:110px}.memories-tile{grid-column:span 2}.atlas-v2 .memories-title h2{letter-spacing:-1px}.memories-full-photo{height:68dvh}}
+@media(hover:none){.memories-tile:hover img{transform:none}}
+@media(prefers-reduced-motion:reduce){.memories-tile,.memories-tile img,.memories-expand{animation:none!important;transition:none!important}.memories-tile.memory-waiting{opacity:1}}
+
+.atlas-v2 #memories.personal-memories{scroll-margin-top:calc(var(--atlas-nav-height,100px) + 10px)}
+.memories-expand svg{width:18px;height:18px}
