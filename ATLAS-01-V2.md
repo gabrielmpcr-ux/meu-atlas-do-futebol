@@ -100,3 +100,11 @@ Os quatro cards superiores agora mostram total geral de voos, total de trechos i
 Um único painel substitui abas de tipo, opções expansíveis e bloco separado de busca: busca, tipo (todos/nacionais Brasil/internacionais/ponte aérea), companhia, ano, país de destino, saída e chegada. Trajeto internacional, no mesmo padrão de campo, aparece somente quando pertinente. Ordenação e limpeza no rodapé do painel. Etiquetas mostram cada filtro e permitem removê-lo individualmente, incluindo o recorte de cidade de um aprofundamento anterior. Os filtros se cruzam por interseção, preservam o painel de resultado ativo e não gravam dados. A busca aceita palavras em qualquer ordem. Limpar retorna a todos os voos sem trocar a visualização ativa.
 
 Playwright: indicadores dinâmicos, painel único sem abas/expansores, internacional incluindo ida/volta e trechos externos, combinação de seis campos, remoção de etiquetas, limpeza, nacional, ponte aérea, horas, busca multi-palavra, grade 5/2 colunas, largura mobile e armazenamento inalterado.
+
+## Ordem do menu e agrupamento de Avellaneda
+
+Menu principal segue a ordem das seções na landing page: Explorar o mundo, Estádios, Minhas viagens, Memórias. Navegação fixa, compensação da altura e indicação da seção ativa preservadas.
+
+A pedido do proprietário, a apresentação da coleção agrupa Avellaneda (Argentina) sob Buenos Aires para exploração e contagem de cidades, sem alterar o local real dos estádios. O detalhe mantém “Buenos Aires · Avellaneda”; busca da galeria reconhece o município original. O registro bruto e as coordenadas pessoais permanecem intactos, inclusive no editor e no backup. Referência geográfica: https://www.mda.gob.ar/ciudad/avellaneda/ — Avellaneda é município próprio na área metropolitana, não bairro da CABA; o agrupamento é uma convenção de apresentação deste Atlas, não alteração administrativa. O ponto sem coordenadas de uma visita municipal ainda utiliza a referência original de Avellaneda, não o centro de Buenos Aires.
+
+Playwright: ordem do menu em desktop/mobile, contador agrupado, estádios preservados, busca Avellaneda, detalhe, localização e editor com coordenadas originais, âncora abaixo do menu e nenhum armazenamento modificado.
