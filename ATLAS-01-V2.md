@@ -91,3 +91,12 @@ Viagens: criar, editar nome/lembrança, selecionar trechos, ordenar manualmente,
 Não há links para ambiente antigo. `atlas-classico.html`, `conceitos.html`, `conceito-1-v1.html`, `conceito-2.html` e `conceito-3.html` apenas redirecionam para o Atlas principal, preservando parâmetros e âncoras. O histórico Git mantém os layouts anteriores. `atlas-01-v2.html` e `conceito-1.html` permanecem aliases da mesma aplicação atual.
 
 Testes unitários em `tests/atlas-transfer.test.cjs`: formatos de backup, rejeição de conteúdo inválido, preservação de campos, mesclagem sem duplicação, remapeamento dos vínculos e ordem dos trechos. Playwright cobre CRUD e ordem de viagem, associação/exclusão, jogo parcial, substituição de voo, CSV filtrado, arquivo inválido, prévia sem escrita, importação mesclada, restauração integral, reversão por quota, metadados, mobile e redirecionamento. Regressão do gerenciamento de voos/cidades/estádios, fotos, jogos e backup também passou.
+
+
+## Filtros unificados e indicadores gerais
+
+Os quatro cards superiores agora mostram total geral de voos, total de trechos internacionais entre países diferentes, ponte aérea SP ↔ RJ nos dois sentidos e horas. Valores calculados da base local, sem fixar 240. Clicar no internacional seleciona todos os sentidos internacionais por padrão (não apenas saída do Brasil). Horas abre a distribuição por companhia; outros atalhos abrem o panorama.
+
+Um único painel substitui abas de tipo, opções expansíveis e bloco separado de busca: busca, tipo (todos/nacionais Brasil/internacionais/ponte aérea), companhia, ano, país de destino, saída e chegada. Trajeto internacional, no mesmo padrão de campo, aparece somente quando pertinente. Ordenação e limpeza no rodapé do painel. Etiquetas mostram cada filtro e permitem removê-lo individualmente, incluindo o recorte de cidade de um aprofundamento anterior. Os filtros se cruzam por interseção, preservam o painel de resultado ativo e não gravam dados. A busca aceita palavras em qualquer ordem. Limpar retorna a todos os voos sem trocar a visualização ativa.
+
+Playwright: indicadores dinâmicos, painel único sem abas/expansores, internacional incluindo ida/volta e trechos externos, combinação de seis campos, remoção de etiquetas, limpeza, nacional, ponte aérea, horas, busca multi-palavra, grade 5/2 colunas, largura mobile e armazenamento inalterado.
