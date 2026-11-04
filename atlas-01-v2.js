@@ -62,7 +62,7 @@ const header=$('.preview-header'),links=[...document.querySelectorAll('.main-nav
 let clicked='',releaseTimer;
 const activate=id=>links.forEach(a=>{if(a.hash==='#'+id)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current')});
 const measure=()=>{document.documentElement.style.setProperty('--atlas-nav-height',Math.ceil(header.getBoundingClientRect().height)+'px');document.documentElement.style.setProperty('--atlas-page-width',document.documentElement.clientWidth+'px')};
-for(const id of ['stadiums','journeys','memories']){const section=$('#'+id);if(section){const divider=document.createElement('div');divider.className='atlas-section-divider';divider.setAttribute('aria-hidden','true');section.before(divider)}}
+for(const id of ['stadiums','journeys','memories']){const section=$('#'+id);if(section){const divider=document.createElement('div');divider.className='atlas-section-transition';divider.setAttribute('aria-hidden','true');divider.innerHTML='<span class="atlas-transition-mist"></span>';section.before(divider)}}
 const update=()=>{header.classList.toggle('is-compact',scrollY>100||(header.classList.contains('is-compact')&&scrollY>24));if(clicked){activate(clicked);return}const top=header.getBoundingClientRect().bottom+42;let active=sections[0]?.id;for(const section of sections)if(section.getBoundingClientRect().top<=top)active=section.id;if(scrollY>100&&innerHeight+scrollY>=document.documentElement.scrollHeight-2)active=sections.at(-1)?.id;activate(active)};
 const schedule=()=>update();
 const release=()=>{clicked='';clearTimeout(releaseTimer);schedule()};
@@ -71,6 +71,14 @@ new ResizeObserver(()=>{measure();schedule()}).observe(header);addEventListener(
 addEventListener('scroll',()=>{schedule();if(clicked){clearTimeout(releaseTimer);releaseTimer=setTimeout(finishNavigation,280)}},{passive:true});
 addEventListener('pointerdown',e=>{if(!e.target.closest('.main-nav a'))release()},{passive:true});addEventListener('wheel',release,{passive:true});addEventListener('touchstart',release,{passive:true});addEventListener('keydown',e=>{if(['ArrowDown','ArrowUp','PageDown','PageUp','Home','End',' '].includes(e.key))release()});
 links.forEach(a=>a.addEventListener('click',e=>{const section=$(a.hash);if(!section)return;e.preventDefault();clicked=section.id;activate(clicked);clearTimeout(releaseTimer);section.scrollIntoView({behavior:reduced?'auto':'smooth',block:'start'});history.replaceState(null,'',a.hash);releaseTimer=setTimeout(finishNavigation,1800)}));measure();update();
+}
+
+function initializeSectionAtmosphere(){
+const boundaries=[...document.querySelectorAll('.atlas-section-transition')],visible=new Set(),motion=matchMedia('(prefers-reduced-motion: reduce)'),desktop=matchMedia('(min-width: 761px)');let queued=false;
+const paint=()=>{queued=false;for(const el of boundaries){const y=visible.has(el)&&desktop.matches&&!motion.matches?Math.max(-24,Math.min(24,(innerHeight/2-el.getBoundingClientRect().top)*.055)):0;el.style.setProperty('--mist-shift',y+'px')}};
+const schedule=()=>{if(!queued){queued=true;requestAnimationFrame(paint)}};
+const observer=new IntersectionObserver(entries=>{for(const entry of entries){if(entry.isIntersecting)visible.add(entry.target);else visible.delete(entry.target)}schedule()},{rootMargin:'240px'});boundaries.forEach(el=>observer.observe(el));
+addEventListener('scroll',()=>{if(desktop.matches&&!motion.matches&&visible.size)schedule()},{passive:true});addEventListener('resize',schedule,{passive:true});motion.addEventListener('change',schedule);desktop.addEventListener('change',schedule);schedule();
 }
 
 function sideTrips(){return `<aside class="journey-sidebar"><span class="eyebrow">BIBLIOTECA DE VIAGENS</span><h2>Para onde vamos?</h2><label class="sidebar-search"><span class="sr-only">Buscar viagem</span><input id="tripSearch" type="search" placeholder="Buscar destino ou viagem…"></label><div class="side-trip-list">${aviation.trips.map(t=>{const fs=aviation.flights.filter(f=>t.flightIds.includes(f.id));return `<button data-trip="${esc(t.id)}">${icon('plane')}<span><strong>${esc(t.name)}</strong><small>${fs.length} trechos · ${fs[0]?.year||'Ano a confirmar'}</small></span>${icon('arrow')}</button>`}).join('')}</div></aside>`}
@@ -120,7 +128,7 @@ make2d();$('.map-stage').classList.add('is-2d');$('#playJourney').disabled=true;
 $('#resetView').onclick=()=>{stopPlayback();if(view==='3d'&&globe)globe.pointOfView({lat:12,lng:-28,altitude:2.3},reduced?0:900);else map.fitBounds([[-60,-180],[82,180]],{padding:[12,12],animate:!reduced})};
 document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>setView(b.dataset.view));
 document.querySelectorAll('[data-layer]').forEach(b=>b.onclick=()=>{stopPlayback();mapLayer=b.dataset.layer;document.querySelectorAll('[data-layer]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));update2d();update3d()});
-initializeCollections();initializeRails();initializeFlights();initializeNavigation();
+initializeCollections();initializeRails();initializeFlights();initializeNavigation();initializeSectionAtmosphere();
 document.querySelectorAll('[data-trip]').forEach(b=>b.onclick=()=>{selectTrip(b.dataset.trip);$('#explore').scrollIntoView({behavior:reduced?'auto':'smooth',block:'start'})});
 function focusCountry(iso){const ps=points.filter(p=>p.iso===iso);stopPlayback();selectedTrip='';selectedFlight=null;$('#tripSelect').value='';mapLayer='all';document.querySelectorAll('[data-layer]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.layer==='all')));update2d();update3d();const name=visits.find(v=>v.iso===iso)?.country||iso;if(ps.length){if(view==='3d'&&globe){const lat=ps.reduce((n,p)=>n+p.lat,0)/ps.length,lng=Math.atan2(ps.reduce((n,p)=>n+Math.sin(p.lng*Math.PI/180),0),ps.reduce((n,p)=>n+Math.cos(p.lng*Math.PI/180),0))*180/Math.PI;globe.pointOfView({lat,lng,altitude:1.4},reduced?0:1000)}else map.fitBounds(ps.map(p=>[p.lat,p.lng]),{maxZoom:7,padding:[45,45]})}$('#mapCaption').textContent=name;$('#explore').scrollIntoView({behavior:reduced?'auto':'smooth',block:'start'});$('#mapPlace').hidden=false;$('#placeKind').textContent='CIDADES E ESTÁDIOS VISITADOS';$('#placeTitle').textContent=name;$('#placeDescription').innerHTML=countryCityMarkup(iso,true);$('#placeExplore').innerHTML='Ver coleção de estádios '+icon('arrow');$('#placeExplore').onclick=()=>{$('#stadiumCountry').value=iso;galleryState.iso=iso;galleryState.q='';$('#stadiumSearch').value='';galleryState.limit=6;renderGallery();$('#stadiums').scrollIntoView({behavior:reduced?'auto':'smooth'})}}
 

@@ -3,8 +3,8 @@
 .atlas-v2 .gr-wordmark img{display:block;width:168px;height:auto;max-width:100%}
 .atlas-v2 .preview-header.is-compact .gr-wordmark img{width:136px}
 .atlas-v2 .preview-footer .gr-wordmark img{width:118px}
-.gr-intro{position:fixed;inset:0;z-index:5000;display:grid;place-items:center;background:#fafaf8;opacity:1;transition:opacity .24s ease;animation:gr-intro-safety 0s 12s forwards}
-.gr-intro-mark{width:clamp(260px,34vw,420px);max-width:80vw}
+.gr-intro{position:fixed;inset:0;z-index:5000;display:grid;place-items:center;background:#fafaf8;opacity:1;overflow:hidden;isolation:isolate;transition:opacity .6s ease;animation:gr-intro-safety 0s 16s forwards}
+.gr-intro-mark{position:relative;z-index:2;width:clamp(260px,34vw,420px);max-width:80vw}
 .gr-intro-mark svg{display:block;width:100%;height:auto;overflow:visible}
 .gr-intro-name{animation:gr-name-reveal .85s .13s cubic-bezier(.22,.7,.28,1) both}
 .gr-intro-square{transform-box:fill-box;transform-origin:center;animation:gr-square-arrive 1s cubic-bezier(.22,.7,.28,1) both,gr-square-breathe 1.8s 1s ease-in-out infinite}
@@ -15,3 +15,11 @@
 @keyframes gr-intro-safety{to{visibility:hidden;pointer-events:none}}
 @media(max-width:760px){.atlas-v2 .preview-header .gr-wordmark img{width:144px}.atlas-v2 .preview-header.is-compact .gr-wordmark img{width:120px}}
 @media(prefers-reduced-motion:reduce){.gr-intro-name,.gr-intro-square{animation:none}.gr-intro{transition:none}}
+
+/* A quiet photographic backdrop, reusing the approved memory collection. */
+.gr-intro-mosaic{position:absolute;z-index:0;inset:-6%;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-template-rows:repeat(4,minmax(0,1fr));gap:4px;opacity:.52;filter:grayscale(.55) saturate(.6);animation:gr-mosaic-drift 14s ease-in-out infinite alternate;pointer-events:none}
+.gr-intro-mosaic img{display:block;width:100%;height:100%;min-width:0;min-height:0;object-fit:cover}
+.gr-intro::before{content:"";position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse at center,#fafaf8f5 0%,#fafaf8da 23%,#fafaf880 63%,#fafaf85c 100%);pointer-events:none}
+@keyframes gr-mosaic-drift{from{transform:translate3d(-.6%,-.5%,0) scale(1.015)}to{transform:translate3d(.6%,.5%,0) scale(1.04)}}
+@media(max-width:760px){.gr-intro-mosaic{grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(6,minmax(0,1fr));gap:3px}}
+@media(prefers-reduced-motion:reduce){.gr-intro-mosaic{animation:none;transform:none}}
