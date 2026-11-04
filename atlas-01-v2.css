@@ -102,3 +102,16 @@
 .atlas-section-transition:nth-of-type(even) .atlas-transition-mist::before{background:radial-gradient(ellipse at 74% 48%,#12202d1c,transparent 59%),radial-gradient(ellipse at 23% 62%,#bd942b20,transparent 54%)}
 @media(max-width:760px){.atlas-section-transition{margin:32px 0}.atlas-transition-mist{height:220px;top:-110px}.atlas-transition-mist::before{filter:blur(22px);transform:none;opacity:.8}}
 @media(prefers-reduced-motion:reduce){.atlas-transition-mist::before{transform:none}}
+
+/* Optical alignment with LATAM: equal slots, useful artwork rather than file margins. */
+.atlas-v2 .carrier-wordmark--fallback{gap:7px}
+.atlas-v2 .carrier-wordmark--fallback>img{width:32px;height:32px;object-fit:contain}
+.atlas-v2 .carrier-wordmark--fallback b{font-family:Outfit,sans-serif;font-size:22px;font-weight:600;line-height:1.05;max-width:105px;white-space:normal;letter-spacing:-.45px}
+.atlas-v2 [data-carrier-fallback="iberia"] b{font-size:27px;letter-spacing:-.6px}
+.atlas-v2 [data-carrier-fallback="avianca"] b{font-size:23px}
+.atlas-v2 [data-carrier-fallback="lufthansa"] b{font-size:20px}
+.atlas-v2 [data-carrier-fallback="britishairways"] b,.atlas-v2 [data-carrier-fallback="copaairlines"] b{font-size:18px}
+@media(max-width:600px){.atlas-v2 .carrier-wordmark--fallback{gap:6px}.atlas-v2 .carrier-wordmark--fallback>img{width:28px;height:28px}.atlas-v2 .carrier-wordmark--fallback b{font-size:19px;max-width:86px}.atlas-v2 [data-carrier-fallback="iberia"] b{font-size:23px}.atlas-v2 [data-carrier-fallback="lufthansa"] b{font-size:17px}.atlas-v2 [data-carrier-fallback="britishairways"] b,.atlas-v2 [data-carrier-fallback="copaairlines"] b{font-size:15px}}
+.atlas-v2 [data-carrier-fallback="avianca"] b{font-size:21px}
+.atlas-v2 .carrier-wordmark--fallback[title="Avianca Brasil"] b,.atlas-v2 [data-carrier-fallback="britishairways"] b{font-size:17px}
+@media(max-width:600px){.atlas-v2 [data-carrier-fallback="avianca"] b{font-size:19px}.atlas-v2 .carrier-wordmark--fallback[title="Avianca Brasil"] b,.atlas-v2 [data-carrier-fallback="britishairways"] b{font-size:15px}}
