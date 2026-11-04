@@ -20,3 +20,13 @@ Identificação das competições informadas pelo responsável pelo Atlas. As ma
 - **Copa das Confederações 2013**: [arquivo informado](https://thumb.wikimedia.org/wikipedia/pt/thumb/5/5a/2013_FIFA_Confederations_Cup.svg/1280px-2013_FIFA_Confederations_Cup.svg.png).
 
 Paulistão: mantida a marca existente, com remoção do patrocinador Sicredi a pedido do responsável pelo Atlas.
+
+## Arquivos fornecidos pelo responsável pelo Atlas
+
+- **Mundial de Clubes FIFA 2011**: arte fornecida em ZIP; enquadramento ajustado apenas para apresentação no carrossel, com proporções preservadas.
+- **Copa América 2019**: arte fornecida em ZIP; enquadramento ajustado apenas para apresentação no carrossel, com proporções preservadas.
+- **Ligue 1 França**: arte fornecida em ZIP; enquadramento ajustado apenas para apresentação no carrossel, com proporções preservadas.
+- **International Champions Cup**: arte fornecida em ZIP; enquadramento ajustado apenas para apresentação no carrossel, com proporções preservadas.
+- **Taça São Paulo**: arte fornecida em ZIP; enquadramento ajustado apenas para apresentação no carrossel, com proporções preservadas.
+
+Copinha: substituída a marca com ano pela versão laranja sem ano, enviada pelo responsável. Recopa mantida.

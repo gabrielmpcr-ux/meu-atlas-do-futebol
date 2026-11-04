@@ -29,3 +29,9 @@
 .competition-wordmark{min-height:98px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;flex:0 0 140px;min-width:0;text-align:center}
 .competition-wordmark img{display:block;width:130px;height:58px;object-fit:contain}
 @media(max-width:600px){.atlas-v2 .competition-row{gap:15px;padding:16px 0}.competition-row>span{flex-basis:62px;font-size:7px;letter-spacing:1px}.competition-track{gap:18px}.competition-wordmark{flex-basis:120px;min-height:92px}.competition-wordmark img{width:112px;height:52px}}
+
+/* Normalize logo viewports without distorting the original artwork. */
+.competition-logo-frame{--competition-logo-width:130px;--competition-logo-height:58px;display:flex;align-items:center;justify-content:center;width:var(--competition-logo-width);height:var(--competition-logo-height);flex:none}
+.competition-logo-crop{position:relative;display:block;overflow:hidden;width:min(var(--competition-logo-width),calc(var(--competition-logo-height) * var(--competition-aspect)));height:min(var(--competition-logo-height),calc(var(--competition-logo-width) / var(--competition-aspect)))}
+.competition-wordmark .competition-logo-crop img{position:absolute;display:block;max-width:none;width:var(--competition-source-width);height:var(--competition-source-height);left:var(--competition-source-left);top:var(--competition-source-top);object-fit:fill}
+@media(max-width:600px){.competition-logo-frame{--competition-logo-width:112px;--competition-logo-height:52px}}
