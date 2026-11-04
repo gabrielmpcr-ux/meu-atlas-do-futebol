@@ -26,7 +26,6 @@
 .atlas-v2 .competition-row{display:flex;align-items:center;gap:30px;border-bottom:1px solid var(--line);padding:19px 0 21px}
 .competition-row>span{flex:0 0 70px;font-size:8px;letter-spacing:1.5px;color:var(--muted);line-height:1.7}
 .competition-track{display:flex;align-items:center;gap:30px;min-width:0;width:100%;padding:8px 0}
-.competition-wordmark{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;flex:0 0 140px;min-width:0;text-align:center}
+.competition-wordmark{min-height:98px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;flex:0 0 140px;min-width:0;text-align:center}
 .competition-wordmark img{display:block;width:130px;height:58px;object-fit:contain}
-.competition-wordmark>span{display:block;min-height:28px;max-width:140px;font-size:9px;line-height:1.5;color:#687780}
-@media(max-width:600px){.atlas-v2 .competition-row{gap:15px;padding:16px 0}.competition-row>span{flex-basis:62px;font-size:7px;letter-spacing:1px}.competition-track{gap:18px}.competition-wordmark{flex-basis:120px}.competition-wordmark img{width:112px;height:52px}}
+@media(max-width:600px){.atlas-v2 .competition-row{gap:15px;padding:16px 0}.competition-row>span{flex-basis:62px;font-size:7px;letter-spacing:1px}.competition-track{gap:18px}.competition-wordmark{flex-basis:120px;min-height:92px}.competition-wordmark img{width:112px;height:52px}}

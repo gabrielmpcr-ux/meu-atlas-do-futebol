@@ -16,3 +16,7 @@ Identificação das competições informadas pelo responsável pelo Atlas. As ma
 - **Copa do Mundo FIFA**: [referência](https://en.wikipedia.org/wiki/FIFA_World_Cup); [arquivo consultado](https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/FIFA_World_Cup_wordmark_%282023%29.svg/250px-FIFA_World_Cup_wordmark_%282023%29.svg.png).
 - **Copa do Nordeste**: [referência](https://en.wikipedia.org/wiki/Copa_do_Nordeste); [arquivo consultado](https://thumb.wikimedia.org/wikipedia/en/thumb/0/05/Copa_do_Nordeste.png/250px-Copa_do_Nordeste.png).
 - **Liga Mexicana**: [referência](https://en.wikipedia.org/wiki/Liga_MX); [arquivo consultado](https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Liga_MX_logo.svg/250px-Liga_MX_logo.svg.png).
+
+- **Copa das Confederações 2013**: [arquivo informado](https://thumb.wikimedia.org/wikipedia/pt/thumb/5/5a/2013_FIFA_Confederations_Cup.svg/1280px-2013_FIFA_Confederations_Cup.svg.png).
+
+Paulistão: mantida a marca existente, com remoção do patrocinador Sicredi a pedido do responsável pelo Atlas.
