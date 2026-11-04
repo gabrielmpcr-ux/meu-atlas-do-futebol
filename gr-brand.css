@@ -1,0 +1,17 @@
+/* Gabriel Rodriguez · geometric wordmark and a restrained opening ident. */
+.atlas-v2 .preview-header .gr-wordmark{gap:0;line-height:0;flex:none}
+.atlas-v2 .gr-wordmark img{display:block;width:168px;height:auto;max-width:100%}
+.atlas-v2 .preview-header.is-compact .gr-wordmark img{width:136px}
+.atlas-v2 .preview-footer .gr-wordmark img{width:118px}
+.gr-intro{position:fixed;inset:0;z-index:5000;display:grid;place-items:center;background:#fafaf8;opacity:1;transition:opacity .24s ease;animation:gr-intro-safety 0s 12s forwards}
+.gr-intro-mark{width:clamp(260px,34vw,420px);max-width:80vw}
+.gr-intro-mark svg{display:block;width:100%;height:auto;overflow:visible}
+.gr-intro-name{animation:gr-name-reveal .85s .13s cubic-bezier(.22,.7,.28,1) both}
+.gr-intro-square{transform-box:fill-box;transform-origin:center;animation:gr-square-arrive 1s cubic-bezier(.22,.7,.28,1) both,gr-square-breathe 1.8s 1s ease-in-out infinite}
+.gr-intro.is-leaving{opacity:0;pointer-events:none}
+@keyframes gr-name-reveal{from{opacity:0;clip-path:inset(0 100% 0 0);transform:translateY(4px)}to{opacity:1;clip-path:inset(0);transform:none}}
+@keyframes gr-square-arrive{0%{opacity:0;transform:translateX(-42px) rotate(-90deg) scale(.65)}35%{opacity:1}100%{opacity:1;transform:none}}
+@keyframes gr-square-breathe{0%,100%{opacity:1}50%{opacity:.65}}
+@keyframes gr-intro-safety{to{visibility:hidden;pointer-events:none}}
+@media(max-width:760px){.atlas-v2 .preview-header .gr-wordmark img{width:144px}.atlas-v2 .preview-header.is-compact .gr-wordmark img{width:120px}}
+@media(prefers-reduced-motion:reduce){.gr-intro-name,.gr-intro-square{animation:none}.gr-intro{transition:none}}
