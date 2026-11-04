@@ -115,3 +115,6 @@
 .atlas-v2 [data-carrier-fallback="avianca"] b{font-size:21px}
 .atlas-v2 .carrier-wordmark--fallback[title="Avianca Brasil"] b,.atlas-v2 [data-carrier-fallback="britishairways"] b{font-size:17px}
 @media(max-width:600px){.atlas-v2 [data-carrier-fallback="avianca"] b{font-size:19px}.atlas-v2 .carrier-wordmark--fallback[title="Avianca Brasil"] b,.atlas-v2 [data-carrier-fallback="britishairways"] b{font-size:15px}}
+/* White-backed source artwork blends into the pale rail without rectangular tiles.
+   Apply to the complete filtered mark so opacity does not reintroduce a white box. */
+.atlas-v2 .carrier-wordmark{mix-blend-mode:multiply;background:transparent}
