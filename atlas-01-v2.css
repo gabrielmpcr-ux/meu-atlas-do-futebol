@@ -46,3 +46,12 @@
 .atlas-v2 .country-row>.flag-track{padding:8px 0}
 .atlas-v2 .carrier-row.section-rail>.carrier-track{padding:8px 0}
 @media(max-width:600px){.atlas-v2 .section-rail{gap:15px;padding:16px 0;margin-bottom:22px}.atlas-v2 .section-rail .section-rail-label{flex-basis:68px;width:68px}.section-rail-label>span{font-size:7px;letter-spacing:1px}.section-rail-label>button{font-size:8px;padding:5px;min-height:28px}}
+
+/* Uniform airline wordmark slots; crop source margins without stretching the mark. */
+.atlas-v2 .carrier-wordmark{--carrier-slot-width:144px;--carrier-slot-height:36px;flex:0 0 var(--carrier-slot-width);width:var(--carrier-slot-width);height:var(--carrier-slot-height);min-width:0;justify-content:center;gap:8px}
+.carrier-logo-frame{display:flex;align-items:center;justify-content:center;width:var(--carrier-slot-width);height:var(--carrier-slot-height);flex:none}
+.carrier-logo-crop{position:relative;display:block;overflow:hidden;width:min(var(--carrier-slot-width),calc(var(--carrier-slot-height) * var(--carrier-aspect)));height:min(var(--carrier-slot-height),calc(var(--carrier-slot-width) / var(--carrier-aspect)))}
+.carrier-wordmark .carrier-logo-crop img{position:absolute;display:block;max-width:none;width:var(--carrier-source-width);height:var(--carrier-source-height);left:var(--carrier-source-left);top:var(--carrier-source-top);object-fit:fill}
+.carrier-wordmark--fallback>img{flex:none;width:24px;height:24px}
+.carrier-wordmark--fallback b{font-size:13px;line-height:1.2;max-width:112px;white-space:normal}
+@media(max-width:600px){.atlas-v2 .carrier-wordmark{--carrier-slot-width:120px;--carrier-slot-height:32px}.carrier-wordmark--fallback b{font-size:12px;max-width:88px}.carrier-wordmark--fallback>img{width:22px;height:22px}}
