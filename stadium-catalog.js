@@ -1,5 +1,6 @@
 // Public stadium reference data. Sources and image licenses are recorded per entry.
 const stadiumCatalog = [
+{"name": "Estádio Mansueto Pierotti", "aliases": ["Mansueto Pierotti", "Estádio Mansuetto Pierotti"], "iso": "BRA", "city": "São Vicente", "lat": -23.96962, "lng": -46.39441, "club": "São Vicente Atlético Clube", "coordinateSource": "https://mapcarta.com/pt/W188971231"},
 {
   "name": "Estádio O Vao",
   "aliases": [

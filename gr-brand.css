@@ -23,3 +23,5 @@
 @keyframes gr-mosaic-drift{from{transform:translate3d(-.6%,-.5%,0) scale(1.015)}to{transform:translate3d(.6%,.5%,0) scale(1.04)}}
 @media(max-width:760px){.gr-intro-mosaic{grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(6,minmax(0,1fr));gap:3px}}
 @media(prefers-reduced-motion:reduce){.gr-intro-mosaic{animation:none;transform:none}}
+
+.gr-intro.is-returning .gr-intro-name,.gr-intro.is-returning .gr-intro-square{animation:none}

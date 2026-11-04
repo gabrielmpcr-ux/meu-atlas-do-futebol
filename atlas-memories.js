@@ -6,7 +6,7 @@ if(!section||section.dataset.mosaicReady)return;
 section.dataset.mosaicReady='true';
 section.classList.add('personal-memories');
 section.setAttribute('aria-labelledby','memoriesTitle');
-section.innerHTML='<div class="section-title memories-title"><div><span class="eyebrow">MEMÓRIAS</span><h2 id="memoriesTitle">As viagens passam. As memórias ficam.</h2><p>Um mosaico de momentos. Todas as fotos, juntas.</p></div></div><div class="memories-mosaic" role="group" aria-label="Mosaico de fotos pessoais"></div>';
+section.innerHTML='<div class="section-title memories-title"><div><h2 id="memoriesTitle">Memórias</h2></div></div><p class="memories-instruction">Toque em uma foto para ampliar.</p><div class="memories-mosaic" role="group" aria-label="Mosaico de fotos pessoais"></div>';
 const grid=section.querySelector('.memories-mosaic');
 for(const [i,p] of photos.entries()){
  const button=document.createElement('button');button.type='button';button.className='memories-tile';
@@ -23,10 +23,11 @@ function open(index,button){current=(index+photos.length)%photos.length;if(butto
 dialog.querySelector('.memories-close').onclick=()=>dialog.close();
 dialog.querySelectorAll('[data-memory-step]').forEach(button=>button.onclick=()=>open(current+Number(button.dataset.memoryStep)));
 dialog.addEventListener('keydown',event=>{if(event.key==='ArrowLeft'||event.key==='ArrowRight'){event.preventDefault();open(current+(event.key==='ArrowLeft'?-1:1));}});
+let swipeStart=null;dialog.addEventListener('touchstart',e=>{const t=e.touches[0];swipeStart={x:t.clientX,y:t.clientY}},{passive:true});dialog.addEventListener('touchend',e=>{if(!swipeStart)return;const t=e.changedTouches[0],dx=t.clientX-swipeStart.x,dy=t.clientY-swipeStart.y;if(Math.abs(dx)>55&&Math.abs(dx)>Math.abs(dy)*1.4)open(current+(dx<0?1:-1));swipeStart=null},{passive:true});
 dialog.addEventListener('close',()=>opener?.focus({preventScroll:true}));
 dialog.addEventListener('click',event=>{if(event.target!==dialog)return;const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();});
 function sizeMosaic(){grid.style.setProperty('--memory-viewport',document.documentElement.clientWidth+'px');}
-sizeMosaic();window.addEventListener('resize',sizeMosaic,{passive:true});
+sizeMosaic();window.addEventListener('resize',sizeMosaic,{passive:true});new ResizeObserver(sizeMosaic).observe(document.documentElement);
 if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&'IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){entry.target.classList.add('memory-revealed');observer.unobserve(entry.target);}},{threshold:.05});grid.querySelectorAll('.memories-tile').forEach(tile=>{tile.classList.add('memory-waiting');observer.observe(tile);});}
 })();
 

@@ -1,0 +1,151 @@
+/* Readability and consistent section structure. */
+:root{--muted:#52616b;--gold-dark:#806015}
+.atlas-v2 .main-nav{gap:26px;align-items:center}
+.atlas-v2 .main-nav a{display:flex!important;align-items:center;justify-content:center;min-height:44px;font-size:14px;line-height:1.3;white-space:nowrap}
+.atlas-v2 .stadium-section>.section-title,.atlas-v2 .journeys-section>.section-title,.atlas-v2 .memories-section>.section-title{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:0 0 28px;padding:0}
+.atlas-v2 #stadiumGalleryTitle,.atlas-v2 #journeysTitle,.atlas-v2 #memoriesTitle{font:600 32px/1.2 Outfit,sans-serif;letter-spacing:-.6px;margin:0;padding:0;color:#24313b}
+.atlas-v2 .stadium-section,.atlas-v2 .journeys-section{margin:44px 0}
+.atlas-v2 .memories-section{margin:44px 0 0}
+.atlas-v2 .immersive-intro h1{margin-top:8px}
+.atlas-v2 .immersive-intro p{font-size:16px;line-height:1.65;color:#ced8df}
+.atlas-v2 .intro-coordinate{font-size:11px;letter-spacing:1px;color:#c2cdd4}
+.hero-stadium-teaser small{font-size:11px!important;letter-spacing:1px;color:#d8bd71}
+.hero-stadium-teaser strong{font-size:20px}
+.hero-stadium-teaser>span>span{font-size:14px;color:#c2cdd4}
+.atlas-v2 .stat-topic span{font-size:13px;color:#52616b}
+.atlas-v2 .stadium-filters label,.atlas-v2 .unified-flight-filters label{font-size:12px;line-height:1.5;letter-spacing:.5px;color:#52616b}
+.atlas-v2 .stadium-filters input,.atlas-v2 .stadium-filters select,.atlas-v2 .unified-flight-filters input[type=search],.atlas-v2 .unified-flight-filters select{font-size:15px;min-height:46px;color:#24313b}
+.atlas-v2 .stadium-filters>button,.atlas-v2 #flightClear{font-size:13px;min-height:44px;padding:10px 0;color:#72550d}
+.atlas-v2 .stadium-count,.atlas-v2 .stadium-more>span,.atlas-v2 .flight-results{font-size:14px;color:#52616b}
+.atlas-v2 .stadium-card-body h3{font-size:21px}
+.atlas-v2 .stadium-card-body h3 button{min-height:44px;text-align:left}
+.atlas-v2 .stadium-card-body>p{font-size:13px;line-height:1.6;color:#52616b}
+.atlas-v2 .photo-credit,.atlas-v2 .stadium-card-body .photo-credit{font-size:12px;line-height:1.5;color:#52616b;overflow-wrap:anywhere}
+.atlas-v2 .stadium-country{font-size:12px;color:#24313b}
+.atlas-v2 .stadium-image-cta{font-size:13px}
+.atlas-v2 .section-rail .section-rail-label{flex-basis:110px;width:110px}
+.atlas-v2 .section-rail-label>span{font-size:11px;letter-spacing:.8px;color:#52616b}
+.atlas-v2 .section-rail-label>button{font-size:12px;min-height:44px;padding:8px;color:#52616b}
+.atlas-v2 .flag-item span{font-size:12px;color:#52616b}
+.atlas-v2 .flight-indicator>span{font-size:15px}
+.atlas-v2 .flight-indicator small{font-size:12px;color:#52616b;line-height:1.55}
+.atlas-v2 .flight-explore{font-size:14px;min-height:46px}
+.atlas-v2 #flightCollection h3{font:500 23px/1.25 Outfit;margin-top:0}
+.atlas-v2 .unified-flight-filters{padding:22px;margin-top:20px}
+.advanced-flight-options{margin-top:16px}
+.advanced-flight-options>summary{min-height:44px;cursor:pointer;font-size:14px;color:#72550d;padding:10px 0}
+.advanced-flight-grid{padding-top:14px}
+.atlas-v2 .flight-filter-bottom>p,.atlas-v2 .flight-active-filters button,.atlas-v2 .flight-summary-stats span,.atlas-v2 .flight-summary-note{font-size:13px;line-height:1.55;color:#52616b}
+.atlas-v2 .flight-summary-stats button.is-active span{color:#edf3f7}
+.atlas-v2 .flight-active-filters button{min-height:44px;color:#344b58}
+.atlas-v2 .flight-pane-header button{min-height:44px;font-size:13px;color:#72550d}
+.atlas-v2 .flight-carrier{font-size:13px;color:#72550d}
+.atlas-v2 .flight-cities,.atlas-v2 .flight-card-meta,.atlas-v2 .flight-card-meta span:last-child{font-size:13px;line-height:1.6;color:#52616b}
+.atlas-v2 .flight-card-actions button{min-height:44px;font-size:14px;color:#72550d}
+.atlas-v2 .flight-card-actions button:last-child{min-width:44px}
+.atlas-v2 .destination-explore-card>small,.atlas-v2 .route-city-label,.atlas-v2 .explore-card-footer>span,.atlas-v2 .duration-caption,.atlas-v2 .duration-row small{font-size:13px;line-height:1.6;color:#52616b}
+.atlas-v2 .topic-country small,.atlas-v2 .topic-flight small,.atlas-v2 #topicCount,.atlas-v2 .detail-subtitle{font-size:13px;line-height:1.6;color:#52616b}
+.atlas-v2 .topic-search>input{font-size:16px;min-height:46px}
+.atlas-v2 .country-content-heading{display:flex;gap:16px;align-items:center;justify-content:space-between;margin-bottom:16px}
+.atlas-v2 .country-content-heading h3{font-size:14px;font-weight:500;color:#52616b}
+.atlas-v2 .country-map-link{margin-top:0;min-height:44px;font-size:13px;flex:none}
+.atlas-v2 .country-city h4{font-size:18px}
+.atlas-v2 .country-city ul{font-size:14px;color:#344b58}
+.atlas-v2 .country-city>p,.atlas-v2 .country-city li small{font-size:13px;color:#52616b}
+.atlas-v2 .atlas-detail-close{min-width:44px;min-height:44px}
+.atlas-v2 .detail-actions>button{min-height:46px;font-size:14px}
+.atlas-v2 .stadium-detail-facts small{font-size:12px;color:#52616b}
+.atlas-v2 .stadium-detail-facts strong{font-size:15px}
+.atlas-v2 .topic-back{min-height:44px;font-size:14px;color:#52616b}
+.atlas-v2 .memories-instruction{font-size:14px;color:#52616b;margin:0 0 18px}
+.atlas-v2 .memories-lightbox{touch-action:pan-y}
+.atlas-v2 .preview-footer{font-size:13px;color:#52616b;gap:24px;flex-wrap:wrap}
+.atlas-v2 .preview-footer details summary{min-height:44px;padding:10px 0}
+.atlas-v2 .back-atlas{font-size:12px;min-height:44px;white-space:nowrap}
+/* Map controls are grouped above the canvas instead of competing with the route. */
+.atlas-v2 .immersive-shell .explore-panel{justify-content:flex-start}
+.atlas-v2 .immersive-shell .map-toolbar{position:relative;inset:auto;top:auto;left:auto;right:auto;display:flex;align-items:center;gap:14px;width:100%;padding:18px 20px 8px;z-index:650}
+.trip-browser{position:relative;min-width:0;flex:1}
+.trip-browser>summary{display:flex;align-items:center;gap:10px;min-height:44px;cursor:pointer;list-style:none;color:#e6eef3;font-size:14px}
+.trip-browser>summary::-webkit-details-marker{display:none}
+.trip-browser>summary>svg{width:20px;height:20px;flex:none;color:#e0bf62}
+.trip-browser>summary>span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.trip-browser>summary::after{content:'⌄';margin-left:auto}
+.trip-browser-panel{position:absolute;left:0;top:calc(100% + 6px);width:340px;max-width:calc(100vw - 40px);padding:18px;border:1px solid #d5dedf;border-radius:5px;background:#fff;box-shadow:0 10px 25px #0002;color:#24313b}
+.trip-browser-panel label{display:block;font-size:12px;color:#52616b;margin:0 0 7px}
+.trip-browser-panel input,.trip-browser-panel select{display:block;width:100%;min-height:46px;margin:0 0 14px;padding:10px;border:1px solid #aab7bd;border-radius:3px;background:#fff;color:#24313b;font-size:16px}
+.atlas-v2 .map-reset{display:flex!important;min-height:44px;gap:6px;color:#e6eef3;font-size:13px;padding:8px 0;flex:none}
+.map-option-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 20px 14px}
+.atlas-v2 .map-option-bar .map-layer-controls{position:static;inset:auto;margin:0;padding:2px}
+.atlas-v2 .map-option-bar .map-switch{position:static;flex:none;margin:0}
+.atlas-v2 .map-layer-controls button,.atlas-v2 .map-switch button{min-height:44px;font-size:12px;padding:8px 10px;color:#d1dce4}
+.atlas-v2 .map-layer-controls button[aria-pressed=true]{color:#ffdc77}
+.atlas-v2 .immersive-shell .map-stage{flex:none;height:520px;min-height:520px}
+.atlas-v2 .map-floating-caption,.atlas-v2 .is-2d .map-floating-caption{top:16px;left:16px;font-size:12px;color:#24313b}
+.atlas-v2 .map-place{top:62px;right:16px;padding:20px;max-width:280px}
+.atlas-v2 #placeDescription{font-size:13px;max-height:250px;color:#52616b}
+.atlas-v2 .country-city-list--map h4{font-size:15px}
+.atlas-v2 .country-city-list--map li button{min-height:36px;font-size:13px}
+.atlas-v2 .playback{bottom:38px;left:16px;right:16px;max-width:none;flex-wrap:wrap;gap:8px}
+.atlas-v2 .playback button{min-height:44px;font-size:13px;background:#fff;color:#24313b}
+.atlas-v2 .playback button:disabled{color:#52616b;background:#e1e6e8;opacity:1}
+.atlas-v2 #playLabel{font-size:12px;color:#344b58;background:#f8fafb;padding:6px 8px;border-radius:3px}
+.atlas-v2 .map-bottom{flex-wrap:wrap;gap:12px;font-size:11px;color:#d1dce4;padding:14px 20px}
+.atlas-v2 .map-bottom>span{font-size:11px;color:#d1dce4}
+.map-legend{display:flex;flex-wrap:wrap;gap:12px}
+.map-legend>span{display:flex;align-items:center;gap:5px}
+.map-legend i{display:inline-block;width:8px;height:8px;border-radius:50%;border:1px solid #ffffff70;background:#c7971e}
+.map-legend .legend-city{background:#647d8c}.map-legend .legend-airport{background:#e8f2f7}
+.map-back{min-height:44px;border:1px solid #ced8df66;border-radius:3px;padding:8px 12px;background:none;color:#eef5fa;font-size:13px}
+.atlas-v2 .stadium-map-audit{font-size:12px;color:#d1dce4}
+.atlas-v2 .stadium-map-audit summary{min-height:44px;padding:8px 0}
+.atlas-v2 .stadium-map-audit p{font-size:12px;color:#d1dce4}
+.route-aircraft{display:grid;place-items:center;width:30px;height:30px;border:1px solid #bd942b;border-radius:50%;background:#12202d;box-shadow:0 2px 8px #0005;pointer-events:none}
+.route-plane-vector{display:block;width:22px;height:22px;fill:#fff;transform:rotate(var(--plane-heading,0deg))}
+.route-endpoint{display:block;min-width:42px;min-height:26px;padding:4px 7px;border:1px solid #bd942b;border-radius:4px;background:#12202d;color:#fff;font:600 12px/1.2 'DM Sans',sans-serif;white-space:nowrap;box-shadow:0 1px 5px #0004;cursor:pointer}
+.route-endpoint-marker,.route-plane-marker{background:transparent;border:0}
+.atlas-v2 .leaflet-control-zoom a{width:44px;height:44px;line-height:44px}
+.load-error{max-width:640px;margin:12vh auto;padding:28px;font-family:'DM Sans',sans-serif;color:#24313b}
+.load-error h1{font:600 30px/1.2 Outfit}.load-error-message{font-size:16px;margin:20px 0;line-height:1.6}
+.load-error button{font-size:15px;min-height:46px;cursor:pointer}
+.gr-intro-skip{position:absolute;right:24px;bottom:24px;z-index:3;min-height:44px;border:1px solid #9aa7af;border-radius:3px;padding:10px 16px;background:#fafaf8e8;color:#24313b;font:14px 'DM Sans',sans-serif;cursor:pointer}
+@media(max-width:760px){
+.atlas-v2 .preview-header{padding:10px 20px 8px;gap:6px}
+.atlas-v2 .main-nav{gap:0;width:100%;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.atlas-v2 .main-nav a{font-size:12px;min-height:44px;padding:8px 0}
+.atlas-v2 .preview-header .gr-wordmark img{width:136px}
+.atlas-v2 .preview-header.is-compact{padding:6px 20px 4px;gap:0}
+.atlas-v2 .preview-header.is-compact .gr-wordmark img{width:112px}
+.atlas-v2 .preview-header.is-compact .main-nav a{min-height:44px;padding:8px 0}
+.atlas-v2 #stadiumGalleryTitle,.atlas-v2 #journeysTitle,.atlas-v2 #memoriesTitle{font-size:28px;line-height:1.2}
+.atlas-v2 .stadium-section>.section-title,.atlas-v2 .journeys-section>.section-title,.atlas-v2 .memories-section>.section-title{margin-bottom:24px;gap:12px;flex-wrap:wrap}
+.atlas-v2 .stadium-section,.atlas-v2 .journeys-section{margin:32px 0}.atlas-v2 .memories-section{margin:32px 0 0}
+.atlas-v2 .immersive-intro h1{font-size:54px;margin:12px 0 20px}
+.atlas-v2 .immersive-intro p{font-size:16px;max-width:320px}
+.atlas-v2 .stadium-filters input,.atlas-v2 .stadium-filters select,.atlas-v2 .unified-flight-filters input[type=search],.atlas-v2 .unified-flight-filters select{font-size:16px;min-height:46px;padding:10px}
+.atlas-v2 .stadium-filters{gap:16px 12px}.atlas-v2 .stadium-card-body{padding:14px}
+.atlas-v2 .stadium-card-body h3{font-size:20px}
+.atlas-v2 .section-rail{gap:16px}.atlas-v2 .section-rail .section-rail-label{flex-basis:90px;width:90px}
+.atlas-v2 .section-rail-label>span{font-size:11px;letter-spacing:.5px}
+.atlas-v2 .section-rail-label>button{font-size:12px}
+.atlas-v2 .flag-item span{font-size:12px}
+.atlas-v2 .flight-indicator{padding:18px 14px}.atlas-v2 .flight-indicator>span{font-size:14px}
+.atlas-v2 .flight-indicator small{font-size:12px}
+.atlas-v2 .flight-filter-bottom>p{font-size:13px}.atlas-v2 .flight-filter-bottom{gap:16px}
+.atlas-v2 .flight-summary-stats>button{padding:12px;min-height:76px}
+.atlas-v2 .flight-pane-header{gap:10px}
+.atlas-v2 .country-content-heading{align-items:flex-start;gap:12px}
+.atlas-v2 .country-map-link{font-size:12px;padding:10px}
+.atlas-v2 .map-option-bar{gap:8px;padding:0 12px 12px}
+.atlas-v2 .map-layer-controls button,.atlas-v2 .map-switch button{font-size:11px;padding:8px 6px}
+.atlas-v2 .immersive-shell .map-stage{height:440px;min-height:440px}
+.atlas-v2 .map-place{width:min(270px,calc(100% - 32px));max-width:none;top:58px}
+.atlas-v2 #placeDescription{max-height:195px}
+.gr-intro-skip{right:20px;bottom:20px}
+}
+@media(max-width:360px){.atlas-v2 .stadium-gallery{grid-template-columns:1fr}.atlas-v2 .map-layer-controls button,.atlas-v2 .map-switch button{font-size:10px;padding:8px 5px}.atlas-v2 .map-reset{font-size:12px}}
+
+.atlas-v2 .map-stage:not(.is-2d) .map-floating-caption{color:#edf4f8;background:#12202de6}
+.atlas-v2 #routeLegSelect{min-height:44px;max-width:220px;padding:8px;border:1px solid #8f9ea8;border-radius:3px;background:#fff;color:#24313b;font-size:14px}
+.atlas-v2 .section-title .manager-section-actions{margin:0;gap:8px}
+.atlas-v2 .section-title .manager-section-button{min-height:44px;font-size:12px}
