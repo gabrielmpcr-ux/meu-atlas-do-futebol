@@ -1,0 +1,7 @@
+/* Fluid outer layout, independent of legacy desktop container rules. */
+body.atlas-v2{--atlas-content-gutter:5vw}
+body.atlas-v2 main#main{box-sizing:border-box;width:100%;max-width:none;margin-inline:0;padding-inline:var(--atlas-content-gutter)}
+body.atlas-v2.layout-1 #main>.immersive-shell{box-sizing:border-box;width:calc(100% + var(--atlas-content-gutter) + var(--atlas-content-gutter));margin-inline:calc(0px - var(--atlas-content-gutter));padding-left:var(--atlas-content-gutter);padding-right:0}
+body.atlas-v2 .preview-header{padding-inline:var(--atlas-content-gutter)}
+@media(min-width:1101px){body.atlas-v2 .preview-header{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)}body.atlas-v2 .preview-header>.gr-wordmark{justify-self:start}body.atlas-v2 .preview-header>.main-nav{justify-self:center}body.atlas-v2 .preview-header>.back-atlas{justify-self:end}}
+@media(max-width:760px){body.atlas-v2{--atlas-content-gutter:20px}body.atlas-v2.layout-1 #main>.immersive-shell{padding-left:0}}
