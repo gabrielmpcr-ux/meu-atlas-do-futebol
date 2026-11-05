@@ -60,18 +60,28 @@ function flightOnMap(id){const f=aviation.flights.find(f=>f.id===id);if(!f||!avi
 function initializeFlights(){initializeAdvancedFlights();$('#flightExplore').onclick=()=>{const open=!$('#flightCollection').hidden;if(open){$('#flightCollection').hidden=true;$('#flightExplore').setAttribute('aria-expanded','false');$('#flightExplore').innerHTML='Ver voos '+icon('arrow')}else showFlights()};document.querySelectorAll('[data-flight-filter]').forEach(b=>b.onclick=()=>showFlights(b.dataset.flightFilter));$('#flightClear').onclick=()=>{const pane=flightState.pane;showFlights('all',false);flightState.pane=pane;renderFlights()};$('#flightMore').onclick=()=>{flightState.limit+=20;renderFlights()};document.addEventListener('click',e=>{const b=e.target.closest('[data-flight-map]');if(b){const d=$('#atlasDetail');if(d?.open)d.close();flightOnMap(b.dataset.flightMap)}})}
 function initializeNavigation(){
 const header=$('.preview-header'),links=[...document.querySelectorAll('.main-nav a')],sections=links.map(a=>$(a.hash)).filter(Boolean);
-let clicked='',releaseTimer;
+let clicked='',navigationFrame=0;
 const activate=id=>links.forEach(a=>{if(a.hash==='#'+id)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current')});
 const measure=()=>{document.documentElement.style.setProperty('--atlas-nav-height',Math.ceil(header.getBoundingClientRect().height)+'px');document.documentElement.style.setProperty('--atlas-page-width',document.documentElement.clientWidth+'px')};
 for(const id of ['stadiums','journeys','memories']){const section=$('#'+id);if(section){const divider=document.createElement('div');divider.className='atlas-section-transition';divider.setAttribute('aria-hidden','true');divider.innerHTML='<span class="atlas-transition-mist"></span>';section.before(divider)}}
-const update=()=>{header.classList.toggle('is-compact',scrollY>100||(header.classList.contains('is-compact')&&scrollY>24));if(clicked){activate(clicked);return}const top=header.getBoundingClientRect().bottom+42;let active=sections[0]?.id;for(const section of sections)if(section.getBoundingClientRect().top<=top)active=section.id;if(scrollY>100&&innerHeight+scrollY>=document.documentElement.scrollHeight-2)active=sections.at(-1)?.id;activate(active)};
+const update=()=>{header.classList.toggle('is-compact',clicked?clicked!=='explore':scrollY>100||(header.classList.contains('is-compact')&&scrollY>24));if(clicked){activate(clicked);return}const top=header.getBoundingClientRect().bottom+42;let active=sections[0]?.id;for(const section of sections)if(section.getBoundingClientRect().top<=top)active=section.id;if(scrollY>100&&innerHeight+scrollY>=document.documentElement.scrollHeight-2)active=sections.at(-1)?.id;activate(active)};
 const schedule=()=>update();
-const release=()=>{clicked='';clearTimeout(releaseTimer);schedule()};
-const finishNavigation=()=>{if(clicked){const section=$('#'+clicked),offset=section.getBoundingClientRect().top-header.getBoundingClientRect().bottom-(clicked==='explore'?0:20);if(Math.abs(offset)>2)scrollBy({top:offset,behavior:'instant'})}release()};
+const release=()=>{cancelAnimationFrame(navigationFrame);navigationFrame=0;clicked='';schedule()};
+// One continuous animation follows the live header height; no delayed snap at the end.
+const navigate=section=>{
+ release();clicked=section.id;activate(clicked);update();measure();
+ scrollTo({top:scrollY,behavior:'instant'});
+ const gap=clicked==='explore'?0:20;
+ const target=()=>Math.max(0,Math.min(Math.max(0,document.documentElement.scrollHeight-innerHeight),scrollY+section.getBoundingClientRect().top-header.getBoundingClientRect().bottom-gap));
+ if(reduced){header.classList.toggle('is-compact',clicked!=='explore');measure();scrollTo({top:target(),behavior:'instant'});release();return}
+ const start=scrollY,started=performance.now(),duration=Math.min(800,Math.max(420,Math.abs(target()-start)*.09));
+ const step=now=>{if(!clicked)return;measure();const t=Math.min(1,(now-started)/duration),ease=t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;scrollTo({top:start+(target()-start)*ease,behavior:'instant'});if(t<1)navigationFrame=requestAnimationFrame(step);else release()};
+ navigationFrame=requestAnimationFrame(step);
+};
 const navSizeObserver=new ResizeObserver(()=>{measure();schedule()});navSizeObserver.observe(header);navSizeObserver.observe(document.documentElement);addEventListener('resize',measure,{passive:true});
-addEventListener('scroll',()=>{schedule();if(clicked){clearTimeout(releaseTimer);releaseTimer=setTimeout(finishNavigation,280)}},{passive:true});
+addEventListener('scroll',schedule,{passive:true});
 addEventListener('atlas:content-navigation',release);addEventListener('pointerdown',e=>{if(!e.target.closest('.main-nav a'))release()},{passive:true});addEventListener('wheel',release,{passive:true});addEventListener('touchstart',release,{passive:true});addEventListener('keydown',e=>{if(['ArrowDown','ArrowUp','PageDown','PageUp','Home','End',' '].includes(e.key))release()});
-const restoreAnchor=()=>{const link=links.find(a=>a.hash===location.hash);if(link)link.click();else schedule()};addEventListener('atlas:ready',restoreAnchor);addEventListener('hashchange',restoreAnchor);links.forEach(a=>a.addEventListener('click',e=>{const section=$(a.hash);if(!section)return;e.preventDefault();clicked=section.id;activate(clicked);clearTimeout(releaseTimer);section.scrollIntoView({behavior:reduced?'auto':'smooth',block:'start'});history.replaceState(null,'',a.hash);releaseTimer=setTimeout(finishNavigation,1800)}));measure();update();
+const restoreAnchor=()=>{const link=links.find(a=>a.hash===location.hash);if(link)link.click();else schedule()};addEventListener('atlas:ready',restoreAnchor);addEventListener('hashchange',restoreAnchor);links.forEach(a=>a.addEventListener('click',e=>{const section=$(a.hash);if(!section)return;e.preventDefault();navigate(section);history.replaceState(null,'',a.hash)}));measure();update();
 }
 
 function initializeSectionAtmosphere(){
