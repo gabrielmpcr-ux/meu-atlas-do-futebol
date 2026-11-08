@@ -1,0 +1,73 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Ajustar salvamento · Gabriel Rodriguez</title><link rel="stylesheet" href="preview-fonts.css"><style>*{box-sizing:border-box}body{margin:0;background:#f7f7f3;color:#24313b;font:16px/1.6 'DM Sans',sans-serif}main{max-width:840px;margin:40px auto;padding:24px}h1{font:600 32px/1.2 Outfit,sans-serif;margin:32px 0 18px}img{width:220px;height:auto}li{margin:14px 0}a{color:#806318}button{min-height:46px;padding:10px 18px;border:0;border-radius:5px;background:#bd942b;color:#12202d;font:600 15px 'DM Sans',sans-serif;cursor:pointer}button:focus-visible,a:focus-visible,textarea:focus-visible{outline:3px solid #12202d;outline-offset:4px}textarea{display:block;width:100%;height:320px;margin:12px 0 24px;padding:16px;border:1px solid #dbe2d9;border-radius:5px;background:#fff;font:12px/1.6 monospace;color:#24313b}label{font-weight:500}.note{font-size:14px;color:#52616b}#copyStatus{min-height:26px}</style></head><body><main><img src="assets/brand/gabriel-rodriguez.svg?v=2" alt="Gabriel Rodriguez"><h1>Ajustar salvamento de fotos</h1><p>Este ajuste precisa ser aplicado uma vez no banco do site. Ele otimiza a validação e dá até 15 segundos para a função de salvamento, mantendo os controles de acesso e de edição simultânea.</p><ol><li>Use o botão <strong>Copiar SQL</strong> abaixo.</li><li><a href="https://supabase.com/dashboard/project/beybhctcfgwzompvbppt/sql/new" target="_blank" rel="noopener noreferrer">Abra o SQL Editor do projeto no Supabase</a>, cole o código em uma consulta nova e clique em <strong>Run</strong>.</li><li>Se o painel indicar sucesso, volte à edição da foto que já está aberta e tente salvar novamente.</li></ol><p class="note">O script substitui apenas a função de salvamento. Não apaga fotos nem registros, e não altera o proprietário ou as regras de leitura pública.</p><button type="button" id="copySql">Copiar SQL</button><p id="copyStatus" role="status" aria-live="polite"></p><label for="sql">Script de ajuste</label><textarea id="sql" readonly spellcheck="false">-- Apply once in the existing project&#x27;s Supabase SQL Editor.
+-- Replaces only atlas_save; preserves data, owner checks, revision conflicts and public redaction.
+begin;
+create or replace function public.atlas_save(p_expected_revision bigint,p_data jsonb)
+returns jsonb language plpgsql security definer set search_path=&#x27;&#x27; set statement_timeout=&#x27;15s&#x27; as $$
+declare
+ new_revision bigint;
+ visible_data jsonb;
+ visits_data jsonb;
+ flights_data jsonb;
+ trips_data jsonb;
+ flight_ids text[];
+ flight_count bigint;
+ unique_flight_count bigint;
+begin
+ if not public.atlas_is_admin() then
+  raise insufficient_privilege using message=&#x27;Editor access required&#x27;;
+ end if;
+ if jsonb_typeof(p_data) is distinct from &#x27;object&#x27; then
+  raise exception &#x27;Invalid Atlas backup&#x27;;
+ end if;
+ -- Extract each subtree once. Embedded photos no longer travel through every flight lookup.
+ visits_data := p_data-&gt;&#x27;visits&#x27;;
+ flights_data := p_data#&gt;&#x27;{aviation,flights}&#x27;;
+ trips_data := p_data#&gt;&#x27;{aviation,trips}&#x27;;
+ if jsonb_typeof(visits_data) is distinct from &#x27;array&#x27;
+    or jsonb_typeof(flights_data) is distinct from &#x27;array&#x27;
+    or jsonb_typeof(trips_data) is distinct from &#x27;array&#x27; then
+  raise exception &#x27;Invalid Atlas backup&#x27;;
+ end if;
+ if pg_column_size(p_data)&gt;16777216
+    or jsonb_array_length(visits_data)&gt;20000
+    or jsonb_array_length(flights_data)&gt;20000 then
+  raise exception &#x27;Atlas exceeds the storage limit for this import&#x27;;
+ end if;
+ if exists(select 1 from jsonb_to_recordset(visits_data) as v(country text,city text,iso text)
+           where coalesce(v.country,&#x27;&#x27;)=&#x27;&#x27; or coalesce(v.city,&#x27;&#x27;)=&#x27;&#x27; or coalesce(v.iso,&#x27;&#x27;)!~&#x27;^[A-Za-z]{3}$&#x27;) then
+  raise exception &#x27;Invalid visit&#x27;;
+ end if;
+ select count(*),count(distinct f.id),coalesce(array_agg(f.id),array[]::text[])
+ into flight_count,unique_flight_count,flight_ids
+ from jsonb_to_recordset(flights_data) as f(id text);
+ if flight_count&lt;&gt;unique_flight_count or &#x27;&#x27;=any(flight_ids) then
+  raise exception &#x27;Invalid or repeated flight identifier&#x27;;
+ end if;
+ if exists(select 1 from jsonb_to_recordset(trips_data) as t(id text,&quot;flightIds&quot; jsonb)
+           where coalesce(t.id,&#x27;&#x27;)=&#x27;&#x27; or jsonb_typeof(t.&quot;flightIds&quot;) is distinct from &#x27;array&#x27;) then
+  raise exception &#x27;Invalid trip&#x27;;
+ end if;
+ -- Check references against the small ID list, not by repeatedly expanding the flight JSON.
+ if exists(select 1 from jsonb_to_recordset(trips_data) as t(&quot;flightIds&quot; jsonb)
+           cross join lateral jsonb_array_elements_text(t.&quot;flightIds&quot;) as ref(id)
+           where not coalesce(ref.id=any(flight_ids),false)) then
+  raise exception &#x27;A trip references a missing flight&#x27;;
+ end if;
+ update public.atlas_state set data=p_data,revision=revision+1,updated_at=now()
+ where id=&#x27;main&#x27; and revision=p_expected_revision returning revision into new_revision;
+ if new_revision is null then
+  raise exception using errcode=&#x27;40001&#x27;,message=&#x27;ATLAS_CONFLICT: the collection changed; reload before saving&#x27;;
+ end if;
+ visible_data := jsonb_set(p_data,&#x27;{aviation,flights}&#x27;,coalesce(
+  (select jsonb_agg(f - array[&#x27;source&#x27;,&#x27;notes&#x27;,&#x27;yearNote&#x27;,&#x27;dateNote&#x27;,&#x27;manualWindow&#x27;,&#x27;manualEvidence&#x27;,&#x27;sourceImages&#x27;])
+   from jsonb_array_elements(flights_data) f),&#x27;[]&#x27;::jsonb));
+ insert into public.atlas_public(id,revision,initialized,data)
+ values(&#x27;main&#x27;,new_revision,true,visible_data)
+ on conflict(id) do update set revision=excluded.revision,initialized=true,data=excluded.data;
+ return jsonb_build_object(&#x27;revision&#x27;,new_revision,&#x27;data&#x27;,p_data,&#x27;initialized&#x27;,true);
+end $$;
+revoke all on function public.atlas_save(bigint,jsonb) from public;
+grant execute on function public.atlas_save(bigint,jsonb) to authenticated;
+notify pgrst,&#x27;reload schema&#x27;;
+commit;
+</textarea><p><a href="atlas-save-performance.sql" download>Baixar o script SQL</a> · <a href="https://supabase.com/docs/guides/database/postgres/timeouts#function-level" target="_blank" rel="noopener noreferrer">Referência do Supabase</a></p><p><a href="/">Voltar ao site</a></p></main><script>document.getElementById('copySql').onclick=async()=>{const code=document.getElementById('sql'),status=document.getElementById('copyStatus');try{await navigator.clipboard.writeText(code.value);status.textContent='Código copiado. Cole no SQL Editor e clique em Run.'}catch{code.focus();code.select();status.textContent='Código selecionado. Copie com Ctrl+C ou pelo menu de seleção.'}};</script></body></html>
