@@ -1,0 +1,709 @@
+{
+  "version": 1,
+  "id": "stadium-games-europa-brasil27-20261108",
+  "normalizeCompetitionNames": true,
+  "stadiums": [
+    {
+      "key": "balaidos",
+      "name": "Balaídos",
+      "city": "Vigo",
+      "iso": "ESP",
+      "aliases": [
+        "Estádio de Balaídos",
+        "Estádio Balaídos",
+        "Estadio de Balaídos",
+        "Abanca Balaídos"
+      ],
+      "matches": [
+        {
+          "id": "europa27-balaidos-2007-06-17-celta-de-vigo-getafe",
+          "date": "17/06/2007",
+          "homeTeam": "Celta de Vigo",
+          "awayTeam": "Getafe",
+          "homeScore": 2,
+          "awayScore": 1,
+          "competition": "La Liga",
+          "notes": "Temporada 2006/07 — 38ª e última rodada.\nDisputado em Balaídos. Apesar da vitória, o Celta terminou a temporada rebaixado.",
+          "sourceUrl": "https://www.bdfutbol.com/es/t/t2006-0711.html?tab=partits",
+          "importSource": {
+            "file": "Lista enviada pelo proprietário — Europa, Brasil e Uruguai",
+            "row": 1,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2007,
+            "originalSourceUrl": "https://www.bdfutbol.com/es/t/t2006-0711.html?tab=partits"
+          }
+        }
+      ]
+    },
+    {
+      "key": "bernabeu",
+      "name": "Santiago Bernabéu",
+      "city": "Madrid",
+      "iso": "ESP",
+      "aliases": [
+        "Estádio Santiago Bernabéu",
+        "Estadio Santiago Bernabéu"
+      ],
+      "matches": [
+        {
+          "id": "europa27-bernabeu-2024-10-26-real-madrid-barcelona",
+          "date": "26/10/2024",
+          "homeTeam": "Real Madrid",
+          "awayTeam": "Barcelona",
+          "homeScore": 0,
+          "awayScore": 4,
+          "competition": "La Liga",
+          "notes": "Temporada 2024/25 — 11ª rodada. El Clásico.\nTodos os gols saíram no segundo tempo: Lewandowski (2), Lamine Yamal e Raphinha.",
+          "sourceUrl": "https://www.fcbarcelona.es/es/futbol/primer-equipo/noticias/4156771/reial-madrid-0-4-fc-barcelona-viva-la-vida/featured",
+          "importSource": {
+            "file": "Lista enviada pelo proprietário — Europa, Brasil e Uruguai",
+            "row": 2,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2025,
+            "originalSourceUrl": "https://www.fcbarcelona.es/es/futbol/primer-equipo/noticias/4156771/reial-madrid-0-4-fc-barcelona-viva-la-vida/featured"
+          }
+        }
+      ]
+    },
+    {
+      "key": "riviera",
+      "name": "Allianz Riviera",
+      "city": "Nice",
+      "iso": "FRA",
+      "aliases": [],
+      "matches": [
+        {
+          "id": "europa27-riviera-2024-10-27-nice-monaco",
+          "date": "27/10/2024",
+          "homeTeam": "Nice",
+          "awayTeam": "Monaco",
+          "homeScore": 2,
+          "awayScore": 1,
+          "competition": "Ligue 1",
+          "notes": "Temporada 2024/25 — 9ª rodada. Derby da Côte d’Azur.\nVitória de virada do Nice, com gols de Evann Guessand e Gaëtan Laborde.",
+          "sourceUrl": "https://www.ogcnice.com/fr/resume/127778/le-gym-renverse-monaco-et-le-derby-2-1.html",
+          "importSource": {
+            "file": "Lista enviada pelo proprietário — Europa, Brasil e Uruguai",
+            "row": 3,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2025,
+            "originalSourceUrl": "https://www.ogcnice.com/fr/resume/127778/le-gym-renverse-monaco-et-le-derby-2-1.html"
+          }
+        }
+      ]
+    },
+    {
+      "key": "allianz",
+      "name": "Allianz Parque",
+      "city": "São Paulo",
+      "iso": "BRA",
+      "aliases": [
+        "Palestra Itália",
+        "Parque Antarctica",
+        "Parque Antártica",
+        "Estádio Palestra Itália"
+      ],
+      "matches": [
+        {
+          "id": "europa27-allianz-2008-07-24-palmeiras-santos",
+          "date": "24/07/2008",
+          "homeTeam": "Palmeiras",
+          "awayTeam": "Santos",
+          "homeScore": 4,
+          "awayScore": 2,
+          "competition": "Campeonato Brasileiro",
+          "notes": "Edição 2008 — Série A.\nDisputado no antigo Palestra Itália / Parque Antarctica, no local do atual Allianz Parque.",
+          "sourceUrl": "https://ge.globo.com/Esportes/Futebol/0%2C%2CCCF22714-9825%2C00.html",
+          "importSource": {
+            "file": "Lista enviada pelo proprietário — Europa, Brasil e Uruguai",
+            "row": 4,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2008,
+            "originalSourceUrl": "https://ge.globo.com/Esportes/Futebol/0%2C%2CCCF22714-9825%2C00.html"
+          }
+        },
+        {
+          "id": "europa27-allianz-2007-02-04-palmeiras-santos",
+          "date": "04/02/2007",
+          "homeTeam": "Palmeiras",
+          "awayTeam": "Santos",
+          "homeScore": 3,
+          "awayScore": 3,
+          "competition": "Campeonato Paulista",
+          "notes": "Edição 2007 — primeira fase. Clássico da Saudade.\nDisputado no antigo Palestra Itália / Parque Antarctica, no local do atual Allianz Parque.",
+          "sourceUrl": "https://www.verdazzo.com.br/jogo/20070204-palmeiras-x-santos-campeonato-paulista-2007/",
+          "importSource": {
+            "file": "Lista enviada pelo proprietário — Europa, Brasil e Uruguai",
+            "row": 5,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2007,
+            "originalSourceUrl": "https://www.verdazzo.com.br/jogo/20070204-palmeiras-x-santos-campeonato-paulista-2007/"
+          }
+        },
+        {
+          "id": "europa27-allianz-2009-04-18-palmeiras-santos",
+          "date": "18/04/2009",
+          "homeTeam": "Palmeiras",
+          "awayTeam": "Santos",
+          "homeScore": 1,
+          "awayScore": 2,
+          "competition": "Campeonato Paulista",
+          "notes": "Edição 2009 — semifinal, jogo de volta.\nO Santos avançou à final com duas vitórias por 2 a 1 (4 a 2 no agregado).\nDisputado no antigo Palestra Itália / Parque Antarctica, no local do atual Allianz Parque.",
+          "sourceUrl": "https://www.terra.com.br/esportes/santos/santos-joga-por-marca-inedita-no-palestra-italia,f0b9b7a6b1ced310VgnCLD200000bbcceb0aRCRD.html",
+          "importSource": {
+            "file": "Lista enviada pelo proprietário — Europa, Brasil e Uruguai",
+            "row": 6,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2009,
+            "originalSourceUrl": "https://www.terra.com.br/esportes/santos/santos-joga-por-marca-inedita-no-palestra-italia,f0b9b7a6b1ced310VgnCLD200000bbcceb0aRCRD.html"
+          }
+        },
+        {
+          "id": "europa27-allianz-2015-04-26-palmeiras-santos",
+          "date": "26/04/2015",
+          "homeTeam": "Palmeiras",
+          "awayTeam": "Santos",
+          "homeScore": 1,
+          "awayScore": 0,
+          "competition": "Campeonato Paulista",
+          "notes": "Edição 2015 — final, jogo de ida.\nGol de Leandro Pereira. Partida disputada no Allianz Parque; o título foi decidido posteriormente na Vila Belmiro.",
+          "sourceUrl": "https://www.palmeiras.com.br/noticias/palmeiras-vence-santos-e-sai-na-frente-na-final-do-paulistao/",
+          "importSource": {
+            "file": "Lista enviada pelo proprietário — Europa, Brasil e Uruguai",
+            "row": 7,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2015,
+            "originalSourceUrl": "https://www.palmeiras.com.br/noticias/palmeiras-vence-santos-e-sai-na-frente-na-final-do-paulistao/"
+          }
+        },
+        {
+          "id": "europa27-allianz-2015-12-02-palmeiras-santos",
+          "date": "02/12/2015",
+          "homeTeam": "Palmeiras",
+          "awayTeam": "Santos",
+          "homeScore": 2,
+          "awayScore": 1,
+          "competition": "Copa do Brasil",
+          "notes": "Edição 2015 — final, jogo de volta.\nPênaltis: Palmeiras 4 × 3 Santos. Palmeiras campeão.\nO placar agregado terminou em 2 a 2; Fernando Prass converteu a cobrança decisiva.",
+          "sourceUrl": "https://www.palmeiras.com.br/noticias/com-muita-emocao-e-penaltis-palmeiras-bate-santos-e-conquista-copa-do-brasil/",
+          "importSource": {
+            "file": "Lista enviada pelo proprietário — Europa, Brasil e Uruguai",
+            "row": 8,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2015,
+            "originalSourceUrl": "https://www.palmeiras.com.br/noticias/com-muita-emocao-e-penaltis-palmeiras-bate-santos-e-conquista-copa-do-brasil/"
+          }
+        },
+        {
+          "id": "europa27-allianz-2007-03-25-santos-rio-claro",
+          "date": "25/03/2007",
+          "homeTeam": "Santos",
+          "awayTeam": "Rio Claro",
+          "homeScore": 2,
+          "awayScore": 1,
+          "competition": "Campeonato Paulista",
+          "notes": "Edição 2007 — primeira fase. Santos mandante.\nA partida foi transferida da Vila Belmiro para São Paulo.\nDisputado no antigo Palestra Itália / Parque Antarctica, no local do atual Allianz Parque.",
+          "sourceUrl": "https://acervosantista.com.br/25-03-2007-santos-2-x-1-rio-claro-campeonato-paulista/",
+          "importSource": {
+            "file": "Lista enviada pelo proprietário — Europa, Brasil e Uruguai",
+            "row": 9,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2007,
+            "originalSourceUrl": "https://acervosantista.com.br/25-03-2007-santos-2-x-1-rio-claro-campeonato-paulista/"
+          }
+        },
+        {
+          "id": "europa27-allianz-2007-01-17-gremio-barueri-santos",
+          "date": "17/01/2007",
+          "homeTeam": "Grêmio Barueri",
+          "awayTeam": "Santos",
+          "homeScore": 1,
+          "awayScore": 2,
+          "competition": "Campeonato Paulista",
+          "notes": "Edição 2007 — primeira rodada. Grêmio Barueri mandante.\nEstreia do Barueri na elite do Campeonato Paulista.\nDisputado no antigo Palestra Itália / Parque Antarctica, no local do atual Allianz Parque.",
+          "sourceUrl": "https://acervosantista.com.br/17-01-2007-gremio-barueri-1-x-2-santos-campeonato-paulista/",
+          "importSource": {
+            "file": "Lista enviada pelo proprietário — Europa, Brasil e Uruguai",
+            "row": 10,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2007,
+            "originalSourceUrl": "https://acervosantista.com.br/17-01-2007-gremio-barueri-1-x-2-santos-campeonato-paulista/",
+            "correction": "Mando corrigido: Grêmio Barueri, não Santos."
+          }
+        }
+      ]
+    },
+    {
+      "key": "fontenova",
+      "name": "Arena Fonte Nova",
+      "city": "Salvador",
+      "iso": "BRA",
+      "aliases": [
+        "Fonte Nova"
+      ],
+      "matches": [
+        {
+          "id": "europa27-fontenova-2018-07-07-bahia-sampaio-correa",
+          "date": "07/07/2018",
+          "homeTeam": "Bahia",
+          "awayTeam": "Sampaio Corrêa",
+          "homeScore": 0,
+          "awayScore": 0,
+          "competition": "Copa do Nordeste",
+          "notes": "Edição 2018 — final, jogo de volta.\nSampaio Corrêa campeão pela primeira vez, com 1 a 0 no agregado após vencer o jogo de ida.",
+          "sourceUrl": "https://ge.globo.com/ba/futebol/copa-do-nordeste/jogo/07-07-2018/bahia-sampaio-correia/",
+          "importSource": {
+            "file": "Lista enviada pelo proprietário — Europa, Brasil e Uruguai",
+            "row": 11,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2018,
+            "originalSourceUrl": "https://ge.globo.com/ba/futebol/copa-do-nordeste/jogo/07-07-2018/bahia-sampaio-correia/"
+          }
+        }
+      ]
+    },
+    {
+      "key": "barradao",
+      "name": "Barradão",
+      "city": "Salvador",
+      "iso": "BRA",
+      "aliases": [
+        "Estádio Manoel Barradas",
+        "Manoel Barradas"
+      ],
+      "matches": [
+        {
+          "id": "europa27-barradao-2010-08-04-vitoria-santos",
+          "date": "04/08/2010",
+          "homeTeam": "Vitória",
+          "awayTeam": "Santos",
+          "homeScore": 2,
+          "awayScore": 1,
+          "competition": "Copa do Brasil",
+          "notes": "Edição 2010 — final, jogo de volta.\nSantos campeão pela primeira vez, com 3 a 2 no agregado.\nEdu Dracena marcou para o Santos; Wallace e Júnior fizeram os gols do Vitória.",
+          "sourceUrl": "https://www.santosfc.com.br/a-primeira-copa-do-brasil/",
+          "importSource": {
+            "file": "Lista enviada pelo proprietário — Europa, Brasil e Uruguai",
+            "row": 12,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2010,
+            "originalSourceUrl": "https://www.santosfc.com.br/a-primeira-copa-do-brasil/"
+          }
+        }
+      ]
+    },
+    {
+      "key": "beirario",
+      "name": "Beira-Rio",
+      "city": "Porto Alegre",
+      "iso": "BRA",
+      "aliases": [
+        "Estádio Beira-Rio",
+        "José Pinheiro Borda"
+      ],
+      "matches": [
+        {
+          "id": "europa27-beirario-2012-04-04-internacional-santos",
+          "date": "04/04/2012",
+          "homeTeam": "Internacional",
+          "awayTeam": "Santos",
+          "homeScore": 1,
+          "awayScore": 1,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Edição 2012 — fase de grupos, Grupo 1, 5ª rodada.\nPartida disputada no Beira-Rio, em Porto Alegre.",
+          "sourceUrl": "https://ge.globo.com/jogo/libertadores-2012/04-04-2012/internacional-santos.html",
+          "importSource": {
+            "file": "Lista enviada pelo proprietário — Europa, Brasil e Uruguai",
+            "row": 13,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2012,
+            "originalSourceUrl": "https://ge.globo.com/jogo/libertadores-2012/04-04-2012/internacional-santos.html"
+          }
+        },
+        {
+          "id": "europa27-beirario-2023-10-04-internacional-fluminense",
+          "date": "04/10/2023",
+          "homeTeam": "Internacional",
+          "awayTeam": "Fluminense",
+          "homeScore": 1,
+          "awayScore": 2,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Edição 2023 — semifinal, jogo de volta.\nFluminense classificado com 4 a 3 no agregado, após virar a partida no segundo tempo.",
+          "sourceUrl": "https://static.fluminense.com.br/noticia/fluminense-vence-o-internacional-de-virada-e-esta-na-final-da-conmebol-libertadores",
+          "importSource": {
+            "file": "Lista enviada pelo proprietário — Europa, Brasil e Uruguai",
+            "row": 14,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2023,
+            "originalSourceUrl": "https://static.fluminense.com.br/noticia/fluminense-vence-o-internacional-de-virada-e-esta-na-final-da-conmebol-libertadores"
+          }
+        }
+      ]
+    },
+    {
+      "key": "caninde",
+      "name": "Canindé",
+      "city": "São Paulo",
+      "iso": "BRA",
+      "aliases": [
+        "Estádio do Canindé",
+        "Dr. Oswaldo Teixeira Duarte"
+      ],
+      "matches": [
+        {
+          "id": "europa27-caninde-2010-03-07-portuguesa-santos",
+          "date": "07/03/2010",
+          "homeTeam": "Portuguesa",
+          "awayTeam": "Santos",
+          "homeScore": 1,
+          "awayScore": 1,
+          "competition": "Campeonato Paulista",
+          "notes": "Edição 2010 — primeira fase, 13ª rodada.\nClássico disputado no Canindé, em São Paulo.",
+          "sourceUrl": "https://conteudo.fpf.org.br/sumulas/2010/3973/125.pdf",
+          "importSource": {
+            "file": "Lista enviada pelo proprietário — Europa, Brasil e Uruguai",
+            "row": 15,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2010,
+            "originalSourceUrl": "https://conteudo.fpf.org.br/sumulas/2010/3973/125.pdf",
+            "correction": "Data informada: 21/02/2010. Data confirmada pela súmula da FPF: 07/03/2010."
+          }
+        }
+      ]
+    },
+    {
+      "key": "maldonado",
+      "name": "Domingo Burgueño Miguel",
+      "city": "Maldonado",
+      "iso": "URY",
+      "aliases": [
+        "Estádio Domingo Burgueño Miguel",
+        "Estadio Domingo Burgueño Miguel",
+        "Campus de Maldonado"
+      ],
+      "matches": [
+        {
+          "id": "europa27-maldonado-2023-10-28-fortaleza-ldu",
+          "date": "28/10/2023",
+          "homeTeam": "Fortaleza",
+          "awayTeam": "LDU",
+          "homeScore": 1,
+          "awayScore": 1,
+          "competition": "CONMEBOL Sudamericana",
+          "notes": "Edição 2023 — final, jogo único em campo neutro.\nPênaltis: Fortaleza 3 × 4 LDU. LDU campeã.\nEmpate por 1 a 1 no tempo normal, mantido após a prorrogação. Partida disputada no Uruguai.",
+          "sourceUrl": "https://fortaleza1918.com.br/fortaleza-e-vice-campeao-da-conmebol-sudamericana/",
+          "importSource": {
+            "file": "Lista enviada pelo proprietário — Europa, Brasil e Uruguai",
+            "row": 16,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2023,
+            "originalSourceUrl": "https://fortaleza1918.com.br/fortaleza-e-vice-campeao-da-conmebol-sudamericana/"
+          }
+        }
+      ]
+    },
+    {
+      "key": "niltonsantos",
+      "name": "Estádio Nilton Santos",
+      "city": "Rio de Janeiro",
+      "iso": "BRA",
+      "aliases": [
+        "Engenhão",
+        "Estádio Olímpico Nilton Santos",
+        "Nilton Santos",
+        "Estádio Olímpico João Havelange"
+      ],
+      "matches": [
+        {
+          "id": "europa27-niltonsantos-2017-08-16-botafogo-flamengo",
+          "date": "16/08/2017",
+          "homeTeam": "Botafogo",
+          "awayTeam": "Flamengo",
+          "homeScore": 0,
+          "awayScore": 0,
+          "competition": "Copa do Brasil",
+          "notes": "Edição 2017 — semifinal, jogo de ida.\nEmpate sem gols no clássico carioca disputado no Estádio Nilton Santos.",
+          "sourceUrl": "https://www.botafogo.com.br/noticias/botafogo-0-x-0-flamengo",
+          "importSource": {
+            "file": "Lista enviada pelo proprietário — Europa, Brasil e Uruguai",
+            "row": 17,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2017,
+            "originalSourceUrl": "https://www.botafogo.com.br/noticias/botafogo-0-x-0-flamengo"
+          }
+        },
+        {
+          "id": "europa27-niltonsantos-2025-02-27-botafogo-racing",
+          "date": "27/02/2025",
+          "homeTeam": "Botafogo",
+          "awayTeam": "Racing",
+          "homeScore": 0,
+          "awayScore": 2,
+          "competition": "CONMEBOL Recopa",
+          "notes": "Edição 2025 — final, jogo de volta.\nRacing campeão, com 4 a 0 no agregado após vencer as duas partidas por 2 a 0.",
+          "sourceUrl": "https://www.uol.com.br/esporte/futebol/ultimas-noticias/2025/02/27/botafogo-racing-recopa-como-foi-o-jogo.htm",
+          "importSource": {
+            "file": "Lista enviada pelo proprietário — Europa, Brasil e Uruguai",
+            "row": 18,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2025,
+            "originalSourceUrl": "https://www.uol.com.br/esporte/futebol/ultimas-noticias/2025/02/27/botafogo-racing-recopa-como-foi-o-jogo.htm"
+          }
+        }
+      ]
+    },
+    {
+      "key": "olimpico",
+      "name": "Estádio Olímpico",
+      "city": "Porto Alegre",
+      "iso": "BRA",
+      "aliases": [
+        "Olímpico",
+        "Olímpico Monumental",
+        "Estádio Olímpico Monumental"
+      ],
+      "matches": [
+        {
+          "id": "europa27-olimpico-2007-05-30-gremio-santos",
+          "date": "30/05/2007",
+          "homeTeam": "Grêmio",
+          "awayTeam": "Santos",
+          "homeScore": 2,
+          "awayScore": 0,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Edição 2007 — semifinal, jogo de ida.\nPartida disputada no Olímpico Monumental, em Porto Alegre.",
+          "sourceUrl": "https://acervosantista.com.br/30-05-2007-gremio-2-x-0-santos-copa-libertadores/",
+          "importSource": {
+            "file": "Lista enviada pelo proprietário — Europa, Brasil e Uruguai",
+            "row": 19,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2007,
+            "originalSourceUrl": "https://acervosantista.com.br/30-05-2007-gremio-2-x-0-santos-copa-libertadores/"
+          }
+        }
+      ]
+    },
+    {
+      "key": "mane",
+      "name": "Mané Garrincha",
+      "city": "Brasília",
+      "iso": "BRA",
+      "aliases": [
+        "Estádio Nacional Mané Garrincha",
+        "Estádio Nacional de Brasília",
+        "Arena BRB Mané Garrincha"
+      ],
+      "matches": [
+        {
+          "id": "europa27-mane-2013-05-26-santos-flamengo",
+          "date": "26/05/2013",
+          "homeTeam": "Santos",
+          "awayTeam": "Flamengo",
+          "homeScore": 0,
+          "awayScore": 0,
+          "competition": "Campeonato Brasileiro",
+          "notes": "Edição 2013 — 1ª rodada. Santos mandante em Brasília.\nDespedida de Neymar ao fim de sua primeira passagem pelo Santos, antes da transferência ao Barcelona.",
+          "sourceUrl": "https://ge.globo.com/jogo/brasileirao2013/26-05-2013/santos-flamengo.html",
+          "importSource": {
+            "file": "Lista enviada pelo proprietário — Europa, Brasil e Uruguai",
+            "row": 20,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2013,
+            "originalSourceUrl": "https://ge.globo.com/jogo/brasileirao2013/26-05-2013/santos-flamengo.html"
+          }
+        },
+        {
+          "id": "europa27-mane-2014-06-15-suica-equador",
+          "date": "15/06/2014",
+          "homeTeam": "Suíça",
+          "awayTeam": "Equador",
+          "homeScore": 2,
+          "awayScore": 1,
+          "competition": "Copa do Mundo",
+          "notes": "Edição 2014 — fase de grupos, Grupo E, 1ª rodada.\nVitória suíça de virada, definida por Seferovic nos acréscimos.",
+          "sourceUrl": "https://ge.globo.com/jogo/copa-do-mundo-2014/15-06-2014/suica-equador.html",
+          "importSource": {
+            "file": "Lista enviada pelo proprietário — Europa, Brasil e Uruguai",
+            "row": 21,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2014,
+            "originalSourceUrl": "https://ge.globo.com/jogo/copa-do-mundo-2014/15-06-2014/suica-equador.html"
+          }
+        }
+      ]
+    },
+    {
+      "key": "maracana",
+      "name": "Maracanã",
+      "city": "Rio de Janeiro",
+      "iso": "BRA",
+      "aliases": [
+        "Estádio do Maracanã",
+        "Estádio Jornalista Mário Filho"
+      ],
+      "matches": [
+        {
+          "id": "europa27-maracana-2013-06-16-mexico-italia",
+          "date": "16/06/2013",
+          "homeTeam": "México",
+          "awayTeam": "Itália",
+          "homeScore": 1,
+          "awayScore": 2,
+          "competition": "Copa das Confederações",
+          "notes": "Edição 2013 — fase de grupos, Grupo A, 1ª rodada.\nPartida disputada no Maracanã, no Rio de Janeiro.\nPirlo e Balotelli marcaram para a Itália; Chicharito marcou para o México.",
+          "sourceUrl": "https://ge.globo.com/jogo/copa-confederacoes-2013/16-06-2013/mexico-italia.html",
+          "importSource": {
+            "file": "Lista enviada pelo proprietário — Europa, Brasil e Uruguai",
+            "row": 22,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2013,
+            "originalSourceUrl": "https://ge.globo.com/jogo/copa-confederacoes-2013/16-06-2013/mexico-italia.html",
+            "correction": "Listado sob Mané Garrincha com a Itália primeiro. Local confirmado: Maracanã; ordem oficial: México × Itália."
+          }
+        }
+      ]
+    },
+    {
+      "key": "moises",
+      "name": "Moisés Lucarelli",
+      "city": "Campinas",
+      "iso": "BRA",
+      "aliases": [
+        "Estádio Moisés Lucarelli"
+      ],
+      "matches": [
+        {
+          "id": "europa27-moises-2007-04-01-ponte-preta-santos",
+          "date": "01/04/2007",
+          "homeTeam": "Ponte Preta",
+          "awayTeam": "Santos",
+          "homeScore": 2,
+          "awayScore": 4,
+          "competition": "Campeonato Paulista",
+          "notes": "Edição 2007 — primeira fase.\nVitória santista no Moisés Lucarelli, em Campinas.",
+          "sourceUrl": "https://acervosantista.com.br/01-04-2007-ponte-preta-2-x-4-santos-campeonato-paulista/",
+          "importSource": {
+            "file": "Lista enviada pelo proprietário — Europa, Brasil e Uruguai",
+            "row": 23,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2007,
+            "originalSourceUrl": "https://acervosantista.com.br/01-04-2007-ponte-preta-2-x-4-santos-campeonato-paulista/",
+            "correction": "Data informada: 24/03/2007. Data confirmada do confronto: 01/04/2007."
+          }
+        },
+        {
+          "id": "europa27-moises-2018-01-25-ponte-preta-santos",
+          "date": "25/01/2018",
+          "homeTeam": "Ponte Preta",
+          "awayTeam": "Santos",
+          "homeScore": 1,
+          "awayScore": 2,
+          "competition": "Campeonato Paulista",
+          "notes": "Edição 2018 — primeira fase, 3ª rodada.\nVitória de virada do Santos, com gols de Eduardo Sasha e Rodrygo.",
+          "sourceUrl": "https://www.santosfc.com.br/sasha-e-rodrygo-saem-do-banco-e-decretam-vitoria-santista-de-virada-sobre-a-ponte/",
+          "importSource": {
+            "file": "Lista enviada pelo proprietário — Europa, Brasil e Uruguai",
+            "row": 24,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2018,
+            "originalSourceUrl": "https://www.santosfc.com.br/sasha-e-rodrygo-saem-do-banco-e-decretam-vitoria-santista-de-virada-sobre-a-ponte/"
+          }
+        }
+      ]
+    },
+    {
+      "key": "neoquimica",
+      "name": "Neo Química Arena",
+      "city": "São Paulo",
+      "iso": "BRA",
+      "aliases": [
+        "Arena Corinthians",
+        "Itaquerão",
+        "Estádio do Corinthians"
+      ],
+      "matches": [
+        {
+          "id": "europa27-neoquimica-2015-08-26-corinthians-santos",
+          "date": "26/08/2015",
+          "homeTeam": "Corinthians",
+          "awayTeam": "Santos",
+          "homeScore": 1,
+          "awayScore": 2,
+          "competition": "Copa do Brasil",
+          "notes": "Edição 2015 — oitavas de final, jogo de volta.\nSantos classificado às quartas com 4 a 1 no agregado.\nPartida disputada na então Arena Corinthians, em Itaquera.",
+          "sourceUrl": "https://ge.globo.com/sp/futebol/copa-do-brasil/noticia/2015/08/santos-faz-valer-dna-elimina-o-rival-corinthians-e-avanca-na-copa-do-brasil.html",
+          "importSource": {
+            "file": "Lista enviada pelo proprietário — Europa, Brasil e Uruguai",
+            "row": 25,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2015,
+            "originalSourceUrl": "https://ge.globo.com/sp/futebol/copa-do-brasil/noticia/2015/08/santos-faz-valer-dna-elimina-o-rival-corinthians-e-avanca-na-copa-do-brasil.html"
+          }
+        }
+      ]
+    },
+    {
+      "key": "novelli",
+      "name": "Novelli Júnior",
+      "city": "Itu",
+      "iso": "BRA",
+      "aliases": [
+        "Estádio Novelli Júnior",
+        "Novelli Junior"
+      ],
+      "matches": [
+        {
+          "id": "europa27-novelli-2007-03-18-ituano-santos",
+          "date": "18/03/2007",
+          "homeTeam": "Ituano",
+          "awayTeam": "Santos",
+          "homeScore": 1,
+          "awayScore": 2,
+          "competition": "Campeonato Paulista",
+          "notes": "Edição 2007 — primeira fase, 14ª rodada.\nVitória de virada do Santos, com gols de Carlinhos e Marcos Aurélio.",
+          "sourceUrl": "https://acervosantista.com.br/18-03-2007-ituano-1-x-2-santos-campeonato-paulista/",
+          "importSource": {
+            "file": "Lista enviada pelo proprietário — Europa, Brasil e Uruguai",
+            "row": 26,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2007,
+            "originalSourceUrl": "https://acervosantista.com.br/18-03-2007-ituano-1-x-2-santos-campeonato-paulista/",
+            "correction": "Data informada: 07/02/2007. Data confirmada do confronto: 18/03/2007."
+          }
+        }
+      ]
+    },
+    {
+      "key": "romildo",
+      "name": "Romildo Vitor Gomes Ferreira",
+      "city": "Mogi Mirim",
+      "iso": "BRA",
+      "aliases": [
+        "Romildo Ferreira",
+        "Estádio Romildo Ferreira",
+        "Estádio Vail Chaves",
+        "Vail Chaves"
+      ],
+      "matches": [
+        {
+          "id": "europa27-romildo-2013-05-04-mogi-mirim-santos",
+          "date": "04/05/2013",
+          "homeTeam": "Mogi Mirim",
+          "awayTeam": "Santos",
+          "homeScore": 1,
+          "awayScore": 1,
+          "competition": "Campeonato Paulista",
+          "notes": "Edição 2013 — semifinal, jogo único.\nPênaltis: Mogi Mirim 4 × 5 Santos. Santos classificado à final.\nA partida terminou empatada por 1 a 1 no tempo normal.",
+          "sourceUrl": "https://ge.globo.com/jogo/campeonato-paulista-2013/04-05-2013/mogi-mirim-santos.html",
+          "importSource": {
+            "file": "Lista enviada pelo proprietário — Europa, Brasil e Uruguai",
+            "row": 27,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2013,
+            "originalSourceUrl": "https://ge.globo.com/jogo/campeonato-paulista-2013/04-05-2013/mogi-mirim-santos.html"
+          }
+        }
+      ]
+    }
+  ]
+}

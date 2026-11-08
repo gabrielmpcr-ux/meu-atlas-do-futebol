@@ -1,6 +1,6 @@
 # Result badges
 
-44 club/national crests, sourced from https://github.com/JoseArroyave/football-logos (logos by country). Rendered to a transparent WebP sprite, 96 px per cell for 48 CSS px. No remote image requests at runtime. Crests remain their respective teams’ marks; used to identify match participants. They represent current reference badges, not a guarantee of historical shirt artwork. Unknown teams use initials rather than an unrelated badge.
+65 club/national crests, sourced from https://github.com/JoseArroyave/football-logos (logos by country). Rendered to a transparent WebP sprite, 96 px per cell for 48 CSS px. No remote image requests at runtime. Crests remain their respective teams’ marks; used to identify match participants. They represent current reference badges, not a guarantee of historical shirt artwork. Unknown teams use initials rather than an unrelated badge.
 
 Sprite order:
 0: argentinos-juniors (corrected from Wikimedia Commons)
@@ -59,3 +59,25 @@ Sources: the same JoseArroyave/football-logos repository, country directories. S
 44: sao-caetano
 45: ituano
 Sources: JoseArroyave/football-logos logos/brazil/São_Caetano.svg and Ituano.svg. Stars restored to match user references (three and two). 46 crests, seven rows; cache version 5.
+
+Additional crests for the 27-game Europa/Brasil/Uruguai batch (sprite cache version 6; ten rows):
+46: celta
+47: getafe
+48: real-madrid
+49: barcelona
+50: nice
+51: monaco
+52: bahia
+53: sampaio-correa
+54: vitoria
+55: portuguesa
+56: fortaleza
+57: ponte-preta
+58: italia
+59: mexico
+60: suica
+61: equador
+62: rio-claro
+63: gremio-barueri
+64: mogi-mirim
+Sources: JoseArroyave/football-logos country SVG files; Wikimedia Commons File:Rio Claro Futebol Clube.svg, File:GR Barueri.svg, File:Mogi Mirim EC.svg. See source metadata in the maintenance workspace. All new marks normalized to visible bounds, without changing existing 46 positions.
