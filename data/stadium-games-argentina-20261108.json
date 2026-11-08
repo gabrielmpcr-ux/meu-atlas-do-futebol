@@ -1,0 +1,204 @@
+{
+  "version": 1,
+  "id": "stadium-games-argentina-20261108",
+  "stadiums": [
+    {
+      "key": "bombonera",
+      "name": "La Bombonera",
+      "iso": "ARG",
+      "city": "Buenos Aires",
+      "aliases": [
+        "Estadio Alberto J. Armando",
+        "Alberto José Armando"
+      ],
+      "matches": [
+        {
+          "id": "argentina-bombonera-2019-04-10",
+          "date": "10/04/2019",
+          "homeTeam": "Boca Juniors",
+          "awayTeam": "Jorge Wilstermann",
+          "homeScore": 4,
+          "awayScore": 0,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Fase de grupos — Grupo G, 4ª rodada",
+          "sourceUrl": "https://historiadeboca.com.ar/partido/boca-4-j-wilstermann-bol-0-copa-libertadores-2019/6229.html",
+          "importSource": {
+            "file": "Jogos_Argentina_Conferidos.xlsx",
+            "attendanceBasis": "inferred-from-photo-dates",
+            "originalSourceUrl": "https://historiadeboca.com.ar/partido/boca-4-j-wilstermann-bol-0-copa-libertadores-2019/6229.html"
+          }
+        },
+        {
+          "id": "argentina-bombonera-2019-10-22",
+          "date": "22/10/2019",
+          "homeTeam": "Boca Juniors",
+          "awayTeam": "River Plate",
+          "homeScore": 1,
+          "awayScore": 0,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Semifinal — volta\nRiver Plate classificado: agregado de 2 a 1.",
+          "sourceUrl": "https://historiadeboca.com.ar/partido/boca-1-river-0-copa-libertadores-2019/6260.html",
+          "importSource": {
+            "file": "Jogos_Argentina_Conferidos.xlsx",
+            "attendanceBasis": "inferred-from-photo-dates",
+            "originalSourceUrl": "https://historiadeboca.com.ar/partido/boca-1-river-0-copa-libertadores-2019/6260.html"
+          }
+        }
+      ]
+    },
+    {
+      "key": "racing",
+      "name": "El Cilindro",
+      "iso": "ARG",
+      "city": "Avellaneda",
+      "aliases": [
+        "Presidente Perón",
+        "Estadio Presidente Perón",
+        "Estadio Juan Domingo Perón"
+      ],
+      "matches": [
+        {
+          "id": "argentina-racing-2024-09-26",
+          "date": "26/09/2024",
+          "homeTeam": "Racing Club",
+          "awayTeam": "Athletico Paranaense",
+          "homeScore": 4,
+          "awayScore": 1,
+          "competition": "CONMEBOL Sudamericana",
+          "notes": "Quartas de final — volta\nRacing classificado: agregado de 4 a 2.",
+          "sourceUrl": "https://www.racingclub.com.ar/palmares/copa-sudamericana-2024/",
+          "importSource": {
+            "file": "Jogos_Argentina_Conferidos.xlsx",
+            "attendanceBasis": "inferred-from-photo-dates",
+            "originalSourceUrl": "https://www.racingclub.com.ar/palmares/copa-sudamericana-2024/"
+          }
+        },
+        {
+          "id": "argentina-racing-2025-02-20",
+          "date": "20/02/2025",
+          "homeTeam": "Racing Club",
+          "awayTeam": "Botafogo",
+          "homeScore": 2,
+          "awayScore": 0,
+          "competition": "CONMEBOL Recopa",
+          "notes": "Final — ida",
+          "sourceUrl": "https://www.racingclub.com.ar/primer-equipo/nota/2025/02/15178_le-gustan-las-finales/",
+          "importSource": {
+            "file": "Jogos_Argentina_Conferidos.xlsx",
+            "attendanceBasis": "inferred-from-photo-dates",
+            "originalSourceUrl": "https://www.racingclub.com.ar/primer-equipo/nota/2025/02/15178_le-gustan-las-finales/"
+          }
+        },
+        {
+          "id": "argentina-racing-2025-08-19",
+          "date": "19/08/2025",
+          "homeTeam": "Racing Club",
+          "awayTeam": "Peñarol",
+          "homeScore": 3,
+          "awayScore": 1,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Oitavas de final — volta\nRacing classificado: agregado de 3 a 2.",
+          "sourceUrl": "https://www.afa.com.ar/es/posts/racing-ante-penarol",
+          "importSource": {
+            "file": "Jogos_Argentina_Conferidos.xlsx",
+            "attendanceBasis": "inferred-from-photo-dates",
+            "originalSourceUrl": "https://www.afa.com.ar/es/posts/racing-ante-penarol"
+          }
+        }
+      ]
+    },
+    {
+      "key": "monumental",
+      "name": "Monumental de Núñez",
+      "iso": "ARG",
+      "city": "Buenos Aires",
+      "aliases": [
+        "Monumental",
+        "Estadio Monumental",
+        "Mâs Monumental"
+      ],
+      "matches": [
+        {
+          "id": "argentina-monumental-2019-05-30",
+          "date": "30/05/2019",
+          "homeTeam": "River Plate",
+          "awayTeam": "Athletico Paranaense",
+          "homeScore": 3,
+          "awayScore": 0,
+          "competition": "CONMEBOL Recopa",
+          "notes": "Final — volta\nRiver campeão: agregado de 3 a 1. Registro de 31/05 não contado como outro jogo.",
+          "sourceUrl": "https://www.tycsports.com/river-plate/river-vencio-a-paranaense-y-se-quedo-con-la-recopa-sudamericana-20190530.html",
+          "importSource": {
+            "file": "Jogos_Argentina_Conferidos.xlsx",
+            "attendanceBasis": "inferred-from-photo-dates",
+            "originalSourceUrl": "https://www.tycsports.com/river-plate/river-vencio-a-paranaense-y-se-quedo-con-la-recopa-sudamericana-20190530.html"
+          }
+        },
+        {
+          "id": "argentina-monumental-2023-08-01",
+          "date": "01/08/2023",
+          "homeTeam": "River Plate",
+          "awayTeam": "Internacional",
+          "homeScore": 2,
+          "awayScore": 1,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Oitavas de final — ida",
+          "sourceUrl": "https://argentina.as.com/futbol/river-plate-internacional-en-vivo-copa-libertadores-en-directo-n/",
+          "importSource": {
+            "file": "Jogos_Argentina_Conferidos.xlsx",
+            "attendanceBasis": "inferred-from-photo-dates",
+            "originalSourceUrl": "https://argentina.as.com/futbol/river-plate-internacional-en-vivo-copa-libertadores-en-directo-n/"
+          }
+        },
+        {
+          "id": "argentina-monumental-2024-09-24",
+          "date": "24/09/2024",
+          "homeTeam": "River Plate",
+          "awayTeam": "Colo-Colo",
+          "homeScore": 1,
+          "awayScore": 0,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Quartas de final — volta\nRiver classificado: agregado de 2 a 1.",
+          "sourceUrl": "https://www.chilevision.cl/chv-deportes/copa-libertadores/river-plate-vs-colo-colo-goles-resumen-y-compacto/",
+          "importSource": {
+            "file": "Jogos_Argentina_Conferidos.xlsx",
+            "attendanceBasis": "inferred-from-photo-dates",
+            "originalSourceUrl": "https://www.chilevision.cl/chv-deportes/copa-libertadores/river-plate-vs-colo-colo-goles-resumen-y-compacto/"
+          }
+        },
+        {
+          "id": "argentina-monumental-2024-11-30",
+          "date": "30/11/2024",
+          "homeTeam": "Atlético Mineiro",
+          "awayTeam": "Botafogo",
+          "homeScore": 1,
+          "awayScore": 3,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Final — jogo único\nCampo neutro. Botafogo campeão.",
+          "sourceUrl": "https://www.afa.com.ar/es_LA/posts/en-el-estadio-mas-monumental-botafogo-le-gano-3-1-a-atletico-mineiro-y-se-quedo-con-la-copa-libertadores",
+          "importSource": {
+            "file": "Jogos_Argentina_Conferidos.xlsx",
+            "attendanceBasis": "inferred-from-photo-dates",
+            "originalSourceUrl": "https://www.afa.com.ar/es_LA/posts/en-el-estadio-mas-monumental-botafogo-le-gano-3-1-a-atletico-mineiro-y-se-quedo-con-la-copa-libertadores"
+          }
+        },
+        {
+          "id": "argentina-monumental-2025-08-21",
+          "date": "21/08/2025",
+          "homeTeam": "River Plate",
+          "awayTeam": "Libertad",
+          "homeScore": 1,
+          "awayScore": 1,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Oitavas de final — volta\nRiver classificado nos pênaltis: 3 a 1. Agregado: 1 a 1.",
+          "sourceUrl": "https://www.apf.org.py/noticias/libertad-no-pudo-en-el-monumental",
+          "importSource": {
+            "file": "Jogos_Argentina_Conferidos.xlsx",
+            "attendanceBasis": "inferred-from-photo-dates",
+            "originalSourceUrl": "https://www.apf.org.py/noticias/libertad-no-pudo-en-el-monumental"
+          }
+        }
+      ]
+    }
+  ]
+}
