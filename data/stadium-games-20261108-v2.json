@@ -1,0 +1,463 @@
+{
+  "version": 1,
+  "id": "stadium-games-20261108-v2",
+  "stadiums": [
+    {
+      "key": "allianz-parque",
+      "name": "Allianz Parque",
+      "iso": "BRA",
+      "city": "São Paulo",
+      "aliases": [
+        "Allianz Parque"
+      ],
+      "matches": [
+        {
+          "id": "xlsx2-allianz-parque-2016-07-12-palmeiras-santos",
+          "date": "12/07/2016",
+          "homeTeam": "Palmeiras",
+          "awayTeam": "Santos",
+          "homeScore": 1,
+          "awayScore": 1,
+          "competition": "Campeonato Brasileiro",
+          "notes": "14ª rodada",
+          "sourceUrl": "https://www.santosfc.com.br/fora-de-casa-santos-fc-empata-com-palmeiras-por-1-a-1/",
+          "importSource": {
+            "file": "Jogos_Allianz_Parque2.xlsx",
+            "sheet": "Jogos",
+            "row": 6,
+            "attendanceBasis": "inferred-from-photo-dates",
+            "originalSourceUrl": "https://www.santosfc.com.br/fora-de-casa-santos-fc-empata-com-palmeiras-por-1-a-1/"
+          }
+        },
+        {
+          "id": "xlsx2-allianz-parque-2017-04-12-palmeiras-penarol",
+          "date": "12/04/2017",
+          "homeTeam": "Palmeiras",
+          "awayTeam": "Peñarol",
+          "homeScore": 3,
+          "awayScore": 2,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Fase de grupos — 3ª rodada",
+          "sourceUrl": "https://www.palmeiras.com.br/noticias/em-partida-emocionante-palmeiras-bate-penarol-nos-acrescimos-pela-libertadores/",
+          "importSource": {
+            "file": "Jogos_Allianz_Parque2.xlsx",
+            "sheet": "Jogos",
+            "row": 7,
+            "attendanceBasis": "inferred-from-photo-dates",
+            "originalSourceUrl": "https://www.palmeiras.com.br/noticias/em-partida-emocionante-palmeiras-bate-penarol-nos-acrescimos-pela-CONMEBOL Libertadores/"
+          }
+        },
+        {
+          "id": "xlsx2-allianz-parque-2019-03-12-palmeiras-melgar",
+          "date": "12/03/2019",
+          "homeTeam": "Palmeiras",
+          "awayTeam": "Melgar",
+          "homeScore": 3,
+          "awayScore": 0,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Fase de grupos — 2ª rodada",
+          "sourceUrl": "https://www.palmeiras.com.br/noticias/dudu-chega-a-200-vitorias-barreira-alcancada-por-apenas-outros-23-nomes-na-historia-do-verdao/",
+          "importSource": {
+            "file": "Jogos_Allianz_Parque2.xlsx",
+            "sheet": "Jogos",
+            "row": 8,
+            "attendanceBasis": "inferred-from-photo-dates",
+            "originalSourceUrl": "https://www.palmeiras.com.br/noticias/dudu-chega-a-200-vitorias-barreira-alcancada-por-apenas-outros-23-nomes-na-historia-do-verdao/"
+          }
+        },
+        {
+          "id": "xlsx2-allianz-parque-2021-09-21-palmeiras-atletico-mg",
+          "date": "21/09/2021",
+          "homeTeam": "Palmeiras",
+          "awayTeam": "Atlético-MG",
+          "homeScore": 0,
+          "awayScore": 0,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Semifinal — ida",
+          "sourceUrl": "https://www.terra.com.br/esportes/futebol/libertadores/ao-vivo/palmeiras-x-atletico-mg/69634/",
+          "importSource": {
+            "file": "Jogos_Allianz_Parque2.xlsx",
+            "sheet": "Jogos",
+            "row": 9,
+            "attendanceBasis": "inferred-from-photo-dates",
+            "originalSourceUrl": "https://www.terra.com.br/esportes/futebol/CONMEBOL Libertadores/ao-vivo/palmeiras-x-atletico-mg/69634/"
+          }
+        },
+        {
+          "id": "xlsx2-allianz-parque-2022-08-10-palmeiras-atletico-mg",
+          "date": "10/08/2022",
+          "homeTeam": "Palmeiras",
+          "awayTeam": "Atlético-MG",
+          "homeScore": 0,
+          "awayScore": 0,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Quartas de final — volta\nPênaltis: Palmeiras 6 × 5 Atlético-MG",
+          "sourceUrl": "https://www.palmeiras.com.br/noticias/palmeiras-x-atletico-mg-informacoes-estatisticas-e-curiosidades-4/",
+          "importSource": {
+            "file": "Jogos_Allianz_Parque2.xlsx",
+            "sheet": "Jogos",
+            "row": 10,
+            "attendanceBasis": "inferred-from-photo-dates",
+            "originalSourceUrl": "https://www.palmeiras.com.br/noticias/palmeiras-x-atletico-mg-informacoes-estatisticas-e-curiosidades-4/"
+          }
+        },
+        {
+          "id": "xlsx2-allianz-parque-2023-08-09-palmeiras-atletico-mg",
+          "date": "09/08/2023",
+          "homeTeam": "Palmeiras",
+          "awayTeam": "Atlético-MG",
+          "homeScore": 0,
+          "awayScore": 0,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Oitavas de final — volta\nPalmeiras classificado (1 × 0 no agregado)",
+          "sourceUrl": "https://www.palmeiras.com.br/noticias/recordista-entre-os-brasileiros-verdao-alcanca-quartas-de-final-da-libertadores-pela-12a-vez/",
+          "importSource": {
+            "file": "Jogos_Allianz_Parque2.xlsx",
+            "sheet": "Jogos",
+            "row": 11,
+            "attendanceBasis": "inferred-from-photo-dates",
+            "originalSourceUrl": "https://www.palmeiras.com.br/noticias/recordista-entre-os-brasileiros-verdao-alcanca-quartas-de-final-da-CONMEBOL Libertadores-pela-12a-vez/"
+          }
+        },
+        {
+          "id": "xlsx2-allianz-parque-2024-08-21-palmeiras-botafogo",
+          "date": "21/08/2024",
+          "homeTeam": "Palmeiras",
+          "awayTeam": "Botafogo",
+          "homeScore": 2,
+          "awayScore": 2,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Oitavas de final — volta\nBotafogo classificado (4 × 3 no agregado)",
+          "sourceUrl": "https://www.palmeiras.com.br/noticias/palmeiras-empata-com-botafogo-e-se-despede-da-libertadores/",
+          "importSource": {
+            "file": "Jogos_Allianz_Parque2.xlsx",
+            "sheet": "Jogos",
+            "row": 12,
+            "attendanceBasis": "inferred-from-photo-dates",
+            "originalSourceUrl": "https://www.palmeiras.com.br/noticias/palmeiras-empata-com-botafogo-e-se-despede-da-CONMEBOL Libertadores/"
+          }
+        }
+      ]
+    },
+    {
+      "key": "maracana",
+      "name": "Maracanã",
+      "iso": "BRA",
+      "city": "Rio de Janeiro",
+      "aliases": [
+        "Maracanã",
+        "Estádio do Maracanã",
+        "Estádio Jornalista Mário Filho",
+        "Jornalista Mário Filho"
+      ],
+      "matches": [
+        {
+          "id": "xlsx2-maracana-2019-07-07-brasil-peru",
+          "date": "07/07/2019",
+          "homeTeam": "Brasil",
+          "awayTeam": "Peru",
+          "homeScore": 3,
+          "awayScore": 1,
+          "competition": "Copa América",
+          "notes": "Final\nBrasil campeão",
+          "sourceUrl": "https://copaamerica.com/pt/noticias/brasil-campeao-copa-america-2019-nono-titul",
+          "importSource": {
+            "file": "Jogos_Maracana2.xlsx",
+            "sheet": "Jogos",
+            "row": 6,
+            "attendanceBasis": "inferred-from-photo-dates",
+            "originalSourceUrl": "https://copaamerica.com/pt/noticias/brasil-campeao-copa-america-2019-nono-titul"
+          }
+        },
+        {
+          "id": "xlsx2-maracana-2019-08-21-flamengo-internacional",
+          "date": "21/08/2019",
+          "homeTeam": "Flamengo",
+          "awayTeam": "Internacional",
+          "homeScore": 2,
+          "awayScore": 0,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Quartas de final — ida",
+          "sourceUrl": "https://www.terra.com.br/esportes/futebol/libertadores/ao-vivo/flamengo-x-internacional/59136/",
+          "importSource": {
+            "file": "Jogos_Maracana2.xlsx",
+            "sheet": "Jogos",
+            "row": 7,
+            "attendanceBasis": "inferred-from-photo-dates",
+            "originalSourceUrl": "https://www.terra.com.br/esportes/futebol/CONMEBOL Libertadores/ao-vivo/flamengo-x-internacional/59136/"
+          }
+        },
+        {
+          "id": "xlsx2-maracana-2019-09-14-flamengo-santos",
+          "date": "14/09/2019",
+          "homeTeam": "Flamengo",
+          "awayTeam": "Santos",
+          "homeScore": 1,
+          "awayScore": 0,
+          "competition": "Campeonato Brasileiro",
+          "notes": "19ª rodada",
+          "sourceUrl": "https://www.santosfc.com.br/fora-de-casa-santos-fc-perde-para-o-flamengo-pela-19a-rodada-do-brasileirao/",
+          "importSource": {
+            "file": "Jogos_Maracana2.xlsx",
+            "sheet": "Jogos",
+            "row": 8,
+            "attendanceBasis": "inferred-from-photo-dates",
+            "originalSourceUrl": "https://www.santosfc.com.br/fora-de-casa-santos-fc-perde-para-o-flamengo-pela-19a-rodada-do-brasileirao/"
+          }
+        },
+        {
+          "id": "xlsx2-maracana-2019-10-23-flamengo-gremio",
+          "date": "23/10/2019",
+          "homeTeam": "Flamengo",
+          "awayTeam": "Grêmio",
+          "homeScore": 5,
+          "awayScore": 0,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Semifinal — volta",
+          "sourceUrl": "https://gremio.net/futebol/ficha/3704",
+          "importSource": {
+            "file": "Jogos_Maracana2.xlsx",
+            "sheet": "Jogos",
+            "row": 9,
+            "attendanceBasis": "inferred-from-photo-dates",
+            "originalSourceUrl": "https://gremio.net/futebol/ficha/3704"
+          }
+        },
+        {
+          "id": "xlsx2-maracana-2020-02-26-flamengo-independiente-del-valle",
+          "date": "26/02/2020",
+          "homeTeam": "Flamengo",
+          "awayTeam": "Independiente del Valle",
+          "homeScore": 3,
+          "awayScore": 0,
+          "competition": "CONMEBOL Recopa",
+          "notes": "Final — volta\nFlamengo campeão",
+          "sourceUrl": "https://www.terra.com.br/esportes/futebol/ao-vivo/flamengo-x-independiente-del-valle/61340/",
+          "importSource": {
+            "file": "Jogos_Maracana2.xlsx",
+            "sheet": "Jogos",
+            "row": 10,
+            "attendanceBasis": "inferred-from-photo-dates",
+            "originalSourceUrl": "https://www.terra.com.br/esportes/futebol/ao-vivo/flamengo-x-independiente-del-valle/61340/"
+          }
+        },
+        {
+          "id": "xlsx2-maracana-2021-01-30-palmeiras-santos",
+          "date": "30/01/2021",
+          "homeTeam": "Palmeiras",
+          "awayTeam": "Santos",
+          "homeScore": 1,
+          "awayScore": 0,
+          "competition": "CONMEBOL Libertadores 2020",
+          "notes": "Final\nEdição 2020, disputada em 2021",
+          "sourceUrl": "https://www.palmeiras.com.br/noticias/palmeiras-bate-santos-com-gol-nos-minutos-finais-e-conquista-bi-da-libertadores/",
+          "importSource": {
+            "file": "Jogos_Maracana2.xlsx",
+            "sheet": "Jogos",
+            "row": 11,
+            "attendanceBasis": "inferred-from-photo-dates",
+            "originalSourceUrl": "https://www.palmeiras.com.br/noticias/palmeiras-bate-santos-com-gol-nos-minutos-finais-e-conquista-bi-da-CONMEBOL Libertadores/"
+          }
+        },
+        {
+          "id": "xlsx2-maracana-2021-09-22-flamengo-barcelona-de-guayaquil",
+          "date": "22/09/2021",
+          "homeTeam": "Flamengo",
+          "awayTeam": "Barcelona de Guayaquil",
+          "homeScore": 2,
+          "awayScore": 0,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Semifinal — ida",
+          "sourceUrl": "https://www.gazetaesportiva.com/campeonatos/libertadores-da-america/flamengo-vence-o-barcelona-equ-no-maracana-e-fica-perto-da-final-da-libertadores/",
+          "importSource": {
+            "file": "Jogos_Maracana2.xlsx",
+            "sheet": "Jogos",
+            "row": 12,
+            "attendanceBasis": "inferred-from-photo-dates",
+            "originalSourceUrl": "https://www.gazetaesportiva.com/campeonatos/CONMEBOL Libertadores-da-america/flamengo-vence-o-barcelona-equ-no-maracana-e-fica-perto-da-final-da-CONMEBOL Libertadores/"
+          }
+        },
+        {
+          "id": "xlsx2-maracana-2022-08-09-flamengo-corinthians",
+          "date": "09/08/2022",
+          "homeTeam": "Flamengo",
+          "awayTeam": "Corinthians",
+          "homeScore": 1,
+          "awayScore": 0,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Quartas de final — volta",
+          "sourceUrl": "https://www.goal.com/br/not%C3%ADcias/quartas-de-final-da-libertadores-2022-classificados-chaveamento-datas-jogos-e-mais/blte378e4a0813644c3",
+          "importSource": {
+            "file": "Jogos_Maracana2.xlsx",
+            "sheet": "Jogos",
+            "row": 13,
+            "attendanceBasis": "inferred-from-photo-dates",
+            "originalSourceUrl": "https://www.goal.com/br/not%C3%ADcias/quartas-de-final-da-CONMEBOL Libertadores-2022-classificados-chaveamento-datas-jogos-e-mais/blte378e4a0813644c3"
+          }
+        },
+        {
+          "id": "xlsx2-maracana-2022-10-19-flamengo-corinthians",
+          "date": "19/10/2022",
+          "homeTeam": "Flamengo",
+          "awayTeam": "Corinthians",
+          "homeScore": 1,
+          "awayScore": 1,
+          "competition": "Copa do Brasil",
+          "notes": "Final — volta\nPênaltis: Flamengo 6 × 5 Corinthians",
+          "sourceUrl": "https://www.quadrodemedalhas.com/futebol/copa-do-brasil/copa-do-brasil-de-futebol-2022.htm",
+          "importSource": {
+            "file": "Jogos_Maracana2.xlsx",
+            "sheet": "Jogos",
+            "row": 14,
+            "attendanceBasis": "inferred-from-photo-dates",
+            "originalSourceUrl": "https://www.quadrodemedalhas.com/futebol/copa-do-brasil/copa-do-brasil-de-futebol-2022.htm"
+          }
+        },
+        {
+          "id": "xlsx2-maracana-2023-02-28-flamengo-independiente-del-valle",
+          "date": "28/02/2023",
+          "homeTeam": "Flamengo",
+          "awayTeam": "Independiente del Valle",
+          "homeScore": 1,
+          "awayScore": 0,
+          "competition": "CONMEBOL Recopa",
+          "notes": "Final — volta\nApós prorrogação. Pênaltis: Flamengo 4 × 5 Del Valle",
+          "sourceUrl": "https://www.terra.com.br/esportes/futebol/ao-vivo/flamengo-x-independiente-del-valle/76162/",
+          "importSource": {
+            "file": "Jogos_Maracana2.xlsx",
+            "sheet": "Jogos",
+            "row": 15,
+            "attendanceBasis": "inferred-from-photo-dates",
+            "originalSourceUrl": "https://www.terra.com.br/esportes/futebol/ao-vivo/flamengo-x-independiente-del-valle/76162/"
+          }
+        },
+        {
+          "id": "xlsx2-maracana-2023-08-08-fluminense-argentinos-juniors",
+          "date": "08/08/2023",
+          "homeTeam": "Fluminense",
+          "awayTeam": "Argentinos Juniors",
+          "homeScore": 2,
+          "awayScore": 0,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Oitavas de final — volta",
+          "sourceUrl": "https://fimdejogo.com.br/tabela-de-jogos-de-2023/",
+          "importSource": {
+            "file": "Jogos_Maracana2.xlsx",
+            "sheet": "Jogos",
+            "row": 16,
+            "attendanceBasis": "inferred-from-photo-dates",
+            "originalSourceUrl": "https://fimdejogo.com.br/tabela-de-jogos-de-2023/"
+          }
+        },
+        {
+          "id": "xlsx2-maracana-2023-09-27-fluminense-internacional",
+          "date": "27/09/2023",
+          "homeTeam": "Fluminense",
+          "awayTeam": "Internacional",
+          "homeScore": 2,
+          "awayScore": 2,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Semifinal — ida",
+          "sourceUrl": "https://www.lance.com.br/temporeal/partida/libertadores-da-america-2023-27-09-2023-fluminensexinternacional",
+          "importSource": {
+            "file": "Jogos_Maracana2.xlsx",
+            "sheet": "Jogos",
+            "row": 17,
+            "attendanceBasis": "inferred-from-photo-dates",
+            "originalSourceUrl": "https://www.lance.com.br/temporeal/partida/CONMEBOL Libertadores-da-america-2023-27-09-2023-fluminensexinternacional"
+          }
+        },
+        {
+          "id": "xlsx2-maracana-2023-11-04-boca-juniors-fluminense",
+          "date": "04/11/2023",
+          "homeTeam": "Boca Juniors",
+          "awayTeam": "Fluminense",
+          "homeScore": 1,
+          "awayScore": 2,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Final\nApós prorrogação. Fluminense campeão",
+          "sourceUrl": "https://www.fluminense.com.br/noticia/historico-fluminense-vence-o-boca-juniors-e-e-campeao-da-conmebol-libertadores-2023",
+          "importSource": {
+            "file": "Jogos_Maracana2.xlsx",
+            "sheet": "Jogos",
+            "row": 18,
+            "attendanceBasis": "inferred-from-photo-dates",
+            "originalSourceUrl": "https://www.fluminense.com.br/noticia/historico-fluminense-vence-o-boca-juniors-e-e-campeao-da-conmebol-CONMEBOL Libertadores-2023"
+          }
+        },
+        {
+          "id": "xlsx2-maracana-2024-02-29-fluminense-ldu",
+          "date": "29/02/2024",
+          "homeTeam": "Fluminense",
+          "awayTeam": "LDU",
+          "homeScore": 2,
+          "awayScore": 0,
+          "competition": "CONMEBOL Recopa",
+          "notes": "Final — volta\nFluminense campeão",
+          "sourceUrl": "https://fluminense.com.br/noticia/fluminense-vence-a-ldu-e-e-campeao-da-recopa-no-maracana",
+          "importSource": {
+            "file": "Jogos_Maracana2.xlsx",
+            "sheet": "Jogos",
+            "row": 19,
+            "attendanceBasis": "inferred-from-photo-dates",
+            "originalSourceUrl": "https://fluminense.com.br/noticia/fluminense-vence-a-ldu-e-e-campeao-da-recopa-no-maracana"
+          }
+        },
+        {
+          "id": "xlsx2-maracana-2024-08-24-flamengo-olympiacos",
+          "date": "24/08/2024",
+          "homeTeam": "Flamengo",
+          "awayTeam": "Olympiacos",
+          "homeScore": 2,
+          "awayScore": 1,
+          "competition": "Copa Intercontinental Sub-20",
+          "notes": "Final\nCategoria Sub-20. Flamengo campeão",
+          "sourceUrl": "https://www.uol.com.br/esporte/futebol/ultimas-noticias/2024/08/24/flamengo-x-olympiacos.amp.htm",
+          "importSource": {
+            "file": "Jogos_Maracana2.xlsx",
+            "sheet": "Jogos",
+            "row": 20,
+            "attendanceBasis": "inferred-from-photo-dates",
+            "originalSourceUrl": "https://www.uol.com.br/esporte/futebol/ultimas-noticias/2024/08/24/flamengo-x-olympiacos.amp.htm"
+          }
+        },
+        {
+          "id": "xlsx2-maracana-2026-02-26-flamengo-lanus",
+          "date": "26/02/2026",
+          "homeTeam": "Flamengo",
+          "awayTeam": "Lanús",
+          "homeScore": 2,
+          "awayScore": 3,
+          "competition": "CONMEBOL Recopa",
+          "notes": "Final — volta\nApós prorrogação. Lanús campeão",
+          "sourceUrl": "https://www.fferj.com.br/partidas/3725",
+          "importSource": {
+            "file": "Jogos_Maracana2.xlsx",
+            "sheet": "Jogos",
+            "row": 21,
+            "attendanceBasis": "inferred-from-photo-dates",
+            "originalSourceUrl": "https://www.fferj.com.br/partidas/3725"
+          }
+        },
+        {
+          "id": "xlsx2-maracana-2026-10-18-fluminense-santos",
+          "date": "18/10/2026",
+          "homeTeam": "Fluminense",
+          "awayTeam": "Santos",
+          "homeScore": 1,
+          "awayScore": 2,
+          "competition": "Campeonato Brasileiro",
+          "notes": "31ª rodada",
+          "sourceUrl": "https://www.santosfc.com.br/de-virada-peixe-vence-no-maracana-contra-o-fluminense/",
+          "importSource": {
+            "file": "Jogos_Maracana2.xlsx",
+            "sheet": "Jogos",
+            "row": 22,
+            "attendanceBasis": "inferred-from-photo-dates",
+            "originalSourceUrl": "https://www.santosfc.com.br/de-virada-peixe-vence-no-maracana-contra-o-fluminense/"
+          }
+        }
+      ]
+    }
+  ]
+}

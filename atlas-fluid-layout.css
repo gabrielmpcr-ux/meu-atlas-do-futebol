@@ -29,3 +29,6 @@ body.atlas-v2 .immersive-shell .map-stage:not(.is-2d),body.atlas-v2 .immersive-s
 body.atlas-v2 .immersive-shell .map-stage{container-type:size}
 body.atlas-v2 .immersive-shell .map-stage:not(.is-2d)::before{content:"";position:absolute;z-index:0;pointer-events:none;left:50%;top:calc(50% + min(42cqw,42cqh) + 18px);width:clamp(100px,min(48cqw,48cqh),320px);height:clamp(14px,min(4cqw,4cqh),26px);transform:translate(-50%,-50%);background:radial-gradient(ellipse,rgba(3,10,17,.34) 0%,rgba(3,10,17,.16) 38%,transparent 75%);filter:blur(7px)}
 body.atlas-v2 .immersive-shell .map-stage:not(.is-2d)::after{content:"";position:absolute;z-index:0;pointer-events:none;left:50%;top:50%;width:min(112cqw,112cqh);height:min(112cqw,112cqh);transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(118,152,178,.065) 0%,rgba(118,152,178,.045) 40%,transparent 69%)}
+
+body.atlas-v2 .stadium-games .match-source{display:inline-flex;align-items:center;min-height:32px;font-size:12px;color:#94701a;text-decoration:underline;overflow-wrap:anywhere}
+body.atlas-v2 .stadium-games article p{white-space:pre-line}
