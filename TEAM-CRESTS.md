@@ -1,6 +1,6 @@
 # Result badges
 
-35 club/national crests, sourced from https://github.com/JoseArroyave/football-logos (logos by country). Rendered to a transparent WebP sprite, 96 px per cell for 48 CSS px. No remote image requests at runtime. Crests remain their respective teams’ marks; used to identify match participants. They represent current reference badges, not a guarantee of historical shirt artwork. Unknown teams use initials rather than an unrelated badge.
+44 club/national crests, sourced from https://github.com/JoseArroyave/football-logos (logos by country). Rendered to a transparent WebP sprite, 96 px per cell for 48 CSS px. No remote image requests at runtime. Crests remain their respective teams’ marks; used to identify match participants. They represent current reference badges, not a guarantee of historical shirt artwork. Unknown teams use initials rather than an unrelated badge.
 
 Sprite order:
 0: argentinos-juniors (corrected from Wikimedia Commons)
@@ -43,3 +43,15 @@ Additional sources: PSG, Inter, Cruz Azul, Club León and Primavera from the sam
 34: bragantino (logos/brazil/RB_Bragantino.svg in the source repository)
 
 These three identities were confirmed against user-provided images. Sprite remains five rows, cache version 3. Audax refers to the Brazilian Osasco club, not Audax Italiano.
+
+Additional crests for the revised 16-game batch, all visually checked:
+35: blooming
+36: colombia
+37: coritiba
+38: cruzeiro
+39: defensa-y-justicia
+40: emelec
+41: junior-barranquilla
+42: rosario-central
+43: sao-paulo
+Sources: the same JoseArroyave/football-logos repository, country directories. Sprite now has seven rows, cache version 4.

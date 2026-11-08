@@ -1,0 +1,404 @@
+{
+  "version": 1,
+  "id": "stadium-games-novos16-20261108",
+  "normalizeCompetitionNames": true,
+  "stadiums": [
+    {
+      "key": "kempes",
+      "name": "Mario Alberto Kempes",
+      "iso": "ARG",
+      "city": "Córdoba",
+      "aliases": [
+        "Estádio Mario Kempes",
+        "Estadio Mario Kempes",
+        "Estadio Mario Alberto Kempes",
+        "Estádio Mario Alberto Kempes"
+      ],
+      "matches": [
+        {
+          "id": "novos16-kempes-2021-01-23-lanus-defensa-y-justicia",
+          "date": "23/01/2021",
+          "homeTeam": "Lanús",
+          "awayTeam": "Defensa y Justicia",
+          "homeScore": 0,
+          "awayScore": 3,
+          "competition": "CONMEBOL Sudamericana",
+          "notes": "Final — jogo único\nEdição 2020, disputada em janeiro de 2021. Campo neutro.",
+          "sourceUrl": "https://www.afa.com.ar/2291/posts/lanus-y-defensa-y-justicia-definen-esta-tarde-el-campeon-de-la-sudamericana",
+          "importSource": {
+            "file": "Jogos_Conferidos_Novo_Lote_v2.xlsx",
+            "sheet": "Jogos confirmados",
+            "row": 2,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2020,
+            "originalSourceUrl": "https://www.afa.com.ar/2291/posts/lanus-y-defensa-y-justicia-definen-esta-tarde-el-campeon-de-la-sudamericana"
+          }
+        },
+        {
+          "id": "novos16-kempes-2022-10-01-sao-paulo-independiente-del-valle",
+          "date": "01/10/2022",
+          "homeTeam": "São Paulo",
+          "awayTeam": "Independiente del Valle",
+          "homeScore": 0,
+          "awayScore": 2,
+          "competition": "CONMEBOL Sudamericana",
+          "notes": "Final — jogo único\nCampo neutro. Independiente del Valle campeão.",
+          "sourceUrl": "https://www.saopaulofc.net/vice-campeao-da-conmebol-sul-americana-2022/",
+          "importSource": {
+            "file": "Jogos_Conferidos_Novo_Lote_v2.xlsx",
+            "sheet": "Jogos confirmados",
+            "row": 3,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2022,
+            "originalSourceUrl": "https://www.saopaulofc.net/vice-campeao-da-conmebol-sul-americana-2022/"
+          }
+        }
+      ]
+    },
+    {
+      "key": "nueva-olla",
+      "name": "General Pablo Rojas — La Nueva Olla",
+      "iso": "PRY",
+      "city": "Assunção",
+      "aliases": [
+        "Nueva Olla",
+        "La Nueva Olla",
+        "General Pablo Rojas",
+        "Estadio General Pablo Rojas",
+        "Estádio General Pablo Rojas"
+      ],
+      "matches": [
+        {
+          "id": "novos16-nueva-olla-2024-11-23-racing-club-cruzeiro",
+          "date": "23/11/2024",
+          "homeTeam": "Racing Club",
+          "awayTeam": "Cruzeiro",
+          "homeScore": 3,
+          "awayScore": 1,
+          "competition": "CONMEBOL Sudamericana",
+          "notes": "Final — jogo único\nCampo neutro. Racing campeão.",
+          "sourceUrl": "https://www.racingclub.com.ar/palmares/copa-sudamericana-2024/",
+          "importSource": {
+            "file": "Jogos_Conferidos_Novo_Lote_v2.xlsx",
+            "sheet": "Jogos confirmados",
+            "row": 4,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2024,
+            "originalSourceUrl": "https://www.racingclub.com.ar/palmares/copa-sudamericana-2024/"
+          }
+        }
+      ]
+    },
+    {
+      "key": "defensores",
+      "name": "Defensores del Chaco",
+      "iso": "PRY",
+      "city": "Assunção",
+      "aliases": [
+        "Estadio Defensores del Chaco",
+        "Estádio Defensores del Chaco"
+      ],
+      "matches": [
+        {
+          "id": "novos16-defensores-2019-04-04-libertad-rosario-central",
+          "date": "04/04/2019",
+          "homeTeam": "Libertad",
+          "awayTeam": "Rosario Central",
+          "homeScore": 2,
+          "awayScore": 0,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Fase de grupos — Grupo H, 3ª rodada\nEstádio confirmado pelo usuário na revisão da planilha.",
+          "sourceUrl": "https://www.terra.com.br/esportes/futebol/libertadores/ao-vivo/libertad-x-rosario-central/57767/",
+          "importSource": {
+            "file": "Jogos_Conferidos_Novo_Lote_v2.xlsx",
+            "sheet": "Jogos confirmados",
+            "row": 5,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2019,
+            "originalSourceUrl": "https://www.terra.com.br/esportes/futebol/libertadores/ao-vivo/libertad-x-rosario-central/57767/"
+          }
+        },
+        {
+          "id": "novos16-defensores-2025-11-22-lanus-atletico-mineiro",
+          "date": "22/11/2025",
+          "homeTeam": "Lanús",
+          "awayTeam": "Atlético Mineiro",
+          "homeScore": 0,
+          "awayScore": 0,
+          "competition": "CONMEBOL Sudamericana",
+          "notes": "Final — jogo único\n0 a 0 após prorrogação; Lanús campeão nos pênaltis por 5 a 4. Não somar pênaltis ao placar.",
+          "sourceUrl": "https://estadisticas.clublanus.com/partidos/lanus-vs-atletico-mineiro-2025-11-22",
+          "importSource": {
+            "file": "Jogos_Conferidos_Novo_Lote_v2.xlsx",
+            "sheet": "Jogos confirmados",
+            "row": 6,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2025,
+            "originalSourceUrl": "https://estadisticas.clublanus.com/partidos/lanus-vs-atletico-mineiro-2025-11-22"
+          }
+        }
+      ]
+    },
+    {
+      "key": "centenario",
+      "name": "Centenario",
+      "iso": "URY",
+      "city": "Montevidéu",
+      "aliases": [
+        "Centenário",
+        "Estádio Centenário",
+        "Estadio Centenario"
+      ],
+      "matches": [
+        {
+          "id": "novos16-centenario-2021-11-20-athletico-paranaense-red-bull-bragantino",
+          "date": "20/11/2021",
+          "homeTeam": "Athletico Paranaense",
+          "awayTeam": "Red Bull Bragantino",
+          "homeScore": 1,
+          "awayScore": 0,
+          "competition": "CONMEBOL Sudamericana",
+          "notes": "Final — jogo único\nAthletico campeão. Data oficial: 20/11/2021; registro fotográfico informado em 19/11/2021. Presença no jogo confirmada pelo usuário.",
+          "sourceUrl": "https://as.com/futbol/2021/11/20/internacional/1637434750_470356.html",
+          "importSource": {
+            "file": "Jogos_Conferidos_Novo_Lote_v2.xlsx",
+            "sheet": "Jogos confirmados",
+            "row": 7,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2021,
+            "originalSourceUrl": "https://as.com/futbol/2021/11/20/internacional/1637434750_470356.html"
+          }
+        },
+        {
+          "id": "novos16-centenario-2021-11-27-palmeiras-flamengo",
+          "date": "27/11/2021",
+          "homeTeam": "Palmeiras",
+          "awayTeam": "Flamengo",
+          "homeScore": 2,
+          "awayScore": 1,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Final — jogo único\n1 a 1 no tempo normal; Palmeiras venceu por 2 a 1 após prorrogação. Campo neutro.",
+          "sourceUrl": "https://www.palmeiras.com.br/noticias/na-prorrogacao-palmeiras-supera-flamengo-por-2-a-1-em-montevideu-e-conquista-sua-terceira-libertadores/",
+          "importSource": {
+            "file": "Jogos_Conferidos_Novo_Lote_v2.xlsx",
+            "sheet": "Jogos confirmados",
+            "row": 8,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2021,
+            "originalSourceUrl": "https://www.palmeiras.com.br/noticias/na-prorrogacao-palmeiras-supera-flamengo-por-2-a-1-em-montevideu-e-conquista-sua-terceira-libertadores/"
+          }
+        }
+      ]
+    },
+    {
+      "key": "baixada",
+      "name": "Arena da Baixada",
+      "iso": "BRA",
+      "city": "Curitiba",
+      "aliases": [
+        "Ligga Arena",
+        "Arena da Baixada - Joaquim Américo Guimarães",
+        "Estádio Joaquim Américo Guimarães"
+      ],
+      "matches": [
+        {
+          "id": "novos16-baixada-2018-12-12-athletico-paranaense-junior-barranquilla",
+          "date": "12/12/2018",
+          "homeTeam": "Athletico Paranaense",
+          "awayTeam": "Junior Barranquilla",
+          "homeScore": 1,
+          "awayScore": 1,
+          "competition": "CONMEBOL Sudamericana",
+          "notes": "Final — volta\n1 a 1 após prorrogação; agregado 2 a 2; Athletico campeão nos pênaltis por 4 a 3.",
+          "sourceUrl": "https://www.terra.com.br/esportes/atletico-pr/furacao-vence-o-junior-barranquilla-nos-penaltis-e-conquista-a-copa-sul-americana,70c51b409d4495a65db5a99d46b9a8850vi4k4ko.html",
+          "importSource": {
+            "file": "Jogos_Conferidos_Novo_Lote_v2.xlsx",
+            "sheet": "Jogos confirmados",
+            "row": 9,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2018,
+            "originalSourceUrl": "https://www.terra.com.br/esportes/atletico-pr/furacao-vence-o-junior-barranquilla-nos-penaltis-e-conquista-a-copa-sul-americana,70c51b409d4495a65db5a99d46b9a8850vi4k4ko.html"
+          }
+        },
+        {
+          "id": "novos16-baixada-2019-05-22-athletico-paranaense-river-plate",
+          "date": "22/05/2019",
+          "homeTeam": "Athletico Paranaense",
+          "awayTeam": "River Plate",
+          "homeScore": 1,
+          "awayScore": 0,
+          "competition": "CONMEBOL Recopa",
+          "notes": "Final — ida",
+          "sourceUrl": "https://www.terra.com.br/esportes/atletico-pr/athletico-sai-na-frente-do-river-plate-na-disputa-pela-recopa,07af16817e603997f31f8f81de477d78jlrp5njl.html",
+          "importSource": {
+            "file": "Jogos_Conferidos_Novo_Lote_v2.xlsx",
+            "sheet": "Jogos confirmados",
+            "row": 10,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2019,
+            "originalSourceUrl": "https://www.terra.com.br/esportes/atletico-pr/athletico-sai-na-frente-do-river-plate-na-disputa-pela-recopa,07af16817e603997f31f8f81de477d78jlrp5njl.html"
+          }
+        },
+        {
+          "id": "novos16-baixada-2022-08-30-athletico-paranaense-palmeiras",
+          "date": "30/08/2022",
+          "homeTeam": "Athletico Paranaense",
+          "awayTeam": "Palmeiras",
+          "homeScore": 1,
+          "awayScore": 0,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Semifinal — ida",
+          "sourceUrl": "https://www.palmeiras.com.br/noticias/palmeiras-sofre-reves-para-athletico-pr-na-arena-da-baixada-pela-ida-das-semifinais-da-libertadores/",
+          "importSource": {
+            "file": "Jogos_Conferidos_Novo_Lote_v2.xlsx",
+            "sheet": "Jogos confirmados",
+            "row": 11,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2022,
+            "originalSourceUrl": "https://www.palmeiras.com.br/noticias/palmeiras-sofre-reves-para-athletico-pr-na-arena-da-baixada-pela-ida-das-semifinais-da-libertadores/"
+          }
+        },
+        {
+          "id": "novos16-baixada-2023-12-03-athletico-paranaense-santos",
+          "date": "03/12/2023",
+          "homeTeam": "Athletico Paranaense",
+          "awayTeam": "Santos",
+          "homeScore": 3,
+          "awayScore": 0,
+          "competition": "Campeonato Brasileiro",
+          "notes": "Série A — 37ª rodada\nDenominação comercial na época: Ligga Arena.",
+          "sourceUrl": "https://www.santosfc.com.br/santos-fc-perde-por-2-a-0-para-o-athletico-pr-fora-de-casa/",
+          "importSource": {
+            "file": "Jogos_Conferidos_Novo_Lote_v2.xlsx",
+            "sheet": "Jogos confirmados",
+            "row": 12,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2023,
+            "originalSourceUrl": "https://www.santosfc.com.br/santos-fc-perde-por-2-a-0-para-o-athletico-pr-fora-de-casa/"
+          }
+        }
+      ]
+    },
+    {
+      "key": "neo-quimica",
+      "name": "Neo Química Arena",
+      "iso": "BRA",
+      "city": "São Paulo",
+      "aliases": [
+        "Arena Corinthians",
+        "Arena Itaquera",
+        "Neo Quimica Arena"
+      ],
+      "matches": [
+        {
+          "id": "novos16-neo-quimica-2016-08-13-brasil-colombia",
+          "date": "13/08/2016",
+          "homeTeam": "Brasil",
+          "awayTeam": "Colômbia",
+          "homeScore": 2,
+          "awayScore": 0,
+          "competition": "Jogos Olímpicos",
+          "notes": "Futebol masculino — quartas de final\nNome na época: Arena Corinthians.",
+          "sourceUrl": "https://olimpiadas.uol.com.br/noticias/redacao/2016/08/13/brasil-x-colombia-futebol-masculino.htm",
+          "importSource": {
+            "file": "Jogos_Conferidos_Novo_Lote_v2.xlsx",
+            "sheet": "Jogos confirmados",
+            "row": 13,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2016,
+            "originalSourceUrl": "https://olimpiadas.uol.com.br/noticias/redacao/2016/08/13/brasil-x-colombia-futebol-masculino.htm"
+          }
+        },
+        {
+          "id": "novos16-neo-quimica-2022-04-26-corinthians-boca-juniors",
+          "date": "26/04/2022",
+          "homeTeam": "Corinthians",
+          "awayTeam": "Boca Juniors",
+          "homeScore": 2,
+          "awayScore": 0,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Fase de grupos — Grupo E, 3ª rodada",
+          "sourceUrl": "https://www.uol.com.br/esporte/futebol/ultimas-noticias/2022/04/26/maycon-faz-dois-corinthians-bate-o-boca-e-assume-lideranca-na-libertadores.htm",
+          "importSource": {
+            "file": "Jogos_Conferidos_Novo_Lote_v2.xlsx",
+            "sheet": "Jogos confirmados",
+            "row": 14,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2022,
+            "originalSourceUrl": "https://www.uol.com.br/esporte/futebol/ultimas-noticias/2022/04/26/maycon-faz-dois-corinthians-bate-o-boca-e-assume-lideranca-na-libertadores.htm"
+          }
+        },
+        {
+          "id": "novos16-neo-quimica-2024-03-27-santos-red-bull-bragantino",
+          "date": "27/03/2024",
+          "homeTeam": "Santos",
+          "awayTeam": "Red Bull Bragantino",
+          "homeScore": 3,
+          "awayScore": 1,
+          "competition": "Campeonato Paulista",
+          "notes": "Semifinal — jogo único\nMando do Santos na Neo Química Arena. Santos classificado para a final.",
+          "sourceUrl": "https://www.santosfc.com.br/santos-fc-vence-red-bull-bragantino-na-neo-quimica-arena-e-esta-na-final-do-campeonato-paulista/",
+          "importSource": {
+            "file": "Jogos_Conferidos_Novo_Lote_v2.xlsx",
+            "sheet": "Jogos confirmados",
+            "row": 15,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2024,
+            "originalSourceUrl": "https://www.santosfc.com.br/santos-fc-vence-red-bull-bragantino-na-neo-quimica-arena-e-esta-na-final-do-campeonato-paulista/"
+          }
+        },
+        {
+          "id": "novos16-neo-quimica-2026-05-17-santos-coritiba",
+          "date": "17/05/2026",
+          "homeTeam": "Santos",
+          "awayTeam": "Coritiba",
+          "homeScore": 0,
+          "awayScore": 3,
+          "competition": "Campeonato Brasileiro",
+          "notes": "Série A — 16ª rodada\nSantos mandante em Itaquera; não atribuir o jogo ao Corinthians.",
+          "sourceUrl": "https://www.santosfc.com.br/jogando-em-casa-na-capital-paulista-santos-fc-e-derrotado-pelo-coritiba/",
+          "importSource": {
+            "file": "Jogos_Conferidos_Novo_Lote_v2.xlsx",
+            "sheet": "Jogos confirmados",
+            "row": 16,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2026,
+            "originalSourceUrl": "https://www.santosfc.com.br/jogando-em-casa-na-capital-paulista-santos-fc-e-derrotado-pelo-coritiba/"
+          }
+        }
+      ]
+    },
+    {
+      "key": "capwell",
+      "name": "George Capwell",
+      "iso": "ECU",
+      "city": "Guayaquil",
+      "aliases": [
+        "Estadio George Capwell",
+        "Estádio George Capwell",
+        "Estadio Banco del Pacífico Capwell"
+      ],
+      "matches": [
+        {
+          "id": "novos16-capwell-2020-02-20-emelec-blooming",
+          "date": "20/02/2020",
+          "homeTeam": "Emelec",
+          "awayTeam": "Blooming",
+          "homeScore": 2,
+          "awayScore": 0,
+          "competition": "CONMEBOL Sudamericana",
+          "notes": "Primeira fase — volta\nEmelec classificado: agregado 5 a 0. A imagem mostra Capwell e a localização Guayaquil; não é Quito. Foto enviada duas vezes, um único registro.",
+          "sourceUrl": "https://www.eltelegrafo.com.ec/noticias/futbol-internacional/212/emelec-segunda-fase-copa-sudamericana",
+          "importSource": {
+            "file": "Jogos_Conferidos_Novo_Lote_v2.xlsx",
+            "sheet": "Jogos confirmados",
+            "row": 17,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2020,
+            "originalSourceUrl": "https://www.eltelegrafo.com.ec/noticias/futbol-internacional/212/emelec-segunda-fase-copa-sudamericana"
+          }
+        }
+      ]
+    }
+  ]
+}
