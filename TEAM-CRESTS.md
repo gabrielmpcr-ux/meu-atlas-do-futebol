@@ -55,3 +55,7 @@ Additional crests for the revised 16-game batch, all visually checked:
 42: rosario-central
 43: sao-paulo
 Sources: the same JoseArroyave/football-logos repository, country directories. Sprite now has seven rows, cache version 4.
+
+44: sao-caetano
+45: ituano
+Sources: JoseArroyave/football-logos logos/brazil/São_Caetano.svg and Ituano.svg. Stars restored to match user references (three and two). 46 crests, seven rows; cache version 5.
