@@ -1,0 +1,83 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Ativar resultados · Gabriel Rodriguez</title><link rel="stylesheet" href="preview-fonts.css"><style>*{box-sizing:border-box}body{margin:0;background:#f7f7f3;color:#24313b;font:16px/1.6 'DM Sans',sans-serif}main{max-width:840px;margin:40px auto;padding:24px}h1{font:600 32px/1.2 Outfit,sans-serif;margin:32px 0 18px}img{width:220px;height:auto}li{margin:14px 0}a{color:#806318}button{min-height:46px;padding:10px 18px;border:0;border-radius:5px;background:#bd942b;color:#12202d;font:600 15px 'DM Sans',sans-serif;cursor:pointer}button:focus-visible,a:focus-visible,textarea:focus-visible{outline:3px solid #12202d;outline-offset:4px}textarea{display:block;width:100%;height:320px;margin:12px 0 24px;padding:16px;border:1px solid #dbe2d9;border-radius:5px;background:#fff;font:12px/1.6 monospace;color:#24313b}label{font-weight:500}.note{font-size:14px;color:#52616b}#copyStatus{min-height:26px}</style></head><body><main><img src="assets/brand/gabriel-rodriguez.svg?v=2" alt="Gabriel Rodriguez"><h1>Ativar salvamento separado dos resultados</h1><p>Aplique este ajuste uma vez no banco. Ele permite enviar somente os jogos do estádio alterado, sem reenviar fotos ou voos.</p><ol><li>Antes de começar, baixe um backup completo na área de edição do site.</li><li>Clique em <strong>Copiar SQL</strong>.</li><li><a href="https://supabase.com/dashboard/project/beybhctcfgwzompvbppt/sql/new" target="_blank" rel="noopener noreferrer">Abra o SQL Editor do Supabase</a>, cole em uma consulta nova e clique em <strong>Run</strong>.</li><li>Após a mensagem de sucesso, atualize o site. Use <strong>Salvar apenas resultados</strong> em Jogos e resultados, ou a página de importação.</li></ol><p class="note">O script adiciona uma função. Não migra nem apaga dados. Mantém autorização, controle de revisão e atualização conjunta das versões privada e pública.</p><button type="button" id="copySql">Copiar SQL</button><p id="copyStatus" role="status" aria-live="polite"></p><label for="sql">Script de ajuste</label><textarea id="sql" readonly spellcheck="false">-- Run once in the existing Supabase SQL Editor. Additive, no collection replacement.
+begin;
+create or replace function public.atlas_save_matches(p_expected_revision bigint,p_changes jsonb)
+returns jsonb language plpgsql security definer set search_path=&#x27;&#x27; as $$
+declare
+ private_data jsonb; public_data jsonb; current_revision bigint; public_revision bigint;
+ change jsonb; game jsonb; idx integer; target jsonb; patch_path text[];
+ seen integer[] := array[]::integer[]; match_ids text[]; match_id text;
+ field_name text; new_revision bigint;
+begin
+ if not public.atlas_is_admin() then
+  raise insufficient_privilege using message=&#x27;Editor access required&#x27;;
+ end if;
+ if p_expected_revision is null or jsonb_typeof(p_changes) is distinct from &#x27;array&#x27; then
+  raise exception &#x27;Invalid match changes&#x27;;
+ end if;
+ if jsonb_array_length(p_changes)&lt;1 or jsonb_array_length(p_changes)&gt;100
+    or octet_length(p_changes::text)&gt;1048576 then raise exception &#x27;Match changes exceed limit&#x27;; end if;
+ select data,revision into private_data,current_revision from public.atlas_state where id=&#x27;main&#x27; for update;
+ if not found or current_revision&lt;&gt;p_expected_revision then
+  raise exception using errcode=&#x27;40001&#x27;,message=&#x27;ATLAS_CONFLICT: the collection changed; reload before saving&#x27;;
+ end if;
+ select data,revision into public_data,public_revision from public.atlas_public where id=&#x27;main&#x27; for update;
+ if not found or public_revision&lt;&gt;current_revision then raise exception &#x27;Public collection is not synchronized&#x27;; end if;
+ if jsonb_typeof(private_data-&gt;&#x27;visits&#x27;) is distinct from &#x27;array&#x27;
+    or jsonb_typeof(public_data-&gt;&#x27;visits&#x27;) is distinct from &#x27;array&#x27; then raise exception &#x27;Invalid visits&#x27;; end if;
+ for change in select value from jsonb_array_elements(p_changes) loop
+  if jsonb_typeof(change) is distinct from &#x27;object&#x27; then raise exception &#x27;Invalid match change&#x27;; end if;
+  if change - array[&#x27;index&#x27;,&#x27;iso&#x27;,&#x27;city&#x27;,&#x27;stadium&#x27;,&#x27;matches&#x27;] &lt;&gt; &#x27;{}&#x27;::jsonb
+     or jsonb_typeof(change-&gt;&#x27;index&#x27;) is distinct from &#x27;number&#x27;
+     or (change-&gt;&gt;&#x27;index&#x27;) !~ &#x27;^(0|[1-9][0-9]{0,5})$&#x27;
+     or jsonb_typeof(change-&gt;&#x27;iso&#x27;) is distinct from &#x27;string&#x27;
+     or jsonb_typeof(change-&gt;&#x27;city&#x27;) is distinct from &#x27;string&#x27;
+     or jsonb_typeof(change-&gt;&#x27;stadium&#x27;) is distinct from &#x27;string&#x27;
+     or coalesce(change-&gt;&gt;&#x27;stadium&#x27;,&#x27;&#x27;)=&#x27;&#x27;
+     or jsonb_typeof(change-&gt;&#x27;matches&#x27;) is distinct from &#x27;array&#x27; then raise exception &#x27;Invalid match change&#x27;; end if;
+  idx := (change-&gt;&gt;&#x27;index&#x27;)::integer;
+  if idx=any(seen) or idx&gt;=jsonb_array_length(private_data-&gt;&#x27;visits&#x27;) then raise exception &#x27;Invalid or repeated stadium index&#x27;; end if;
+  seen:=array_append(seen,idx);
+  target:=private_data-&gt;&#x27;visits&#x27;-&gt;idx;
+  if (target-&gt;&gt;&#x27;iso&#x27;) is distinct from (change-&gt;&gt;&#x27;iso&#x27;)
+     or (target-&gt;&gt;&#x27;city&#x27;) is distinct from (change-&gt;&gt;&#x27;city&#x27;)
+     or (target-&gt;&gt;&#x27;stadium&#x27;) is distinct from (change-&gt;&gt;&#x27;stadium&#x27;)
+     or (public_data-&gt;&#x27;visits&#x27;-&gt;idx-&gt;&gt;&#x27;iso&#x27;) is distinct from (change-&gt;&gt;&#x27;iso&#x27;)
+     or (public_data-&gt;&#x27;visits&#x27;-&gt;idx-&gt;&gt;&#x27;city&#x27;) is distinct from (change-&gt;&gt;&#x27;city&#x27;)
+     or (public_data-&gt;&#x27;visits&#x27;-&gt;idx-&gt;&gt;&#x27;stadium&#x27;) is distinct from (change-&gt;&gt;&#x27;stadium&#x27;) then
+   raise exception &#x27;Stadium identity mismatch&#x27;;
+  end if;
+  if jsonb_array_length(change-&gt;&#x27;matches&#x27;)&gt;5000 then raise exception &#x27;Too many matches&#x27;; end if;
+  match_ids:=array[]::text[];
+  for game in select value from jsonb_array_elements(change-&gt;&#x27;matches&#x27;) loop
+   if jsonb_typeof(game) is distinct from &#x27;object&#x27; then raise exception &#x27;Invalid match&#x27;; end if;
+   if game - array[&#x27;id&#x27;,&#x27;date&#x27;,&#x27;homeTeam&#x27;,&#x27;awayTeam&#x27;,&#x27;homeScore&#x27;,&#x27;awayScore&#x27;,&#x27;competition&#x27;,&#x27;notes&#x27;,&#x27;sourceUrl&#x27;,&#x27;importSource&#x27;] &lt;&gt; &#x27;{}&#x27;::jsonb then raise exception &#x27;Unexpected match field&#x27;; end if;
+   foreach field_name in array array[&#x27;id&#x27;,&#x27;date&#x27;,&#x27;homeTeam&#x27;,&#x27;awayTeam&#x27;,&#x27;competition&#x27;,&#x27;notes&#x27;,&#x27;sourceUrl&#x27;] loop
+    if game ? field_name and jsonb_typeof(game-&gt;field_name) not in (&#x27;string&#x27;,&#x27;null&#x27;) then raise exception &#x27;Invalid match text&#x27;; end if;
+   end loop;
+   foreach field_name in array array[&#x27;homeScore&#x27;,&#x27;awayScore&#x27;] loop
+    if game ? field_name and game-&gt;field_name&lt;&gt;&#x27;null&#x27;::jsonb then
+     if jsonb_typeof(game-&gt;field_name) is distinct from &#x27;number&#x27; or (game-&gt;&gt;field_name)!~ &#x27;^[0-9]{1,2}$&#x27; then raise exception &#x27;Invalid match score&#x27;; end if;
+    end if;
+   end loop;
+   if game ? &#x27;importSource&#x27; and jsonb_typeof(game-&gt;&#x27;importSource&#x27;) not in (&#x27;object&#x27;,&#x27;null&#x27;) then raise exception &#x27;Invalid match source&#x27;; end if;
+   match_id:=game-&gt;&gt;&#x27;id&#x27;;
+   if coalesce(match_id,&#x27;&#x27;)&lt;&gt;&#x27;&#x27; then
+    if match_id=any(match_ids) then raise exception &#x27;Repeated match identifier&#x27;; end if;
+    match_ids:=array_append(match_ids,match_id);
+   end if;
+  end loop;
+  patch_path:=array[&#x27;visits&#x27;,idx::text,&#x27;matches&#x27;];
+  private_data:=jsonb_set(private_data,patch_path,change-&gt;&#x27;matches&#x27;,true);
+  public_data:=jsonb_set(public_data,patch_path,change-&gt;&#x27;matches&#x27;,true);
+ end loop;
+ new_revision:=current_revision+1;
+ update public.atlas_state set data=private_data,revision=new_revision,updated_at=now() where id=&#x27;main&#x27;;
+ update public.atlas_public set data=public_data,revision=new_revision where id=&#x27;main&#x27;;
+ -- Small receipt: no photos, flights or full collection returned to the browser.
+ return jsonb_build_object(&#x27;revision&#x27;,new_revision,&#x27;initialized&#x27;,true);
+end $$;
+revoke all on function public.atlas_save_matches(bigint,jsonb) from public,anon;
+grant execute on function public.atlas_save_matches(bigint,jsonb) to authenticated;
+notify pgrst,&#x27;reload schema&#x27;;
+commit;
+</textarea><p><a href="atlas-save-matches.sql" download>Baixar o script SQL</a> · <a href="https://supabase.com/docs/guides/database/postgres/timeouts#function-level" target="_blank" rel="noopener noreferrer">Referência do Supabase</a></p><p><a href="/">Voltar ao site</a></p></main><script>document.getElementById('copySql').onclick=async()=>{const code=document.getElementById('sql'),status=document.getElementById('copyStatus');try{await navigator.clipboard.writeText(code.value);status.textContent='Código copiado. Cole no SQL Editor e clique em Run.'}catch{code.focus();code.select();status.textContent='Código selecionado. Copie com Ctrl+C ou pelo menu de seleção.'}};</script></body></html>
