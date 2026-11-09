@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "id": "stadium-games-independiente-u-20261109",
+  "normalizeCompetitionNames": true,
+  "stadiums": [
+    {
+      "key": "libertadores-america",
+      "name": "Libertadores de América",
+      "iso": "ARG",
+      "city": "Avellaneda",
+      "aliases": [
+        "Estádio Libertadores de América",
+        "Estadio Libertadores de América",
+        "Libertadores de América-Ricardo Enrique Bochini",
+        "Libertadores de América — Ricardo Enrique Bochini",
+        "Estadio Libertadores de América - Ricardo Enrique Bochini"
+      ],
+      "matches": [
+        {
+          "id": "independiente-universidad-chile-2025-08-20",
+          "date": "20/08/2025",
+          "homeTeam": "Independiente",
+          "awayTeam": "Universidad de Chile",
+          "homeScore": 1,
+          "awayScore": 1,
+          "competition": "CONMEBOL Sudamericana",
+          "notes": "Edição 2025 — oitavas de final, jogo de volta.\nPartida interrompida no início do segundo tempo, com o placar de 1 a 1, devido a graves incidentes nas arquibancadas. Posteriormente cancelada pela CONMEBOL por falta de garantias de segurança.\nO 1 a 1 corresponde ao placar no momento da interrupção, não a uma partida concluída.\nEm decisão disciplinar posterior, o Independiente foi desclassificado e a Universidad de Chile avançou às quartas de final.",
+          "sourceUrl": "https://gol.conmebol.com/es/fixture/view/365",
+          "importSource": {
+            "file": "Jogo do Independiente contra La U solicitado pelo proprietário",
+            "attendanceBasis": "user-confirmed",
+            "edition": 2025,
+            "matchStatus": "cancelled",
+            "scoreBasis": "at-interruption",
+            "originalSourceUrl": "https://gol.conmebol.com/es/fixture/view/365",
+            "cancellationSourceUrl": "https://clubaindependiente.com.ar/institucion/noticias/1755790211_comunicado-oficial-copa-sudamericana",
+            "disciplinarySourceUrl": "https://www.reuters.com/sports/soccer/conmebol-disqualifies-independiente-copa-sudamericana-after-stadium-violence-2025-09-05/"
+          }
+        }
+      ]
+    }
+  ]
+}
