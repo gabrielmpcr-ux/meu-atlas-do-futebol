@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "id": "stadium-games-feminina2021-20261109",
+  "normalizeCompetitionNames": true,
+  "stadiums": [
+    {
+      "key": "gran-parque-central",
+      "name": "Gran Parque Central",
+      "iso": "URY",
+      "city": "Montevidéu",
+      "aliases": [
+        "Estádio Gran Parque Central",
+        "Estadio Gran Parque Central",
+        "Parque Central"
+      ],
+      "matches": [
+        {
+          "id": "feminina2021-gran-parque-central-2021-11-21",
+          "date": "21/11/2021",
+          "homeTeam": "Santa Fe",
+          "awayTeam": "Corinthians",
+          "homeScore": 0,
+          "awayScore": 2,
+          "competition": "CONMEBOL Libertadores Feminina",
+          "notes": "Edição 2021 — Final, jogo único em campo neutro. Categoria feminina.\nCorinthians tricampeão, com gols de Adriana e Gabi Portilho.\nDisputada no Gran Parque Central, em Montevidéu, Uruguai.",
+          "sourceUrl": "https://cdn.conmebol.com/wp-content/uploads/2023/09/CONMEBOL-Libertadores-Femenina-2021-PT.pdf",
+          "importSource": {
+            "file": "Final feminina de 2021 confirmada pelo proprietário",
+            "attendanceBasis": "user-confirmed",
+            "edition": 2021,
+            "originalSourceUrl": "https://cdn.conmebol.com/wp-content/uploads/2023/09/CONMEBOL-Libertadores-Femenina-2021-PT.pdf"
+          }
+        }
+      ]
+    }
+  ]
+}
