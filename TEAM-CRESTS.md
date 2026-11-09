@@ -1,6 +1,6 @@
 # Result badges
 
-65 club/national crests, sourced from https://github.com/JoseArroyave/football-logos (logos by country). Rendered to a transparent WebP sprite, 96 px per cell for 48 CSS px. No remote image requests at runtime. Crests remain their respective teams’ marks; used to identify match participants. They represent current reference badges, not a guarantee of historical shirt artwork. Unknown teams use initials rather than an unrelated badge.
+67 club/national crests, sourced from https://github.com/JoseArroyave/football-logos (logos by country). Rendered to a transparent WebP sprite, 96 px per cell for 48 CSS px. No remote image requests at runtime. Crests remain their respective teams’ marks; used to identify match participants. They represent current reference badges, not a guarantee of historical shirt artwork. Unknown teams use initials rather than an unrelated badge.
 
 Sprite order:
 0: argentinos-juniors (corrected from Wikimedia Commons)
@@ -81,3 +81,7 @@ Additional crests for the 27-game Europa/Brasil/Uruguai batch (sprite cache vers
 63: gremio-barueri
 64: mogi-mirim
 Sources: JoseArroyave/football-logos country SVG files; Wikimedia Commons File:Rio Claro Futebol Clube.svg, File:GR Barueri.svg, File:Mogi Mirim EC.svg. See source metadata in the maintenance workspace. All new marks normalized to visible bounds, without changing existing 46 positions.
+
+65: oeste — Wikimedia Commons File:Oeste FC Badge.svg
+66: comercial — Ribeirão Preto, JoseArroyave/football-logos/logos/brazil/Comercial.svg
+Sprite cache version 7; ten rows unchanged.

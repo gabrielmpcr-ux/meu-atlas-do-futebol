@@ -1,0 +1,127 @@
+{
+  "version": 1,
+  "id": "stadium-games-barueri6-20261109",
+  "normalizeCompetitionNames": true,
+  "stadiums": [
+    {
+      "key": "barueri",
+      "name": "Arena Barueri",
+      "aliases": [
+        "Estádio Arena Barueri",
+        "Arena Municipal de Barueri"
+      ],
+      "iso": "BRA",
+      "city": "Barueri",
+      "matches": [
+        {
+          "id": "barueri6-2010-02-07",
+          "date": "07/02/2010",
+          "homeTeam": "São Paulo",
+          "awayTeam": "Santos",
+          "homeScore": 1,
+          "awayScore": 2,
+          "competition": "Campeonato Paulista",
+          "notes": "Edição 2010 — primeira fase, 7ª rodada.\nReestreia de Robinho pelo Santos, com gol de letra que definiu a vitória no clássico San-São.",
+          "sourceUrl": "https://www.saopaulofc.net/ficha-tecnica-sao-paulo-1-x-2-santos/",
+          "importSource": {
+            "file": "Lista Arena Barueri enviada pelo proprietário",
+            "row": 1,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2010,
+            "originalSourceUrl": "https://www.saopaulofc.net/ficha-tecnica-sao-paulo-1-x-2-santos/"
+          }
+        },
+        {
+          "id": "barueri6-2011-01-30",
+          "date": "30/01/2011",
+          "homeTeam": "Santos",
+          "awayTeam": "São Paulo",
+          "homeScore": 2,
+          "awayScore": 0,
+          "competition": "Campeonato Paulista",
+          "notes": "Edição 2011 — primeira fase, 5ª rodada.\nClássico San-São na Arena Barueri. Gols de Elano e Maikon Leite.",
+          "sourceUrl": "https://www.saopaulofc.net/ficha-tecnica-santos-2-x-0-sao-paulo/",
+          "importSource": {
+            "file": "Lista Arena Barueri enviada pelo proprietário",
+            "row": 2,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2011,
+            "originalSourceUrl": "https://www.saopaulofc.net/ficha-tecnica-santos-2-x-0-sao-paulo/"
+          }
+        },
+        {
+          "id": "barueri6-2012-02-02",
+          "date": "02/02/2012",
+          "homeTeam": "Santos",
+          "awayTeam": "Oeste",
+          "homeScore": 1,
+          "awayScore": 1,
+          "competition": "Campeonato Paulista",
+          "notes": "Edição 2012 — primeira fase, 4ª rodada.\nSantos mandante na Arena Barueri. Ibson marcou o gol de empate santista.",
+          "sourceUrl": "https://ge.globo.com/jogo/paulista-2012/02-02-2012/santos-oeste.html",
+          "importSource": {
+            "file": "Lista Arena Barueri enviada pelo proprietário",
+            "row": 3,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2012,
+            "originalSourceUrl": "https://ge.globo.com/jogo/paulista-2012/02-02-2012/santos-oeste.html"
+          }
+        },
+        {
+          "id": "barueri6-2012-02-22",
+          "date": "22/02/2012",
+          "homeTeam": "Santos",
+          "awayTeam": "Comercial",
+          "homeScore": 2,
+          "awayScore": 0,
+          "competition": "Campeonato Paulista",
+          "notes": "Edição 2012 — primeira fase, 9ª rodada.\nAdversário: Comercial de Ribeirão Preto (SP). Gols de Ibson e Durval.",
+          "sourceUrl": "https://ge.globo.com/jogo/paulista-2012/22-02-2012/santos-comercial-sp.html",
+          "importSource": {
+            "file": "Lista Arena Barueri enviada pelo proprietário",
+            "row": 4,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2012,
+            "originalSourceUrl": "https://ge.globo.com/jogo/paulista-2012/22-02-2012/santos-comercial-sp.html"
+          }
+        },
+        {
+          "id": "barueri6-2012-02-25",
+          "date": "25/02/2012",
+          "homeTeam": "Santos",
+          "awayTeam": "Ponte Preta",
+          "homeScore": 6,
+          "awayScore": 1,
+          "competition": "Campeonato Paulista",
+          "notes": "Edição 2012 — primeira fase, 10ª rodada.\nGols do Santos: Neymar (2), Ganso, Edu Dracena (2) e Ferron (contra). Uendel marcou para a Ponte Preta.",
+          "sourceUrl": "https://ge.globo.com/jogo/paulista-2012/25-02-2012/santos-ponte-preta.html",
+          "importSource": {
+            "file": "Lista Arena Barueri enviada pelo proprietário",
+            "row": 5,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2012,
+            "originalSourceUrl": "https://ge.globo.com/jogo/paulista-2012/25-02-2012/santos-ponte-preta.html"
+          }
+        },
+        {
+          "id": "barueri6-2013-01-22",
+          "date": "22/01/2013",
+          "homeTeam": "Palmeiras",
+          "awayTeam": "Santos",
+          "homeScore": 2,
+          "awayScore": 3,
+          "competition": "Copa São Paulo de Futebol Júnior",
+          "notes": "Edição 2013 — semifinal, categoria de base.\nNeilton marcou os três gols do Santos, que se classificou para enfrentar o Goiás na final.",
+          "sourceUrl": "https://www.palmeiras.com.br/noticias/palmeiras-luta-ate-o-fim-mas-nao-evita-derrota-para-o-santos/",
+          "importSource": {
+            "file": "Lista Arena Barueri enviada pelo proprietário",
+            "row": 6,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2013,
+            "originalSourceUrl": "https://www.palmeiras.com.br/noticias/palmeiras-luta-ate-o-fim-mas-nao-evita-derrota-para-o-santos/"
+          }
+        }
+      ]
+    }
+  ]
+}
