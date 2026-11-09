@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "id": "stadium-games-mrv2026-20261109",
+  "normalizeCompetitionNames": true,
+  "stadiums": [
+    {
+      "key": "arena-mrv",
+      "name": "Arena MRV",
+      "iso": "BRA",
+      "city": "Belo Horizonte",
+      "aliases": [
+        "MRV Arena",
+        "Estádio Arena MRV"
+      ],
+      "matches": [
+        {
+          "id": "mrv-2026-09-16-atletico-mineiro-santos",
+          "date": "16/09/2026",
+          "homeTeam": "Atlético Mineiro",
+          "awayTeam": "Santos",
+          "homeScore": 4,
+          "awayScore": 2,
+          "competition": "CONMEBOL Sudamericana",
+          "notes": "Edição 2026 — quartas de final, jogo de volta.\nPênaltis: Atlético Mineiro 3 × 1 Santos. Atlético classificado às semifinais.\nPlacar agregado: 4 a 4, após vitória do Santos por 2 a 0 na ida.\nGols do Atlético: Bernard, Reinier (2) e Cuello. Gols do Santos: Lyanco (contra) e Gabriel Barbosa.\nGabriel Delfim defendeu três cobranças na disputa por pênaltis.",
+          "sourceUrl": "https://atletico.com.br/galo-vence-o-santos-nos-penaltis-e-esta-na-semifinal-da-sul-americana/",
+          "importSource": {
+            "file": "Jogo da Arena MRV solicitado pelo proprietário",
+            "attendanceBasis": "user-confirmed",
+            "edition": 2026,
+            "originalSourceUrl": "https://atletico.com.br/galo-vence-o-santos-nos-penaltis-e-esta-na-semifinal-da-sul-americana/",
+            "corroboratingSourceUrl": "https://www.santosfc.com.br/santos-fc-e-superado-nos-penaltis-e-se-despede-da-conmebol-sudamericana/"
+          }
+        }
+      ]
+    }
+  ]
+}
