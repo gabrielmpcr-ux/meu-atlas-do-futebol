@@ -1,6 +1,6 @@
 # Result badges
 
-67 club/national crests, sourced from https://github.com/JoseArroyave/football-logos (logos by country). Rendered to a transparent WebP sprite, 96 px per cell for 48 CSS px. No remote image requests at runtime. Crests remain their respective teams’ marks; used to identify match participants. They represent current reference badges, not a guarantee of historical shirt artwork. Unknown teams use initials rather than an unrelated badge.
+71 club/national crests, sourced from https://github.com/JoseArroyave/football-logos (logos by country). Rendered to a transparent WebP sprite, 96 px per cell for 48 CSS px. No remote image requests at runtime. Crests remain their respective teams’ marks; used to identify match participants. They represent current reference badges, not a guarantee of historical shirt artwork. Unknown teams use initials rather than an unrelated badge.
 
 Sprite order:
 0: argentinos-juniors (corrected from Wikimedia Commons)
@@ -85,3 +85,9 @@ Sources: JoseArroyave/football-logos country SVG files; Wikimedia Commons File:R
 65: oeste — Wikimedia Commons File:Oeste FC Badge.svg
 66: comercial — Ribeirão Preto, JoseArroyave/football-logos/logos/brazil/Comercial.svg
 Sprite cache version 7; ten rows unchanged.
+
+67: aguilas-doradas — logos/colombia/Águilas_Doradas.svg
+68: independiente — logos/argentina/Independiente.svg
+69: san-lorenzo — logos/argentina/San_Lorenzo_de_Almagro.svg
+70: colon — logos/argentina/Club_Atlético_Colón.svg
+Sources: JoseArroyave/football-logos. References supplied by the owner for Águilas Doradas, Independiente (CAI) and San Lorenzo (CASLA). Sprite cache version 8; eleven rows. Existing 67 indices preserved.

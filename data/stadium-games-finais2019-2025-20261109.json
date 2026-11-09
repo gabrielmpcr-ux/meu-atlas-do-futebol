@@ -1,0 +1,433 @@
+{
+  "version": 1,
+  "id": "stadium-games-finais2019-2025-20261109",
+  "normalizeCompetitionNames": true,
+  "stadiums": [
+    {
+      "key": "monumental-lima",
+      "name": "Estádio Monumental",
+      "city": "Lima",
+      "iso": "PER",
+      "aliases": [
+        "Monumental",
+        "Estadio Monumental",
+        "Estádio Monumental de Lima",
+        "Monumental de Lima",
+        "Estadio Monumental U Marathon"
+      ],
+      "matches": [
+        {
+          "id": "finais-monumental-lima-2019-11-23",
+          "date": "23/11/2019",
+          "homeTeam": "Flamengo",
+          "awayTeam": "River Plate",
+          "homeScore": 2,
+          "awayScore": 1,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Edição 2019 — Final, jogo único em campo neutro.\nFlamengo campeão. Dois gols de Gabriel Barbosa nos minutos finais viraram a partida.\nDisputada no Monumental de Lima, no Peru.",
+          "sourceUrl": "https://gol.conmebol.com/libertadores/es/news/flamengo-quiere-extender-su-era-dorada-en-la-conmebol-libertadores",
+          "importSource": {
+            "file": "Revisão das finais desde 2019 e jogos do Mineirão",
+            "attendanceBasis": "user-confirmed",
+            "edition": 2019,
+            "originalSourceUrl": "https://gol.conmebol.com/libertadores/es/news/flamengo-quiere-extender-su-era-dorada-en-la-conmebol-libertadores"
+          }
+        },
+        {
+          "id": "finais-monumental-lima-2025-11-29",
+          "date": "29/11/2025",
+          "homeTeam": "Palmeiras",
+          "awayTeam": "Flamengo",
+          "homeScore": 0,
+          "awayScore": 1,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Edição 2025 — Final, jogo único em campo neutro.\nFlamengo campeão, com gol de Danilo.\nDisputada no Monumental de Lima, no Peru.",
+          "sourceUrl": "https://gol.conmebol.com/en/fixture/view/23",
+          "importSource": {
+            "file": "Revisão das finais desde 2019 e jogos do Mineirão",
+            "attendanceBasis": "user-confirmed",
+            "edition": 2025,
+            "originalSourceUrl": "https://gol.conmebol.com/en/fixture/view/23"
+          }
+        }
+      ]
+    },
+    {
+      "key": "maracana",
+      "name": "Maracanã",
+      "iso": "BRA",
+      "city": "Rio de Janeiro",
+      "aliases": [
+        "Maracanã",
+        "Estádio do Maracanã",
+        "Estádio Jornalista Mário Filho",
+        "Jornalista Mário Filho"
+      ],
+      "matches": [
+        {
+          "id": "xlsx2-maracana-2021-01-30-palmeiras-santos",
+          "date": "30/01/2021",
+          "homeTeam": "Palmeiras",
+          "awayTeam": "Santos",
+          "homeScore": 1,
+          "awayScore": 0,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Final\nEdição 2020, disputada em 2021",
+          "sourceUrl": "https://www.palmeiras.com.br/noticias/palmeiras-bate-santos-com-gol-nos-minutos-finais-e-conquista-bi-da-libertadores/",
+          "importSource": {
+            "file": "Jogos_Maracana2.xlsx",
+            "sheet": "Jogos",
+            "row": 11,
+            "attendanceBasis": "user-confirmed",
+            "originalSourceUrl": "https://www.palmeiras.com.br/noticias/palmeiras-bate-santos-com-gol-nos-minutos-finais-e-conquista-bi-da-CONMEBOL Libertadores/",
+            "edition": 2020
+          }
+        },
+        {
+          "id": "xlsx2-maracana-2023-11-04-boca-juniors-fluminense",
+          "date": "04/11/2023",
+          "homeTeam": "Boca Juniors",
+          "awayTeam": "Fluminense",
+          "homeScore": 1,
+          "awayScore": 2,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Final\nApós prorrogação. Fluminense campeão",
+          "sourceUrl": "https://www.fluminense.com.br/noticia/historico-fluminense-vence-o-boca-juniors-e-e-campeao-da-conmebol-libertadores-2023",
+          "importSource": {
+            "file": "Jogos_Maracana2.xlsx",
+            "sheet": "Jogos",
+            "row": 18,
+            "attendanceBasis": "user-confirmed",
+            "originalSourceUrl": "https://www.fluminense.com.br/noticia/historico-fluminense-vence-o-boca-juniors-e-e-campeao-da-conmebol-CONMEBOL Libertadores-2023",
+            "edition": 2023
+          }
+        }
+      ]
+    },
+    {
+      "key": "centenario",
+      "name": "Centenario",
+      "iso": "URY",
+      "city": "Montevidéu",
+      "aliases": [
+        "Centenário",
+        "Estádio Centenário",
+        "Estadio Centenario"
+      ],
+      "matches": [
+        {
+          "id": "novos16-centenario-2021-11-20-athletico-paranaense-red-bull-bragantino",
+          "date": "20/11/2021",
+          "homeTeam": "Athletico Paranaense",
+          "awayTeam": "Red Bull Bragantino",
+          "homeScore": 1,
+          "awayScore": 0,
+          "competition": "CONMEBOL Sudamericana",
+          "notes": "Final — jogo único\nAthletico campeão. Data oficial: 20/11/2021; registro fotográfico informado em 19/11/2021. Presença no jogo confirmada pelo usuário.",
+          "sourceUrl": "https://as.com/futbol/2021/11/20/internacional/1637434750_470356.html",
+          "importSource": {
+            "file": "Jogos_Conferidos_Novo_Lote_v2.xlsx",
+            "sheet": "Jogos confirmados",
+            "row": 7,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2021,
+            "originalSourceUrl": "https://as.com/futbol/2021/11/20/internacional/1637434750_470356.html"
+          }
+        },
+        {
+          "id": "novos16-centenario-2021-11-27-palmeiras-flamengo",
+          "date": "27/11/2021",
+          "homeTeam": "Palmeiras",
+          "awayTeam": "Flamengo",
+          "homeScore": 2,
+          "awayScore": 1,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Final — jogo único\n1 a 1 no tempo normal; Palmeiras venceu por 2 a 1 após prorrogação. Campo neutro.",
+          "sourceUrl": "https://www.palmeiras.com.br/noticias/na-prorrogacao-palmeiras-supera-flamengo-por-2-a-1-em-montevideu-e-conquista-sua-terceira-libertadores/",
+          "importSource": {
+            "file": "Jogos_Conferidos_Novo_Lote_v2.xlsx",
+            "sheet": "Jogos confirmados",
+            "row": 8,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2021,
+            "originalSourceUrl": "https://www.palmeiras.com.br/noticias/na-prorrogacao-palmeiras-supera-flamengo-por-2-a-1-em-montevideu-e-conquista-sua-terceira-libertadores/"
+          }
+        }
+      ]
+    },
+    {
+      "key": "monumental-guayaquil",
+      "name": "Monumental Isidro Romero Carbo",
+      "city": "Guayaquil",
+      "iso": "ECU",
+      "aliases": [
+        "Estadio Monumental Isidro Romero Carbo",
+        "Estádio Monumental Isidro Romero Carbo",
+        "Monumental de Guayaquil",
+        "Estadio Monumental Banco Pichincha",
+        "Estádio Monumental Banco Pichincha"
+      ],
+      "matches": [
+        {
+          "id": "finais-monumental-guayaquil-2022-10-29",
+          "date": "29/10/2022",
+          "homeTeam": "Flamengo",
+          "awayTeam": "Athletico Paranaense",
+          "homeScore": 1,
+          "awayScore": 0,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Edição 2022 — Final, jogo único em campo neutro.\nFlamengo campeão, com gol de Gabriel Barbosa.\nDisputada no Monumental Isidro Romero Carbo, em Guayaquil, Equador.",
+          "sourceUrl": "https://gol.conmebol.com/libertadores/es/news/finalistas-brasilenos-una-vez-mas",
+          "importSource": {
+            "file": "Revisão das finais desde 2019 e jogos do Mineirão",
+            "attendanceBasis": "user-confirmed",
+            "edition": 2022,
+            "originalSourceUrl": "https://gol.conmebol.com/libertadores/es/news/finalistas-brasilenos-una-vez-mas"
+          }
+        }
+      ]
+    },
+    {
+      "key": "monumental",
+      "name": "Monumental de Núñez",
+      "iso": "ARG",
+      "city": "Buenos Aires",
+      "aliases": [
+        "Monumental",
+        "Estadio Monumental",
+        "Mâs Monumental"
+      ],
+      "matches": [
+        {
+          "id": "argentina-monumental-2024-11-30",
+          "date": "30/11/2024",
+          "homeTeam": "Atlético Mineiro",
+          "awayTeam": "Botafogo",
+          "homeScore": 1,
+          "awayScore": 3,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Final — jogo único\nCampo neutro. Botafogo campeão.",
+          "sourceUrl": "https://www.afa.com.ar/es_LA/posts/en-el-estadio-mas-monumental-botafogo-le-gano-3-1-a-atletico-mineiro-y-se-quedo-con-la-copa-libertadores",
+          "importSource": {
+            "file": "Jogos_Argentina_Conferidos.xlsx",
+            "attendanceBasis": "user-confirmed",
+            "originalSourceUrl": "https://www.afa.com.ar/es_LA/posts/en-el-estadio-mas-monumental-botafogo-le-gano-3-1-a-atletico-mineiro-y-se-quedo-con-la-copa-libertadores",
+            "edition": 2024
+          }
+        }
+      ]
+    },
+    {
+      "key": "nueva-olla",
+      "name": "General Pablo Rojas — La Nueva Olla",
+      "city": "Assunção",
+      "iso": "PRY",
+      "aliases": [
+        "Nueva Olla",
+        "La Nueva Olla",
+        "General Pablo Rojas",
+        "Estadio General Pablo Rojas",
+        "Estádio General Pablo Rojas"
+      ],
+      "matches": [
+        {
+          "id": "finais-nueva-olla-2019-11-09",
+          "date": "09/11/2019",
+          "homeTeam": "Independiente del Valle",
+          "awayTeam": "Colón",
+          "homeScore": 3,
+          "awayScore": 1,
+          "competition": "CONMEBOL Sudamericana",
+          "notes": "Edição 2019 — Final, jogo único em campo neutro.\nIndependiente del Valle campeão pela primeira vez.\nDisputada no General Pablo Rojas (La Nueva Olla), em Assunção, Paraguai.",
+          "sourceUrl": "https://gol.conmebol.com/libertadores/es/news/independiente-del-valle-la-fabrica-de-cracks-que-suena-con-la-gloria-eterna",
+          "importSource": {
+            "file": "Revisão das finais desde 2019 e jogos do Mineirão",
+            "attendanceBasis": "user-confirmed",
+            "edition": 2019,
+            "originalSourceUrl": "https://gol.conmebol.com/libertadores/es/news/independiente-del-valle-la-fabrica-de-cracks-que-suena-con-la-gloria-eterna"
+          }
+        },
+        {
+          "id": "novos16-nueva-olla-2024-11-23-racing-club-cruzeiro",
+          "date": "23/11/2024",
+          "homeTeam": "Racing Club",
+          "awayTeam": "Cruzeiro",
+          "homeScore": 3,
+          "awayScore": 1,
+          "competition": "CONMEBOL Sudamericana",
+          "notes": "Final — jogo único\nCampo neutro. Racing campeão.",
+          "sourceUrl": "https://www.racingclub.com.ar/palmares/copa-sudamericana-2024/",
+          "importSource": {
+            "file": "Jogos_Conferidos_Novo_Lote_v2.xlsx",
+            "sheet": "Jogos confirmados",
+            "row": 4,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2024,
+            "originalSourceUrl": "https://www.racingclub.com.ar/palmares/copa-sudamericana-2024/"
+          }
+        }
+      ]
+    },
+    {
+      "key": "kempes",
+      "name": "Mario Alberto Kempes",
+      "iso": "ARG",
+      "city": "Córdoba",
+      "aliases": [
+        "Estádio Mario Kempes",
+        "Estadio Mario Kempes",
+        "Estadio Mario Alberto Kempes",
+        "Estádio Mario Alberto Kempes"
+      ],
+      "matches": [
+        {
+          "id": "novos16-kempes-2021-01-23-lanus-defensa-y-justicia",
+          "date": "23/01/2021",
+          "homeTeam": "Lanús",
+          "awayTeam": "Defensa y Justicia",
+          "homeScore": 0,
+          "awayScore": 3,
+          "competition": "CONMEBOL Sudamericana",
+          "notes": "Final — jogo único\nEdição 2020, disputada em janeiro de 2021. Campo neutro.",
+          "sourceUrl": "https://www.afa.com.ar/2291/posts/lanus-y-defensa-y-justicia-definen-esta-tarde-el-campeon-de-la-sudamericana",
+          "importSource": {
+            "file": "Jogos_Conferidos_Novo_Lote_v2.xlsx",
+            "sheet": "Jogos confirmados",
+            "row": 2,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2020,
+            "originalSourceUrl": "https://www.afa.com.ar/2291/posts/lanus-y-defensa-y-justicia-definen-esta-tarde-el-campeon-de-la-sudamericana"
+          }
+        },
+        {
+          "id": "novos16-kempes-2022-10-01-sao-paulo-independiente-del-valle",
+          "date": "01/10/2022",
+          "homeTeam": "São Paulo",
+          "awayTeam": "Independiente del Valle",
+          "homeScore": 0,
+          "awayScore": 2,
+          "competition": "CONMEBOL Sudamericana",
+          "notes": "Final — jogo único\nCampo neutro. Independiente del Valle campeão.",
+          "sourceUrl": "https://www.saopaulofc.net/vice-campeao-da-conmebol-sul-americana-2022/",
+          "importSource": {
+            "file": "Jogos_Conferidos_Novo_Lote_v2.xlsx",
+            "sheet": "Jogos confirmados",
+            "row": 3,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2022,
+            "originalSourceUrl": "https://www.saopaulofc.net/vice-campeao-da-conmebol-sul-americana-2022/"
+          }
+        }
+      ]
+    },
+    {
+      "key": "maldonado",
+      "name": "Domingo Burgueño Miguel",
+      "city": "Maldonado",
+      "iso": "URY",
+      "aliases": [
+        "Estádio Domingo Burgueño Miguel",
+        "Estadio Domingo Burgueño Miguel",
+        "Campus de Maldonado"
+      ],
+      "matches": [
+        {
+          "id": "europa27-maldonado-2023-10-28-fortaleza-ldu",
+          "date": "28/10/2023",
+          "homeTeam": "Fortaleza",
+          "awayTeam": "LDU",
+          "homeScore": 1,
+          "awayScore": 1,
+          "competition": "CONMEBOL Sudamericana",
+          "notes": "Edição 2023 — final, jogo único em campo neutro.\nPênaltis: Fortaleza 3 × 4 LDU. LDU campeã.\nEmpate por 1 a 1 no tempo normal, mantido após a prorrogação. Partida disputada no Uruguai.",
+          "sourceUrl": "https://fortaleza1918.com.br/fortaleza-e-vice-campeao-da-conmebol-sudamericana/",
+          "importSource": {
+            "file": "Lista enviada pelo proprietário — Europa, Brasil e Uruguai",
+            "row": 16,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2023,
+            "originalSourceUrl": "https://fortaleza1918.com.br/fortaleza-e-vice-campeao-da-conmebol-sudamericana/"
+          }
+        }
+      ]
+    },
+    {
+      "key": "defensores",
+      "name": "Defensores del Chaco",
+      "iso": "PRY",
+      "city": "Assunção",
+      "aliases": [
+        "Estadio Defensores del Chaco",
+        "Estádio Defensores del Chaco"
+      ],
+      "matches": [
+        {
+          "id": "novos16-defensores-2025-11-22-lanus-atletico-mineiro",
+          "date": "22/11/2025",
+          "homeTeam": "Lanús",
+          "awayTeam": "Atlético Mineiro",
+          "homeScore": 0,
+          "awayScore": 0,
+          "competition": "CONMEBOL Sudamericana",
+          "notes": "Final — jogo único\n0 a 0 após prorrogação; Lanús campeão nos pênaltis por 5 a 4. Não somar pênaltis ao placar.",
+          "sourceUrl": "https://estadisticas.clublanus.com/partidos/lanus-vs-atletico-mineiro-2025-11-22",
+          "importSource": {
+            "file": "Jogos_Conferidos_Novo_Lote_v2.xlsx",
+            "sheet": "Jogos confirmados",
+            "row": 6,
+            "attendanceBasis": "user-confirmed",
+            "edition": 2025,
+            "originalSourceUrl": "https://estadisticas.clublanus.com/partidos/lanus-vs-atletico-mineiro-2025-11-22"
+          }
+        }
+      ]
+    },
+    {
+      "key": "mineirao",
+      "name": "Mineirão",
+      "city": "Belo Horizonte",
+      "iso": "BRA",
+      "aliases": [
+        "Estádio Mineirão",
+        "Estádio Governador Magalhães Pinto",
+        "Governador Magalhães Pinto"
+      ],
+      "matches": [
+        {
+          "id": "finais-mineirao-2006-11-19",
+          "date": "19/11/2006",
+          "homeTeam": "Cruzeiro",
+          "awayTeam": "Santos",
+          "homeScore": 1,
+          "awayScore": 1,
+          "competition": "Campeonato Brasileiro",
+          "notes": "Edição 2006 — Série A, 36ª rodada.\nPartida disputada no Mineirão, em Belo Horizonte.",
+          "sourceUrl": "https://mineirao.com.br/fichas-tecnicas",
+          "importSource": {
+            "file": "Revisão das finais desde 2019 e jogos do Mineirão",
+            "attendanceBasis": "user-confirmed",
+            "edition": 2006,
+            "originalSourceUrl": "https://mineirao.com.br/fichas-tecnicas"
+          }
+        },
+        {
+          "id": "finais-mineirao-2021-08-18",
+          "date": "18/08/2021",
+          "homeTeam": "Atlético Mineiro",
+          "awayTeam": "River Plate",
+          "homeScore": 3,
+          "awayScore": 0,
+          "competition": "CONMEBOL Libertadores",
+          "notes": "Edição 2021 — quartas de final, jogo de volta.\nAtlético Mineiro classificado às semifinais, com 4 a 0 no agregado.\nPartida marcou o reencontro do Atlético com sua torcida no Mineirão.",
+          "sourceUrl": "https://atletico.com.br/no-embalo-da-massa/",
+          "importSource": {
+            "file": "Revisão das finais desde 2019 e jogos do Mineirão",
+            "attendanceBasis": "user-confirmed",
+            "edition": 2021,
+            "originalSourceUrl": "https://atletico.com.br/no-embalo-da-massa/"
+          }
+        }
+      ]
+    }
+  ]
+}
