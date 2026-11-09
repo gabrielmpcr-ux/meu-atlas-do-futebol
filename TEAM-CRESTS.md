@@ -1,6 +1,6 @@
 # Result badges
 
-74 club/national crests, sourced from https://github.com/JoseArroyave/football-logos (logos by country). Rendered to a transparent WebP sprite, 96 px per cell for 48 CSS px. No remote image requests at runtime. Crests remain their respective teams’ marks; used to identify match participants. They represent current reference badges, not a guarantee of historical shirt artwork. Unknown teams use initials rather than an unrelated badge.
+76 club/national crests, sourced from https://github.com/JoseArroyave/football-logos (logos by country). Rendered to a transparent WebP sprite, 96 px per cell for 48 CSS px. No remote image requests at runtime. Crests remain their respective teams’ marks; used to identify match participants. They represent current reference badges, not a guarantee of historical shirt artwork. Unknown teams use initials rather than an unrelated badge.
 
 Sprite order:
 0: argentinos-juniors (corrected from Wikimedia Commons)
@@ -96,3 +96,7 @@ Sources: JoseArroyave/football-logos. References supplied by the owner for Águi
 72: arsenal — logos/england/Arsenal.svg
 73: santa-fe — logos/colombia/Independiente_Santa_Fe.svg
 Source: JoseArroyave/football-logos. Sprite cache version 9; eleven rows unchanged. Public audit: conferir-escudos.html. When editing matchCrests, regenerate assets/teams/crest-aliases.json from the same map and update its audit cache query.
+
+74: chelsea — JoseArroyave/football-logos/logos/england/Chelsea.svg
+75: ajax — luukhopman/football-logos/master/history/2021-22/Netherlands - Eredivisie/Ajax.png (line-face version, matching owner reference)
+Sprite and audit cache version 10; eleven rows. Preserve the circular Ajax mark supplied by the owner.
