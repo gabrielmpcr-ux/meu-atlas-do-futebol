@@ -2,7 +2,7 @@
 begin;
 create or replace function public.atlas_save_aviation(p_expected_revision bigint,p_aviation jsonb)
 returns jsonb language plpgsql security definer
-set search_path='' set statement_timeout='15s' as $
+set search_path='' set statement_timeout='15s' as $$
 declare
  current_revision bigint; public_revision bigint; new_revision bigint;
  flights jsonb; trips jsonb; visible_flights jsonb; visible_aviation jsonb;
@@ -59,7 +59,7 @@ begin
  update public.atlas_public set data=jsonb_set(data,'{aviation}',visible_aviation,true),
   revision=new_revision where id='main';
  return jsonb_build_object('revision',new_revision,'initialized',true);
-end $;
+end $$;
 revoke all on function public.atlas_save_aviation(bigint,jsonb) from public,anon;
 grant execute on function public.atlas_save_aviation(bigint,jsonb) to authenticated;
 notify pgrst,'reload schema';
