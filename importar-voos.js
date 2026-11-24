@@ -15,7 +15,7 @@ function render(){
 button.onclick=async()=>{
  if(!loaded||busy||!AtlasCloud.isAdmin||!preview?.changed)return;busy=true;button.disabled=true;$('#importStatus').textContent='Salvando a viagem…';
  try{await AtlasCloud.commit({[key]:preview.data},{[key]:previous});$('#importStatus').textContent='Viagem incluída com sucesso. Os trechos foram agrupados na sua coleção.';render()}
- catch(error){$('#importStatus').textContent=error.message||'Não foi possível confirmar o salvamento.'}
+ catch(error){$('#importStatus').textContent=error.message||'Não foi possível confirmar o salvamento.';$('#flightSaveSetup').hidden=!/ativar-voos\.html/.test(error.message||'')}
  finally{busy=false;button.disabled=!AtlasCloud.isAdmin||!preview?.changed}
 };
 try{
